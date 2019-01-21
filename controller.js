@@ -1,5 +1,5 @@
 (function controller(view) {
-    view.render();
+   // view.render();
     let staticDiameter = 15;
     let squeeze = 12;
     let steps = 0;
