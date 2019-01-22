@@ -1,5 +1,5 @@
-(function controller(view) {
-   // view.render();
+(function controller(view, projectHolder) {
+    view.render();
     let staticDiameter = 15;
     let squeeze = 12;
     let steps = 0;
@@ -7,14 +7,15 @@
     let lowerTitles = document.querySelector('#lowerTitles');
     let menuBackground = document.querySelector('#menuBackground');
     let bodyColor = document.querySelector('body');
+    let root = document.querySelector('#Root');
     let bntsMenu = document.querySelectorAll('.btn-menu');
     let conerTitles = document.querySelectorAll('.cornerTitle');
-    let portfolioTitle =  document.querySelector('#portfolioTitle');
+    let portfolioTitle = document.querySelector('#portfolioTitle');
 
 
 
     view.onAnimateRange = (range, rangeStartPosition, destination, index) => {
-        if(rangeStartPosition == destination){
+        if (rangeStartPosition == destination) {
             return
         }
         let gobalTiming = 0;
@@ -62,15 +63,15 @@
                             bodyColor.style.backgroundImage = 'none';
                         }
                         if (index == 1) {
-                            menuBackground.style.display='block';
+                            menuBackground.style.display = 'block';
                         } else {
-                            menuBackground.style.display='none';
+                            menuBackground.style.display = 'none';
                         }
 
-                        if(index==2){
-                            portfolioTitle.style.opacity='0';
-                        }else{
-                            portfolioTitle.style.opacity='1';
+                        if (index == 2) {
+                            portfolioTitle.style.opacity = '0';
+                        } else {
+                            portfolioTitle.style.opacity = '1';
                         }
 
                         if (index == 3) {
@@ -101,20 +102,55 @@
 
     }
 
+    view.onShowProject = (projectIndex) => {
+        let pagehasChange = false;
+        let gobalTiming = 0;
+        view.animate({
+            duration: 1000,
+            timing: view.makeEaseInOut((timeFraction) => {
+                gobalTiming = timeFraction;
+                return Math.pow(timeFraction, 4);
+            }),
+            draw(progress) {
+                root.style.opacity = 1 - gobalTiming;
 
-})(view);
+                if (progress >= 0.5) {
+                    if(!pagehasChange){
+                        view.renderProject(projectHolder[projectIndex]);
+                        pagehasChange=true;
+                    }
+                    
+                }
+            }
+        });
+    }
+
+    view.onReturnToProjects = () => {
+        let gobalTiming = 0;
+        view.animate({
+            duration: 1000,
+            timing: view.makeEaseInOut((timeFraction) => {
+                gobalTiming = timeFraction;
+                return Math.pow(timeFraction, 4);
+            }),
+            draw(progress) {
+                root.style.opacity = 1 - gobalTiming;
+
+                if (progress >= .5) {
+                    view.renderPageProjects(2);
+                }
+            }
+        });
+    }
+
+
+})(view, projectHolder);
 
 var t1 = performance.now();
 //console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
 
 var styles = [
-     'border: 1px solid #3E0E02'
-    , 'color: black'
-    , 'display: block'
-    , 'line-height: 40px'
-    , 'text-align: center'
-    , 'font-size: 18px'
-    , 'font-weight: bold'
+    'border: 1px solid #3E0E02', 'color: black', 'display: block', 'line-height: 40px', 'text-align: center', 'font-size: 18px', 'font-weight: bold'
 ].join(';');
 
 console.log('%c Hey Human Welcome to my Code ', styles);

@@ -1,4 +1,49 @@
 var t0 = performance.now();
+/*
+function onYouTubeIframeAPIReady(videoID) {
+    console.log('enter fuction YouTube');
+    let player;
+    player = new YT.Player('YouTubeBackgroundVideoPlayer', {
+        videoId: videoID, // YouTube Video IDhttps://youtu.be/g6idU-GWSxA  _oZTvCParEs rbmRyxe87PA
+        width: 1920, // Player width (in px)
+        height: 1080, // Player height (in px)
+        playerVars: {
+            playlist: videoID,
+            autoplay: 1, // Auto-play the video on load
+            autohide: 1,
+            disablekb: 1,
+            controls: 0, // Hide pause/play buttons in player
+            showinfo: 0, // Hide the video title
+            modestbranding: 1, // Hide the Youtube Logo
+            loop: 1, // Run the video in a loop
+            fs: 0, // Hide the full screen button
+            autohide: 0, // Hide video controls when playing
+            rel: 0,
+            enablejsapi: 1
+        },
+        events: {
+            onReady: function (e) {
+                e.target.mute();
+                e.target.setPlaybackQuality('hd1080');
+            },
+            onStateChange: function (e) {
+                if (e && e.data === 1) {
+                    // let videoHolder = document.getElementById('background-youtube-video');
+                    let videoHolder = div;
+                    //let projectCoverPageContainer = document.querySelector('#project-coverPageContainer');
+                    if (videoHolder && videoHolder.id) {
+                        videoHolder.classList.remove('loading');
+                        //projectCoverPageContainer.classList.remove('loading');
+
+                    }
+                } else if (e && e.data === 0) {
+                    e.target.playVideo()
+                }
+            }
+        }
+    });
+};*/
+
 let view = {
 
     bodyElement: document.querySelector(`#Root`),
@@ -38,7 +83,7 @@ let view = {
 
     },
 
-    getNavegationMenu: function getNavegationMenu() {
+    getNavegationMenu: function getNavegationMenu(value) {
         let div = document.createElement(`div`);
         div.id = `navigationMenuContainer`;
 
@@ -59,7 +104,7 @@ let view = {
                     <div class="indicator"></div>
                 </div>
                 <style data="slider-style-animation" type="text/css"></style>
-                <input type="range" min="0" max="100" value="0" steps="1" class="slider" id="navigationMenuSlider" disabled>
+                <input type="range" min="0" max="100" value="${value}" steps="1" class="slider" id="navigationMenuSlider" disabled>
             </div>
         `;
 
@@ -193,24 +238,12 @@ let view = {
             <h3> Datos varios </h3>
         </div>
         <div class="sectionBlock">
-            <div class="textContainerInSection">
+            <div>
                 <h3> Datos varios </h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipiscing elit est praesent non augue suspendisse, mus luctus vestibulum per facilisis sociosqu inceptos curabitur et laoreet dictum. Rutrum viverra sem mus iaculis hendrerit phasellus lacinia risus, quisque montes diam congue pretium aliquet primis integer sapien, facilisi ultricies vitae himenaeos eleifend tellus laoreet. Justo dapibus donec duis porttitor auctor primis pharetra per mus eu integer, sodales fringilla volutpat suspendisse pulvinar dui netus taciti bibendum felis laoreet metus, enim egestas hac lobortis facilisis diam eros malesuada nisi ad. </p>
             </div>
         </div>
-        <!--div class="sectionBlock">
-            <div class="iFrameContainerInSection">
-                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/g6idU-GWSxA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="sectionBlock">
-            <div class="textContainerInSection">
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit est praesent non augue suspendisse, mus luctus vestibulum per facilisis sociosqu inceptos curabitur et laoreet dictum. Rutrum viverra sem mus iaculis hendrerit phasellus lacinia risus, quisque montes diam congue pretium aliquet primis integer sapien, facilisi ultricies vitae himenaeos eleifend tellus laoreet. Justo dapibus donec duis porttitor auctor primis pharetra per mus eu integer, sodales fringilla volutpat suspendisse pulvinar dui netus taciti bibendum felis laoreet metus, enim egestas hac lobortis facilisis diam eros malesuada nisi ad. </p>
-            </div>
-            <div class="imgContainerInSection">
-                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/f0054d31931717.5667899699352.png">
-            </div>
-        </div-->`;
+        `;
 
         return div;
     },
@@ -225,13 +258,20 @@ let view = {
         </div>
         <div class="sectionBlock">
             <ul>
-                <li>Hictio</li>
-                <li>Ginef</li>
-                <li>BeoLab</li>
-                <li>Helix</li>
+                <li class="project-trigger">Hictio</li>
+                <li class="project-trigger">Ginef</li>
+                <li class="project-trigger">BeoLab</li>
+                <li class="project-trigger">Helix</li>
             </ul>
         </div>
         `;
+        let projectTriggers = div.querySelectorAll('.project-trigger');
+        projectTriggers.forEach((e, i) => {
+            e.addEventListener('click', (event) => {
+
+                this.onShowProject(i);
+            });
+        });
 
         return div;
     },
@@ -248,13 +288,249 @@ let view = {
             Let me know if you think I could be part of your team during my internship in 2019
             </span>
             <h3>josedavidgm1995@gmail.com</h3>
-
         </div>
        `;
 
         return div;
     },
+    //------------------------------------------------- Project pages structure
 
+    getYouTubeBackGroundVideo: function getYouTubeBackGroundVideo(videoID) {
+        let div = document.createElement('div');
+        div.id = 'background-youtube-video';
+        div.className = 'loading';
+        div.innerHTML = `
+            <script async src="https://www.youtube.com/iframe_api"></script>
+            <script>${
+                function onYouTubeIframeAPIReady() {
+                 console.log('enter fuction YouTube');
+                     let player;
+                     player = new YT.Player('YouTubeBackgroundVideoPlayer', {
+                         videoId: videoID, // YouTube Video IDhttps://youtu.be/g6idU-GWSxA  _oZTvCParEs rbmRyxe87PA
+                         width: 1920, // Player width (in px)
+                         height: 1080, // Player height (in px)
+                         playerVars: {
+                             playlist: videoID,
+                             autoplay: 1, // Auto-play the video on load
+                             autohide: 1,
+                             disablekb: 1,
+                             controls: 0, // Hide pause/play buttons in player
+                             showinfo: 0, // Hide the video title
+                             modestbranding: 1, // Hide the Youtube Logo
+                             loop: 1, // Run the video in a loop
+                             fs: 0, // Hide the full screen button
+                             autohide: 0, // Hide video controls when playing
+                             rel: 0,
+                             enablejsapi: 1
+                         },
+                         events: {
+                             onReady: function (e) {
+                                 console.log('onReady fuction YouTube');
+                                 e.target.mute();
+                                 e.target.setPlaybackQuality('hd1080');
+                             },
+                             onStateChange: function (e) {
+                                 if (e && e.data === 1) {
+                                     console.log('onStateChange ==== 1 fuction YouTube');
+                                     // let videoHolder = document.getElementById('background-youtube-video');
+                                     let videoHolder = div;
+                                     //let projectCoverPageContainer = document.querySelector('#project-coverPageContainer');
+                                     if (videoHolder && videoHolder.id) {
+                                         videoHolder.classList.remove('loading');
+                                         
+                                         //projectCoverPageContainer.classList.remove('loading');
+         
+                                     }
+                                 } else if (e && e.data === 0) {
+                                     e.target.playVideo()
+                                 }
+                             }
+                         }
+                     });
+                }}</script>
+            <section id="home-banner-box" class="home-banner loading">
+                <div class="video-background">
+                    <div class="video-foreground" id="YouTubeBackgroundVideoPlayer">
+                    </div>
+                </div>
+             </section>
+        `;
+        // onYouTubeIframeAPIReady(videoID);
+
+        return div;
+    },
+
+    getProjectCoverPage: function getProjectCoverPage(coverData) {
+        let div = document.createElement('div');
+        div.id = 'project-coverPage';
+        div.innerHTML = `
+            <div id="project-title">
+                <div id="project-titlesBox">
+                    <h1>${coverData.title}</h1>
+                    <h2>${coverData.subTitle}</h2>
+                </div>
+                <div id="project-purpose">
+                    <p>${coverData.purpose}</p>
+                </div>
+            </div>
+        `;
+        div.appendChild(this.getYouTubeBackGroundVideo(coverData.youTubeVideoID));
+        return div;
+    },
+    getProjectBriefData: function getProjectBriefData(briefData) {
+        let div = document.createElement('div');
+        div.id = 'project-briefData';
+        div.innerHTML = `
+        <div id="project-section-insideBriefData">
+            <div id="project-header">
+                <div id="project-sub-header-up">
+                    <h1>${briefData.longTitle}</h1>
+                </div>
+                <div id="project-sub-header-down">
+                    <div class="project-sub-header-block">
+                        <h3>Team:</h3>
+                        <p>${briefData.team}</p>
+                    </div>
+                    <div class="project-sub-header-block">
+                        <h3>Scope:</h3>
+                        <p>${briefData.scope}</p>
+                    </div>
+                    <div class="project-sub-header-block">
+                        <h3>Date:</h3>
+                        <p>${briefData.date}</p>
+                    </div>
+                </div>
+            </div>
+            <div id="project-tools-list">
+                <div class="project-tools-list-block">
+                    <h3>Research tools used</h3>
+                    <p>${briefData.researchTools}</p>
+                </div>
+                <div class="project-tools-list-block">
+                    <h3>Technologies used</h3>
+                    <p>${briefData.techTools}</p>
+                </div>
+            </div>
+        </div>
+        `;
+        return div;
+    },
+    //---------------------- Project content micro architecture
+    getProjectMediaBoxInsideDisplay: function getProjectMediaBoxInsideDisplay(mediaLink, type) {
+        let div = document.createElement('div');
+        div.className = 'project-media-box-display-InsideSection';
+
+        if (typeof type === 'string') {
+            switch (type) {
+                case 'image':
+                    div.innerHTML = `
+                <img src="${mediaLink}" alt="josedavid GIRALDO Portfolio">
+                `;
+                    break;
+                case 'gif':
+                    div.innerHTML = `
+                <img src="${mediaLink}" alt="josedavid GIRALDO Portfolio">
+                `;
+                    break;
+                case 'video':
+                    div.innerHTML = `
+                <iframe src="https://www.youtube.com/embed/${mediaLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                `;
+                    break;
+            }
+        }
+
+        return div;
+    },
+    getProjectTextBoxInsideDisplay: function getProjectTextBoxInsideDisplay(sectionInfo) {
+        let div = document.createElement('div');
+        div.className = 'project-text-box-display-InsideSection';
+        div.innerHTML = `
+        <h2>${sectionInfo.title}</h2>
+        <h3>${sectionInfo.subTitle}</h3>
+        <p>${sectionInfo.text}</p>
+        `;
+        return div;
+    },
+
+    getProjectSectionInsideContent: function getProjectSectionInsideContent(sectionInfo) {
+        let div = document.createElement('div');
+        div.className = 'project-section-InsideContent';
+        div.innerHTML = `
+            <div class="project-display-InsideSection"></div>
+        `;
+        let InsideDisplay = div.querySelector(".project-display-InsideSection");
+        //.project-display-InsideSection is the bow with 1400px width
+        InsideDisplay.appendChild(this.getProjectTextBoxInsideDisplay(sectionInfo));
+        return div;
+    },
+
+    getProjectContentContainer: function getProjectContentContainer(sections) {
+        let div = document.createElement('div');
+        div.id = 'project-content-container';
+        sections.forEach((sectionInfo, index) => {
+            div.appendChild(this.getProjectSectionInsideContent(sectionInfo));
+        });
+        return div;
+    },
+    //---------------------- Thank You
+    getThankYouContainer: function getThankYouContainer() {
+        let div = document.createElement('div');
+        div.id = 'thankYouContainer';
+        div.innerHTML = `
+            <div class="thankYouBlock">
+                <button>
+                    <p>Back to top</p>
+                </button>
+            </div>
+            <div class="thankYouBlock" id="nextPrev">
+                <button><p id="nextProject">Next Project</p></button>
+                <p>1/4</p>
+                <button><p id="previousProject">Previous Project</p></button>
+            </div>
+            <div class="thankYouBlock">
+                <h1>Thank you for watching</h1>
+            </div>
+            <div class="thankYouBlock">
+                <button>
+                    <a href="mailto:josedavidgm1995@gmail.com?Subject=Internship%202019" target="_top">
+                        <p>Send me an<span class="bolder">EMAIL</span></p>
+                    </a>
+                </button>
+            </div>
+            <div class="thankYouBlock">
+                <p>© 2019 JoseDavid GIRALDO / All Rights Reserved</p>
+            </div>
+        `;
+        return div;
+    },
+    getBackToPorjectsMenuBar: function getBackToPorjectsMenuBar() {
+        let div = document.createElement('div');
+        div.id = 'backToPorjectBar';
+        div.innerHTML = `
+            <h1 id="backToPorjectButton">Back to <span class="bolder">Projects</span></h1>
+        `;
+        let btn = div.querySelector('#backToPorjectButton');
+        btn.addEventListener('click', (e) => {
+            this.onReturnToProjects();
+
+        });
+
+        return div;
+    },
+    getProjectContainer: function getProjectContainer(project) {
+        let div = document.createElement('div');
+        div.id = 'project-container';
+
+        div.appendChild(this.getProjectCoverPage(project.coverData));
+        div.appendChild(this.getProjectBriefData(project.briefData));
+        div.appendChild(this.getProjectContentContainer(project.sections));
+        div.appendChild(this.getThankYouContainer());
+
+        return div;
+    },
+
+    //------------------------------------------------- Pages Array [Home, About, Portfolio, Contact]
     getPagesArray: function getPagesArray() {
         let pagesArray = [
             this.getFirtsPage(),
@@ -264,7 +540,7 @@ let view = {
         ]
         return pagesArray;
     },
-
+    //------------------------------------------------- Pages Container
     getPageContainer: function getPageContainer() {
         let div = document.createElement(`div`);
         div.className = `pagesContainer`;
@@ -276,29 +552,9 @@ let view = {
         div.appendChild(this.getPagesArray()[this.pageNumber]);
 
         let page = div.querySelector(".page");
-
-
-        /* window.addEventListener(`scroll`, (e) => {
-             console.log(`Div height: ${page.scrollHeight} /
-             \n Scroll y: ${page.scrollTop}
-             \n Client y: ${page.clientHeight}
-             \n ${page.scrollTop + page.clientHeight ==  page.scrollHeight }
-             `);
-         });*/
-
-        /*window.addEventListener('click', (e) => {
-            div.querySelector(".page").style.WebkitAnimation = "exit 0.5s ease-in-out";
-            div.querySelector(".page").style.animation = "exit 0.5s ease-in-out";
-            window.setTimeout(() => {
-                div.querySelector(".page").scrollTop = 0;
-                window.screenTop = 0;
-                this.onPageChange(this.pageNumber);
-            }, 500);
-        });*/
-
         return div;
     },
-
+    //------------------------------------------------- Render single Page
     renderPage: function renderPage(n) {
         this.setPageNumber(n);
         let p = document.querySelector(`.pagesContainer`);
@@ -306,15 +562,34 @@ let view = {
         <style data="page-style-animation" type="text/css"></style>   
         `;
         p.appendChild(this.getPagesArray()[this.getPageNumber()]);
-        console.log(`Actual page number: ${this.getPageNumber()}`);
+        //console.log(`Actual page number: ${this.getPageNumber()}`);
     },
-
-    //=====================================================================
-    render: function render() {
+    renderPageProjects: function renderPageProjects(n) {
+        this.bodyElement.innerHTML = ``;
+        this.bodyElement.appendChild(this.getCornerTitle());
+        this.bodyElement.appendChild(this.getNavegationMenu(67));
+        this.bodyElement.appendChild(this.getPageContainer());
+        this.setPageNumber(n);
+        let p = document.querySelector(`.pagesContainer`);
+        p.innerHTML = `
+        <style data="page-style-animation" type="text/css"></style>   
+        `;
+        p.appendChild(this.getPagesArray()[this.getPageNumber()]);
+        //console.log(`Actual page number: ${this.getPageNumber()}`);
+    },
+    //------------------------------------------------- Render single Project
+    renderProject: function renderProject(project) {
         this.bodyElement.innerHTML = ``;
 
+        this.bodyElement.appendChild(this.getBackToPorjectsMenuBar());
+        this.bodyElement.appendChild(this.getProjectContainer(project));
+    },
+    //===================================================================== Initial Render
+    render: function render() {
+
+        this.bodyElement.innerHTML = ``;
         this.bodyElement.appendChild(this.getCornerTitle());
-        this.bodyElement.appendChild(this.getNavegationMenu());
+        this.bodyElement.appendChild(this.getNavegationMenu(0));
         this.bodyElement.appendChild(this.getPageContainer());
     }
 

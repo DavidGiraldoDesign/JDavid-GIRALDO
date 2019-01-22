@@ -4,62 +4,62 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /*background-image: url("josefondoweb.png");*/
+    background-image: url("josefondoweb.png");
     display: inline-block;
     vertical-align: middle;
-    background-color : white;
+    background-color: white;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
 @media only screen and (orientation: portrait) {
-    body{
+    body {
         background-size: auto 100%;
         background-position: 60% 50%;
     }
-    #homeArticle{
+    article {
         margin: 2%;
     }
-    #homeArticle .sectionBlock{
+    #homeArticle .sectionBlock {
         width: 70%;
     }
-    #homeArticle h1{
+    #homeArticle h1 {
         font-size: 100px;
     }
-    #homeArticle h3{
+    #homeArticle h3 {
         font-size: 30px;
         line-height: 1.1;
     }
-    #homeArticle span{
+    #homeArticle span {
         font-size: 12px;
     }
-    #homeArticle .bolder{
+    #homeArticle .bolder {
         font-size: 30px;
     }
 }
 
 @media only screen and (orientation: landscape) {
-    body{
+    body {
         background-size: auto;
         background-position: 50% 50%;
     }
-    #homeArticle{
+    article {
         margin: 0;
     }
-    #homeArticle .sectionBlock{
+    #homeArticle .sectionBlock {
         width: 60%;
     }
-    #homeArticle h1{
+    #homeArticle h1 {
         font-size: 150px;
     }
-    #homeArticle h3{
+    #homeArticle h3 {
         font-size: 50px;
         line-height: 1.2;
     }
-    #homeArticle span{
+    #homeArticle span {
         font-size: 15px;
     }
-    #homeArticle .bolder{
+    #homeArticle .bolder {
         font-size: 50px;
     }
 }
@@ -75,62 +75,46 @@ body {
 }
 
 article {
-
     padding: 0;
     margin: 0;
     max-width: 1000px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: transparent;
+    color: rgb(25, 25, 25);
 }
 
 /*---------------------------------------------------------*/
+
 #contactArticle {
     color: rgb(200, 200, 200);
 }
-#homeArticle{
-    position: fixed;
-    width: 100%;
-    height: 70%;
-    display: flex;
+
+#homeArticle {
+    
+    min-height: 500px;
     justify-content: center;
     align-content: center;
 }
-#homeArticle h3{
+
+#homeArticle h3 {
     font-family: 'Comfortaa', cursive;
     font-weight: lighter;
-    color: rgb(25, 25, 25);
-}
-#homeArticle span{
-    font-family: 'Comfortaa', cursive;
-    font-weight: lighter;
-    color: rgb(25, 25, 25);
-}
-#homeArticle .bolder{
-    font-family: 'Barlow', sans-serif;
-    color: rgb(25, 25, 25);
 }
 
+#homeArticle span {
+    font-family: 'Comfortaa', cursive;
+    font-weight: lighter;
+}
+
+#homeArticle .bolder {
+    font-family: 'Barlow', sans-serif;
+}
 
 /*-------------------------------------------------------*/
+
 .sectionBlock {
     margin-bottom: 40px;
-}
-
-.iFrameContainerInSection {
-    margin-bottom: 20px;
-    width: 100%;
-    height: auto;
-}
-
-.textContainerInSection {
-    margin-bottom: 20px;
-}
-
-.imgContainerInSection {
-    margin-bottom: 20px;
-
 }
 
 article h1 {
