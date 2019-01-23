@@ -17,17 +17,18 @@ body {
         background-size: auto 100%;
         background-position: 60% 50%;
     }
-    article {
-        margin: 2%;
+    #homeArticle {
+        justify-content: flex-start;
     }
     #homeArticle .sectionBlock {
+        padding-top: 20px;
         width: 70%;
     }
     #homeArticle h1 {
         font-size: 100px;
     }
     #homeArticle h3 {
-        font-size: 30px;
+        font-size: 25px;
         line-height: 1.1;
     }
     #homeArticle span {
@@ -36,6 +37,25 @@ body {
     #homeArticle .bolder {
         font-size: 30px;
     }
+    article {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+    #contactArticle {
+        height: 550px;
+    }
+    #contactArticle h1 {
+        padding-top: 20px;
+        font-size: 60px;
+    }
+    #contactArticle h2 {
+        padding: 0;
+    }
+    #contactArticle p {
+       
+        padding: 0;
+    }
 }
 
 @media only screen and (orientation: landscape) {
@@ -43,8 +63,8 @@ body {
         background-size: auto;
         background-position: 50% 50%;
     }
-    article {
-        margin: 0;
+    #homeArticle {
+        justify-content: center;
     }
     #homeArticle .sectionBlock {
         width: 60%;
@@ -62,6 +82,14 @@ body {
     #homeArticle .bolder {
         font-size: 50px;
     }
+    article {
+        padding-top: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #contactArticle {
+        height: 100%;
+    }
 }
 
 .pagesContainer {
@@ -75,15 +103,16 @@ body {
 }
 
 article {
-    padding: 0;
-    margin: 0;
     max-width: 1000px;
+    padding-bottom: 100px;
     height: 100%;
     display: flex;
     flex-direction: column;
     color: rgb(25, 25, 25);
 }
-
+#aboutArticle{
+    max-width: 700px;
+}
 /*---------------------------------------------------------*/
 
 #contactArticle {
@@ -91,19 +120,22 @@ article {
 }
 
 #homeArticle {
-    
     min-height: 500px;
-    justify-content: center;
-    align-content: center;
+    /*align-content: center;*/
+    align-items: flex-start;
+    color: rgb(25, 25, 25);
 }
 
 #homeArticle h3 {
-    font-family: 'Comfortaa', cursive;
+    /*font-family: 'Comfortaa', cursive;*/
+    font-family: 'Didact Gothic', sans-serif;
     font-weight: lighter;
+    color: rgb(50, 50, 50);
 }
 
 #homeArticle span {
-    font-family: 'Comfortaa', cursive;
+    /*font-family: 'Comfortaa', cursive;*/
+    font-family: 'Didact Gothic', sans-serif;
     font-weight: lighter;
 }
 
@@ -113,8 +145,23 @@ article {
 
 /*-------------------------------------------------------*/
 
+
+#contactArticle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactArticle p {
+    text-align: center;
+    font-size: 18px;
+}
+
+/*--------------------------------*/
+
 .sectionBlock {
     margin-bottom: 40px;
+
 }
 
 article h1 {
@@ -122,11 +169,24 @@ article h1 {
     font-family: 'Barlow', sans-serif;
 }
 
+article h2 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 24px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+article h3 {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    padding-bottom: 10px;
+    color: rgb(150, 150, 150);
+}
+
 article p {
     font-size: 16px;
     line-height: 1.5;
-    text-indent: 10px;
-    padding: 0;
+    padding-bottom: 10px;
     margin: 0;
     font-family: 'Didact Gothic', sans-serif;
     text-align: justify;

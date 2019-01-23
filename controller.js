@@ -115,11 +115,11 @@
                 root.style.opacity = 1 - gobalTiming;
 
                 if (progress >= 0.5) {
-                    if(!pagehasChange){
-                        view.renderProject(projectHolder[projectIndex]);
-                        pagehasChange=true;
+                    if (!pagehasChange) {
+                        view.renderProject(projectIndex);
+                        pagehasChange = true;
                     }
-                    
+
                 }
             }
         });
@@ -143,6 +143,61 @@
         });
     }
 
+    view.onNextProject = (actualProjectIndex,portfolioSize) => {
+        let pagehasChange = false;
+        let gobalTiming = 0;
+        view.animate({
+            duration: 500,
+            timing: view.makeEaseInOut((timeFraction) => {
+                gobalTiming = timeFraction;
+                return Math.pow(timeFraction, 4);
+            }),
+            draw(progress) {
+                root.style.opacity = 1 - gobalTiming;
+
+                if (progress >= 0.5) {
+                    if (!pagehasChange) {
+                        if(actualProjectIndex<portfolioSize-1){
+                            actualProjectIndex++;
+                        }else{
+                            actualProjectIndex=0;
+                        }
+                        view.renderProject(actualProjectIndex);
+                        pagehasChange = true;
+                    }
+
+                }
+            }
+        });
+    }
+
+    view.onPreviousProject = (actualProjectIndex,portfolioSize) => {
+        let pagehasChange = false;
+        let gobalTiming = 0;
+        view.animate({
+            duration: 500,
+            timing: view.makeEaseInOut((timeFraction) => {
+                gobalTiming = timeFraction;
+                return Math.pow(timeFraction, 4);
+            }),
+            draw(progress) {
+                root.style.opacity = 1 - gobalTiming;
+
+                if (progress >= 0.5) {
+                    if (!pagehasChange) {
+                        if(actualProjectIndex>0){
+                            actualProjectIndex--;
+                        }else{
+                            actualProjectIndex=3;
+                        }
+                        view.renderProject(actualProjectIndex);
+                        pagehasChange = true;
+                    }
+
+                }
+            }
+        });
+    }
 
 })(view, projectHolder);
 

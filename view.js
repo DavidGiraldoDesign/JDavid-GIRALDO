@@ -179,8 +179,7 @@ let view = {
         div.innerHTML = `
         <div class="sectionBlock">
             <h1>Hi!</h1>
-            <span>I’m  a design student from Colombia.</span>
-            <h3>I am currently looking for an <span class="bolder">AWESOME INTERNSHIP</span></h3>
+            <h3>I’m  a design student from Colombia, currently looking for an <span class="bolder">AWESOME INTERNSHIP</span></h3>
         </div>`;
 
         return div;
@@ -192,12 +191,60 @@ let view = {
         div.innerHTML = `
         <div class="sectionBlock">
             <h1> About </h1>
-            <h3> Datos varios </h3>
         </div>
         <div class="sectionBlock">
             <div>
-                <h3> Datos varios </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit est praesent non augue suspendisse, mus luctus vestibulum per facilisis sociosqu inceptos curabitur et laoreet dictum. Rutrum viverra sem mus iaculis hendrerit phasellus lacinia risus, quisque montes diam congue pretium aliquet primis integer sapien, facilisi ultricies vitae himenaeos eleifend tellus laoreet. Justo dapibus donec duis porttitor auctor primis pharetra per mus eu integer, sodales fringilla volutpat suspendisse pulvinar dui netus taciti bibendum felis laoreet metus, enim egestas hac lobortis facilisis diam eros malesuada nisi ad. </p>
+                <p> My name is Jose David GIRALDO Mosquera, I am an outgoing and active Industrial & Interactive Media Design student at Icesi University in Cali - Colombia (South America), currently looking for an internship.
+                <br><br>
+                I am aware that I still have too much to learn, nevertheless I am capable to work in collaborative environments and give support in UX design, human centered design, design thinking, sketching, prototyping, 3d modeling and coding.
+                <br><br>
+                I would love to be able to participate in projects with real clients and be part of a Product/Industrial Design studio with a well constituted team.
+                </p>
+                <h2> Education </h2>
+                <h3> Icesi University (undergraduate student) since 2012 - to date: </h3>
+                <p>
+                    1. Industrial Design - IX semester
+                    <br>
+                    2. Interactive Media Design - IX semester
+                </p>
+                <h3> Certifications: </h3>
+                <p>
+                    1. Design Kit: Prototyping, provided by +Acumen and IDEO.org (2018).
+                    <br>
+                    2. SolidWorks Associate - Mechanical Design (2014).
+                </p>
+                <h2> Recognitions </h2>   
+                <p>
+                    1. Behance Appreciation Award Coin in product design (2016).
+                    <br>
+                    2. MASISA Student Design Contest (2016) - 3º Place in Colombia and a special mention in design presentation skills.
+                    <br>
+                    3. PAVCO Student Design Contest #DiseñaConPavco - 1º Place (2015).
+                </p>
+                <h2> Student monitor: </h2> 
+                <p>
+                During my semesters at Icesi University, since 2014, I have been a student monitor, giving my support to teachers by providing  assistance to students requiring additional educational guidance  in the following subjects:
+                <br><br>
+                Universal Design, usability and accessibility, / Industrial design sketching and analog rendering / 3D modeling with Rhino 5, 3D printing using MakerBot, and product rendering with V-Ray.
+                <br><br>
+                Furthermore I conducted a 4 week class about using “Behance as a Industrial design portfolio”.
+                </p>
+                <h2>  Research assistant: </h2> 
+                <p>
+                I gave my support in industrial design (3d modeling and prototyping)  for the “Platoon-based Cyclists Cooperative System” project - A solution for smart transportation and human-to-machine interfaces.
+                </p>
+                <h2>  Co-founder of the Industrial design´s Student Group of Icesi University </h2> 
+                <p>
+                I am a co-founder and the former “Director of design and communication” of the Icesi´s Industrial design student group: “Conceptos”. Creating the brand communication strategies, and visual styling. From: August  2017 to December 2018.
+                <br>
+                I also design the  “Open House” image for the Industrial Design program at Icesi University each year from 2016 to 2018.
+                <br><br>
+                <a href="https://www.instagram.com/conceptosicesi/">Instagram</a>
+                <a href="https://www.facebook.com/conceptosicesi ">Facebook</a>
+                </p>
+                
+                    
+            
             </div>
         </div>
         `;
@@ -225,7 +272,6 @@ let view = {
         let projectTriggers = div.querySelectorAll('.project-trigger');
         projectTriggers.forEach((e, i) => {
             e.addEventListener('click', (event) => {
-
                 this.onShowProject(i);
             });
         });
@@ -237,15 +283,21 @@ let view = {
         div.id = `contactArticle`;
         div.className = `page`;
         div.innerHTML = `
-        <div class="sectionBlock">
+        <!--div class="sectionBlock"-->
+        <div class="thankYouBlock">
             <h1> Thank you for wathing </h1>
-            <span>
+        </div>
+        <div class="thankYouBlock">    
+            <p>
             Did you enjoy my work? 
             <br>
             Let me know if you think I could be part of your team during my internship in 2019
-            </span>
-            <h3>josedavidgm1995@gmail.com</h3>
+            </p>
         </div>
+        <div class="thankYouBlock">     
+            <h2>josedavidgm1995@gmail.com</h2>
+        </div>
+        <!--/div-->
        `;
 
         return div;
@@ -253,7 +305,7 @@ let view = {
     //------------------------------------------------- Project pages structure
 
     getYouTubeBackGroundVideo: function getYouTubeBackGroundVideo(youTubeVideoID, imageCover) {
-  
+
         let div = document.createElement('div');
         div.id = 'background-youtube-video';
         div.innerHTML = `
@@ -281,7 +333,7 @@ let view = {
             </div>
         `;
         //div.appendChild(this.getYouTubeBackGroundVideo(coverData.youTubeVideoID));
-        div.insertBefore(this.getYouTubeBackGroundVideo(coverData.youTubeVideoID,coverData.imageCover), div.childNodes[0]);
+        div.insertBefore(this.getYouTubeBackGroundVideo(coverData.youTubeVideoID, coverData.imageCover), div.childNodes[0]);
         return div;
     },
     getProjectBriefData: function getProjectBriefData(briefData) {
@@ -381,19 +433,19 @@ let view = {
         return div;
     },
     //---------------------- Thank You
-    getThankYouContainer: function getThankYouContainer() {
+    getThankYouContainer: function getThankYouContainer(actualProjectIndex, portfolioSize) {
         let div = document.createElement('div');
         div.id = 'thankYouContainer';
         div.innerHTML = `
             <div class="thankYouBlock">
                 <button>
-                    <p>Back to top</p>
+                    <p id="backToTop">Back to top</p>
                 </button>
             </div>
             <div class="thankYouBlock" id="nextPrev">
-                <button><p id="nextProject">Next Project</p></button>
-                <p>1/4</p>
                 <button><p id="previousProject">Previous Project</p></button>
+                <p>${actualProjectIndex+1}/${portfolioSize}</p>
+                <button><p id="nextProject">Next Project</p></button>
             </div>
             <div class="thankYouBlock">
                 <h1>Thank you for watching</h1>
@@ -409,6 +461,24 @@ let view = {
                 <p>© 2019 JoseDavid GIRALDO / All Rights Reserved</p>
             </div>
         `;
+
+        let backToTop = div.querySelector('#backToTop');
+        backToTop.addEventListener('click', e => {
+            console.log('back to top');
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
+
+
+        let nextProject = div.querySelector('#nextProject');
+        nextProject.addEventListener('click', e => {
+            this.onNextProject(actualProjectIndex, portfolioSize);
+        });
+        let previousProject = div.querySelector('#previousProject');
+        previousProject.addEventListener('click', e => {
+            this.onPreviousProject(actualProjectIndex, portfolioSize);
+        });
+
         return div;
     },
     getBackToPorjectsMenuBar: function getBackToPorjectsMenuBar() {
@@ -423,16 +493,27 @@ let view = {
 
         });
 
+        let prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                div.style.top = "0";
+            } else {
+                div.style.top = "-60px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+
         return div;
     },
-    getProjectContainer: function getProjectContainer(project) {
+    getProjectContainer: function getProjectContainer(project, projectIndex, projectHolder) {
         let div = document.createElement('div');
         div.id = 'project-container';
 
         div.appendChild(this.getProjectCoverPage(project.coverData));
         div.appendChild(this.getProjectBriefData(project.briefData));
         div.appendChild(this.getProjectContentContainer(project.sections));
-        div.appendChild(this.getThankYouContainer());
+        div.appendChild(this.getThankYouContainer(projectIndex, projectHolder.length));
 
         return div;
     },
@@ -465,6 +546,7 @@ let view = {
     renderPage: function renderPage(n) {
         this.setPageNumber(n);
         let p = document.querySelector(`.pagesContainer`);
+        p.scrollTop = 0;
         p.innerHTML = `
         <style data="page-style-animation" type="text/css"></style>   
         `;
@@ -473,6 +555,7 @@ let view = {
     },
     renderPageProjects: function renderPageProjects(n) {
         this.bodyElement.innerHTML = ``;
+        this.bodyElement.scrollTop = 0;
         this.bodyElement.appendChild(this.getCornerTitle());
         this.bodyElement.appendChild(this.getNavegationMenu(67));
         this.bodyElement.appendChild(this.getPageContainer());
@@ -485,11 +568,16 @@ let view = {
         //console.log(`Actual page number: ${this.getPageNumber()}`);
     },
     //------------------------------------------------- Render single Project
-    renderProject: function renderProject(project) {
+    renderProject: function renderProject(projectIndex) {
         this.bodyElement.innerHTML = ``;
-
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        // window.screenTop=0;
+        this.bodyElement.scrollTop = 0;
+        // this.bodyElement.clientHeight=0;
+        //this.bodyElement.scrollHeight=0;
         this.bodyElement.appendChild(this.getBackToPorjectsMenuBar());
-        this.bodyElement.appendChild(this.getProjectContainer(project));
+        this.bodyElement.appendChild(this.getProjectContainer(projectHolder[projectIndex], projectIndex, projectHolder));
     },
     //===================================================================== Initial Render
     render: function render() {
