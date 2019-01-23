@@ -106,7 +106,7 @@
         let pagehasChange = false;
         let gobalTiming = 0;
         view.animate({
-            duration: 1000,
+            duration: 1500,
             timing: view.makeEaseInOut((timeFraction) => {
                 gobalTiming = timeFraction;
                 return Math.pow(timeFraction, 4);

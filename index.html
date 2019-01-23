@@ -16,200 +16,77 @@
     <!--link rel="stylesheet" type="text/css" media="screen" href="project-page-style.css" /-->
     <link rel="stylesheet" type="text/css" media="screen" href="project-style.css" />
 
-    <!-- Or use a CDN -->
+
     <script async src="https://www.youtube.com/iframe_api"></script>
+    <!--Or use a CDN -->
     <script src="https://cdn.rawgit.com/adriancooney/console.image/c9e6d4fd/console.image.min.js"></script>
 </head>
 
 <body>
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+    <div id="player"></div>
+
+    <script>
+        // 2. This code loads the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // 3. This function creates an <iframe> (and YouTube player)
+        //    after the API code downloads.
+       
+    </script>
+<script>
+        function onYouTubeIframeAPIReady() {
+             var player;
+             player = new YT.Player('YouTubeBackgroundVideoPlayer', {
+                 videoId: 'rbmRyxe87PA', // YouTube Video IDhttps://youtu.be/g6idU-GWSxA  _oZTvCParEs rbmRyxe87PA
+                 width: 1920, // Player width (in px)
+                 height: 1080, // Player height (in px)
+                 playerVars: {
+                     playlist: 'rbmRyxe87PA',
+                     autoplay: 1, // Auto-play the video on load
+                     autohide: 1,
+                     disablekb: 1,
+                     controls: 0, // Hide pause/play buttons in player
+                     showinfo: 0, // Hide the video title
+                     modestbranding: 1, // Hide the Youtube Logo
+                     loop: 1, // Run the video in a loop
+                     fs: 0, // Hide the full screen button
+                     autohide: 0, // Hide video controls when playing
+                     rel: 0,
+                     enablejsapi: 1
+                 },
+                 events: {
+                     onReady: function (e) {
+                         e.target.mute();
+                         e.target.setPlaybackQuality('hd1080');
+                     },
+                     onStateChange: function (e) {
+                         if (e && e.data === 1) {
+                             var videoHolder = document.getElementById('home-banner-box');
+                             let projectCoverPageContainer = document.querySelector(
+                                 '#project-coverPageContainer');
+
+                             if (videoHolder && videoHolder.id) {
+                                 videoHolder.classList.remove('loading');
+                                 projectCoverPageContainer.classList.remove('loading');
+
+                             }
+                         } else if (e && e.data === 0) {
+                             e.target.playVideo()
+                         }
+                     }
+                 }
+             });
+         }
+    </script>
     <div id="Root">
-        <script>
-            function onYouTubeIframeAPIReady() {
-                var player;
-                player = new YT.Player('YouTubeBackgroundVideoPlayer', {
-                    videoId: 'rbmRyxe87PA', // YouTube Video IDhttps://youtu.be/g6idU-GWSxA  _oZTvCParEs rbmRyxe87PA
-                    width: 1920, // Player width (in px)
-                    height: 1080, // Player height (in px)
-                    playerVars: {
-                        playlist: 'rbmRyxe87PA',
-                        autoplay: 1, // Auto-play the video on load
-                        autohide: 1,
-                        disablekb: 1,
-                        controls: 0, // Hide pause/play buttons in player
-                        showinfo: 0, // Hide the video title
-                        modestbranding: 1, // Hide the Youtube Logo
-                        loop: 1, // Run the video in a loop
-                        fs: 0, // Hide the full screen button
-                        autohide: 0, // Hide video controls when playing
-                        rel: 0,
-                        enablejsapi: 1
-                    },
-                    events: {
-                        onReady: function (e) {
-                            e.target.mute();
-                            e.target.setPlaybackQuality('hd1080');
-                        },
-                        onStateChange: function (e) {
-                            if (e && e.data === 1) {
-                                var videoHolder = document.getElementById('home-banner-box');
-                                let projectCoverPageContainer = document.querySelector(
-                                    '#project-coverPageContainer');
-
-                                if (videoHolder && videoHolder.id) {
-                                    videoHolder.classList.remove('loading');
-                                    projectCoverPageContainer.classList.remove('loading');
-
-                                }
-                            } else if (e && e.data === 0) {
-                                e.target.playVideo()
-                            }
-                        }
-                    }
-                });
-            }
-        </script>
-
-        <div id="project-Container">
-
-
-            <div id="project-coverPage">
-
-                <section id="home-banner-box" class="home-banner loading">
-                    <div class="video-background">
-                        <div class="video-foreground" id="YouTubeBackgroundVideoPlayer">
-                        </div>
-                    </div>
-                </section>
-
-                <div id="project-coverPageContainer" class="loading">
-                    <div id="project-title">
-                        <h1>Hictio</h1>
-                        <h2>Interactive Museography</h2>
-                        <div id="project-description">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in urna suscipit, accumsan
-                                eleifend est sit amet, lobortis dui.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="project-content">
-                <div class="project-container">
-                    <div class="project-display" id="project-brief-data">
-                        <div id="project-header">
-                            <h1>Suspendisse in urna suscipit, accumsan mauris ac, justo.</h1>
-                            <div id="project-sub-header">
-                                <div class="project-sub-header-block">
-                                    <h3>Team:</h3>
-                                    <p>Jose David Giraldo
-                                        <br> Camilo Montoya</p>
-                                </div>
-                                <div class="project-sub-header-block">
-                                    <h3>Scope:</h3>
-                                    <p>Graduate Thesis</p>
-                                </div>
-                                <div class="project-sub-header-block">
-                                    <h3>Date:</h3>
-                                    <p>2018</p>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div id="project-tools-list">
-                            <div class="project-tools-list-block">
-                                <h3>Research tools used</h3>
-                                <p>Sed interdum / in ipsum sit / amet rhoncus / Nulla pellentesque / odio porttitor / dictum
-                                    facilisis / lacus odio mattis neque / a vehicula tortor / nulla a nulla.</p>
-                            </div>
-                            <div class="project-tools-list-block">
-                                <h3>Technologies used</h3>
-                                <p>Sed interdum / in ipsum sit / amet rhoncus / Nulla pellentesque / odio porttitor / dictum
-                                    facilisis / lacus odio mattis neque / a vehicula tortor / nulla a nulla.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-display imageSlideshow">
-                        <div class="project-displayTextBox">
-                            <h2>Title super cool</h2>
-                            <h3>Extence subtitle about design</h3>
-                            <p>Aenean porta felis et ipsum dictum dapibus. Quisque mollis dolor facilisis orci malesuada, non
-                                bibendum ante commodo.
-                                <br> Vivamus lacinia in sapien a eleifend. Class aptent taciti sociosqu ad litora torquent per
-                                conubia nostra, per inceptos himenaeos. Pellentesque ut mi eu nulla tristique fringilla nec
-                                at eros. In sit amet augue vel nunc consectetur malesuada. Maecenas rutrum dapibus velit.
-                                Sed semper lacinia libero, non facilisis enim pharetra ut.</p>
-
-                        </div>
-                    </div>
-                    <div class="project-display video">
-                        <div class="project-displayTextBox">
-                            <h2>Title super cool</h2>
-                            <h3>Extence subtitle about design</h3>
-                            <p>Aenean porta felis et ipsum dictum dapibus. Quisque mollis dolor facilisis orci malesuada, non
-                                bibendum ante commodo.
-                                <br> Vivamus lacinia in sapien a eleifend. Class aptent taciti sociosqu ad litora torquent per
-                                conubia nostra, per inceptos himenaeos. Pellentesque ut mi eu nulla tristique fringilla nec
-                                at eros. In sit amet augue vel nunc consectetur malesuada. Maecenas rutrum dapibus velit.
-                                Sed semper lacinia libero, non facilisis enim pharetra ut.</p>
-
-                        </div>
-                    </div>
-                    <div class="project-display">
-                        <div class="project-displayTextBox">
-                            <h2>Title super cool</h2>
-                            <h3>Extence subtitle about design</h3>
-                            <p>Aenean porta felis et ipsum dictum dapibus. Quisque mollis dolor facilisis orci malesuada, non
-                                bibendum ante commodo.
-                                <br> Vivamus lacinia in sapien a eleifend. Class aptent taciti sociosqu ad litora torquent per
-                                conubia nostra, per inceptos himenaeos. Pellentesque ut mi eu nulla tristique fringilla nec
-                                at eros. In sit amet augue vel nunc consectetur malesuada. Maecenas rutrum dapibus velit.
-                                Sed semper lacinia libero, non facilisis enim pharetra ut.</p>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div id="thankYouContainer">
-                <div class="thankYouBlock">
-                    <button>
-                        <p>Back to top</p>
-                    </button>
-
-                </div>
-                <div class="thankYouBlock" id="nextPrev">
-                    <button>
-                        <p id="nextProject">Next Project</p>
-                    </button>
-
-                    <p>1/4</p>
-
-                    <button>
-                        <p id="previousProject">Previous Project</p>
-                    </button>
-                </div>
-                <div class="thankYouBlock">
-                    <h1>Thank you for watching</h1>
-                </div>
-                <div class="thankYouBlock">
-                    <button>
-                        <a href="mailto:josedavidgm1995@gmail.com?Subject=Internship%202019" target="_top">
-                            <p>Send me an
-                                <span class="bolder">EMAIL</span>
-                            </p>
-                        </a>
-                    </button>
-                </div>
-                <div class="thankYouBlock">
-                    <p>© 2019 JoseDavid GIRALDO / All Rights Reserved</p>
-                </div>
-
-            </div>
-        </div>
-
+        
     </div>
+
     <script type="text/javascript" src="project.js"></script>
     <script type="text/javascript" src="svg.js"></script>
     <script type="text/javascript" src="view.js"></script>

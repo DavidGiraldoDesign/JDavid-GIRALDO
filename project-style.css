@@ -1,4 +1,13 @@
 @media only screen and (orientation: portrait) {
+    .video-background {
+        display: none;
+    }
+    #imageCover {
+        min-height: 600px;
+    }
+    #YouTubeBackgroundVideoPlayer {
+        display: none;
+    }
     #project-coverPage {
         height: 600px;
     }
@@ -15,6 +24,15 @@
 }
 
 @media only screen and (orientation: landscape) {
+    .video-background {
+        display: flex;
+    }
+    #imageCover {
+        min-height: 800px;
+    }
+    #YouTubeBackgroundVideoPlayer {
+        display: flex;
+    }
     #project-coverPage {
         height: 800px;
     }
@@ -35,9 +53,9 @@
 }
 
 /*------------------------ Back button */
-#Root{
- 
-}
+
+#Root {}
+
 #backToPorjectBar {
     position: fixed;
     background: blue;
@@ -51,45 +69,72 @@
 }*/
 
 #project-container {
+    z-index: -2;
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%;
 }
+
 /*------------------------  YouTube Video*/
 
-#home-banner-box {
+#background-youtube-video {
     position: fixed;
     z-index: -1;
+    overflow: hidden;
     width: 100%;
-    min-height: 800px;
     height: 800px;
-    flex-direction: column;
-    background: red;
+    background-color: black;
 }
-.loading .video-background {
-    opacity: 1;
-}
+
 .video-background {
+    display: flex;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    -webkit-transition: 3s opacity ease;
-    transition: 3s opacity ease;
-    opacity: 1;
     overflow: hidden;
 }
-.video-foreground,
-.video-background iframe {
+#imageCover {
+    position: absolute;
+    overflow: hidden;
+}
+#YouTubeBackgroundVideoPlayer {
     position: absolute;
     min-height: 800px;
     pointer-events: none;
+    -webkit-animation-name: enter;
+    /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s;
+    /* Safari 4.0 - 8.0 */
+    animation-name: enter;
+    animation-duration: 4s;
+}
+
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes enter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Standard syntax */
+
+@keyframes enter {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /*------------------------  COVER */
@@ -97,24 +142,21 @@
 #project-coverPage {
     width: 100%;
     display: flex;
-    border: 1px solid red;
     background-color: transparent;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, .2), rgba(0, 0, 0, .0));
 }
 
 #project-title {
-    border: 1px solid red;
     position: relative;
     bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-  
 }
 
 #project-titlesBox {
-    height:200px;
+    height: 200px;
 }
 
 #project-purpose {
@@ -129,6 +171,7 @@
     min-height: 400px;
     display: flex;
     justify-content: center;
+    background-color: white;
 }
 
 #project-section-insideBriefData {
@@ -152,6 +195,7 @@
 /*---------------------------------------*/
 
 #project-content-container {
+    background: white;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -161,7 +205,6 @@
 }
 
 .project-section-InsideContent {
-    border: 1px solid red;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -259,7 +302,6 @@
     min-height: 500px;
     color: white;
     padding: 5%;
-    border: 1px solid red;
 }
 
 #thankYouContainer button {

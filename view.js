@@ -1,48 +1,5 @@
 var t0 = performance.now();
-/*
-function onYouTubeIframeAPIReady(videoID) {
-    console.log('enter fuction YouTube');
-    let player;
-    player = new YT.Player('YouTubeBackgroundVideoPlayer', {
-        videoId: videoID, // YouTube Video IDhttps://youtu.be/g6idU-GWSxA  _oZTvCParEs rbmRyxe87PA
-        width: 1920, // Player width (in px)
-        height: 1080, // Player height (in px)
-        playerVars: {
-            playlist: videoID,
-            autoplay: 1, // Auto-play the video on load
-            autohide: 1,
-            disablekb: 1,
-            controls: 0, // Hide pause/play buttons in player
-            showinfo: 0, // Hide the video title
-            modestbranding: 1, // Hide the Youtube Logo
-            loop: 1, // Run the video in a loop
-            fs: 0, // Hide the full screen button
-            autohide: 0, // Hide video controls when playing
-            rel: 0,
-            enablejsapi: 1
-        },
-        events: {
-            onReady: function (e) {
-                e.target.mute();
-                e.target.setPlaybackQuality('hd1080');
-            },
-            onStateChange: function (e) {
-                if (e && e.data === 1) {
-                    // let videoHolder = document.getElementById('background-youtube-video');
-                    let videoHolder = div;
-                    //let projectCoverPageContainer = document.querySelector('#project-coverPageContainer');
-                    if (videoHolder && videoHolder.id) {
-                        videoHolder.classList.remove('loading');
-                        //projectCoverPageContainer.classList.remove('loading');
 
-                    }
-                } else if (e && e.data === 0) {
-                    e.target.playVideo()
-                }
-            }
-        }
-    });
-};*/
 
 let view = {
 
@@ -295,68 +252,17 @@ let view = {
     },
     //------------------------------------------------- Project pages structure
 
-    getYouTubeBackGroundVideo: function getYouTubeBackGroundVideo(videoID) {
+    getYouTubeBackGroundVideo: function getYouTubeBackGroundVideo(youTubeVideoID, imageCover) {
+  
         let div = document.createElement('div');
         div.id = 'background-youtube-video';
-        div.className = 'loading';
         div.innerHTML = `
-            <script async src="https://www.youtube.com/iframe_api"></script>
-            <script>${
-                function onYouTubeIframeAPIReady() {
-                 console.log('enter fuction YouTube');
-                     let player;
-                     player = new YT.Player('YouTubeBackgroundVideoPlayer', {
-                         videoId: videoID, // YouTube Video IDhttps://youtu.be/g6idU-GWSxA  _oZTvCParEs rbmRyxe87PA
-                         width: 1920, // Player width (in px)
-                         height: 1080, // Player height (in px)
-                         playerVars: {
-                             playlist: videoID,
-                             autoplay: 1, // Auto-play the video on load
-                             autohide: 1,
-                             disablekb: 1,
-                             controls: 0, // Hide pause/play buttons in player
-                             showinfo: 0, // Hide the video title
-                             modestbranding: 1, // Hide the Youtube Logo
-                             loop: 1, // Run the video in a loop
-                             fs: 0, // Hide the full screen button
-                             autohide: 0, // Hide video controls when playing
-                             rel: 0,
-                             enablejsapi: 1
-                         },
-                         events: {
-                             onReady: function (e) {
-                                 console.log('onReady fuction YouTube');
-                                 e.target.mute();
-                                 e.target.setPlaybackQuality('hd1080');
-                             },
-                             onStateChange: function (e) {
-                                 if (e && e.data === 1) {
-                                     console.log('onStateChange ==== 1 fuction YouTube');
-                                     // let videoHolder = document.getElementById('background-youtube-video');
-                                     let videoHolder = div;
-                                     //let projectCoverPageContainer = document.querySelector('#project-coverPageContainer');
-                                     if (videoHolder && videoHolder.id) {
-                                         videoHolder.classList.remove('loading');
-                                         
-                                         //projectCoverPageContainer.classList.remove('loading');
-         
-                                     }
-                                 } else if (e && e.data === 0) {
-                                     e.target.playVideo()
-                                 }
-                             }
-                         }
-                     });
-                }}</script>
-            <section id="home-banner-box" class="home-banner loading">
-                <div class="video-background">
-                    <div class="video-foreground" id="YouTubeBackgroundVideoPlayer">
-                    </div>
-                </div>
-             </section>
+        <div class="video-background">
+            <img id="imageCover" src="${imageCover}" alt="josedavid-coverpage">
+            <iframe id="YouTubeBackgroundVideoPlayer" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                title="YouTube video player" width="1920" height="1080" src="https://www.youtube.com/embed/${youTubeVideoID}?playlist=${youTubeVideoID}&amp;autoplay=1&amp;autohide=0&amp;disablekb=1&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;loop=1&amp;fs=0&amp;rel=0&amp;enablejsapi=1&amp;origin=http%3A%2F%2F127.0.0.1%3A5500&amp;widgetid=1"></iframe>
+        </div>
         `;
-        // onYouTubeIframeAPIReady(videoID);
-
         return div;
     },
 
@@ -374,7 +280,8 @@ let view = {
                 </div>
             </div>
         `;
-        div.appendChild(this.getYouTubeBackGroundVideo(coverData.youTubeVideoID));
+        //div.appendChild(this.getYouTubeBackGroundVideo(coverData.youTubeVideoID));
+        div.insertBefore(this.getYouTubeBackGroundVideo(coverData.youTubeVideoID,coverData.imageCover), div.childNodes[0]);
         return div;
     },
     getProjectBriefData: function getProjectBriefData(briefData) {

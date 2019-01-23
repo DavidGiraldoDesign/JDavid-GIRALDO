@@ -36,7 +36,8 @@ const projectHictio = {
         title: 'Hictio',
         subTitle: 'Interactive museography',
         purpose:'Enhance autonomy, satisfaction and information recall of visual impaired people who visit an aquarium located in the Zoo of Cali, Colombia.',
-        youTubeVideoID: 'rbmRyxe87PA'
+        youTubeVideoID: 'jIMBqsfZtBE',
+        imageCover:'http://lorempixel.com/output/cats-q-g-1920-1080-10.jpg'
     },
     briefData: {
         longTitle: 'Interactive Products and Universal Design for Enhancing Accessibility of the Visually Impaired in Touristic Environments',
@@ -67,7 +68,8 @@ const projectGinef = {
     coverData: {
         title: 'projectGinef',
         subTitle: 'SubTitle',
-        youTubeVideoID: 'rbmRyxe87PA'
+        youTubeVideoID: 'jIMBqsfZtBE',
+        imageCover:'http://lorempixel.com/output/cats-q-g-1920-1080-10.jpg'
     },
     briefData: {
         longTitle: 'LongTitle',
@@ -98,7 +100,8 @@ const projectBeo = {
     coverData: {
         title: 'projectBeo',
         subTitle: 'SubTitle',
-        youTubeVideoID: 'rbmRyxe87PA'
+        youTubeVideoID: 'jIMBqsfZtBE',
+        imageCover:'http://lorempixel.com/output/cats-q-g-1920-1080-10.jpg'
     },
     briefData: {
         longTitle: 'LongTitle',
@@ -129,7 +132,8 @@ const projectShell = {
     coverData: {
         title: 'projectShell',
         subTitle: 'SubTitle',
-        youTubeVideoID: 'rbmRyxe87PA'
+        youTubeVideoID: 'jIMBqsfZtBE',
+        imageCover:'http://lorempixel.com/output/cats-q-g-1920-1080-10.jpg'
     },
     briefData: {
         longTitle: 'LongTitle',
