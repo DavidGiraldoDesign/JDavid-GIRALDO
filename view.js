@@ -308,6 +308,9 @@ let view = {
 
         let div = document.createElement('div');
         div.id = 'background-youtube-video';
+
+
+
         div.innerHTML = `
         <div class="video-background">
             <img id="imageCover" src="${imageCover}" alt="josedavid-coverpage">
@@ -315,6 +318,13 @@ let view = {
                 title="YouTube video player" width="1920" height="1080" src="https://www.youtube.com/embed/${youTubeVideoID}?playlist=${youTubeVideoID}&amp;autoplay=1&amp;autohide=0&amp;disablekb=1&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;loop=1&amp;fs=0&amp;rel=0&amp;enablejsapi=1&amp;origin=http%3A%2F%2F127.0.0.1%3A5500&amp;widgetid=1"></iframe>
         </div>
         `;
+        if (youTubeVideoID === null) {
+            let videoBackground = div.querySelector('#YouTubeBackgroundVideoPlayer');
+            videoBackground.style.display = 'none';
+            console.log('no hay video');
+        }
+
+
         return div;
     },
 
@@ -404,11 +414,18 @@ let view = {
     getProjectTextBoxInsideDisplay: function getProjectTextBoxInsideDisplay(sectionInfo) {
         let div = document.createElement('div');
         div.className = 'project-text-box-display-InsideSection';
+        let textStringLines = sectionInfo.text.split('\n');
+
         div.innerHTML = `
         <h2>${sectionInfo.title}</h2>
         <h3>${sectionInfo.subTitle}</h3>
-        <p>${sectionInfo.text}</p>
+        <!--p>${sectionInfo.text}</p-->
         `;
+        textStringLines.forEach(line => {
+            let lineNode = document.createElement('p');
+            lineNode.innerHTML = `${line}<br>`;
+            div.appendChild(lineNode);
+        });
         return div;
     },
 
@@ -419,7 +436,7 @@ let view = {
             <div class="project-display-InsideSection"></div>
         `;
         let InsideDisplay = div.querySelector(".project-display-InsideSection");
-        //.project-display-InsideSection is the bow with 1400px width
+        //.project-display-InsideSection is the box with 1400px width
         InsideDisplay.appendChild(this.getProjectTextBoxInsideDisplay(sectionInfo));
         return div;
     },
