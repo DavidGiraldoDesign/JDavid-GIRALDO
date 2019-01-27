@@ -308,9 +308,6 @@ let view = {
 
         let div = document.createElement('div');
         div.id = 'background-youtube-video';
-
-
-
         div.innerHTML = `
         <div class="video-background">
             <img id="imageCover" src="${imageCover}" alt="josedavid-coverpage">
@@ -416,10 +413,19 @@ let view = {
         div.className = 'project-information-box-InsideDisplay';
 
         if (sectionInfo.media === true) {
-            let image = document.createElement('img');
-            image.className = '';
-            image.src = sectionInfo.url;
-            div.appendChild(image);
+            if(sectionInfo.url!==null){
+                let image = document.createElement('img');
+                image.className = '';
+                image.src = sectionInfo.url;
+                div.appendChild(image);
+            }else{
+                let youTubeDiv = document.createElement('div');
+                youTubeDiv.className='youTube-InsideDisplay';
+                youTubeDiv.innerHTML = `
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${sectionInfo.youTubeVideoID}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                div.appendChild(youTubeDiv);
+            }
+            
         } else {
             let textStringLines = sectionInfo.text.split('\n');
 

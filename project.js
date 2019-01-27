@@ -110,6 +110,18 @@ const projectHictio = {
         },
         {
             title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: null,
+            youTubeVideoID:'g6idU-GWSxA',
+            style: {
+                background: 'rgb(255,230,230)',
+                color: ''
+            }
+        },
+        {
+            title: '',
             subTitle: 'Field work',
             text: `We visited the zoo with tow blind people as subject of the study. We ask them to think out loud during the interaction with the expositions. Furthermore, we pass-through and interact with the butterflies’ and birds’ expositions with our eyes cover to understand more closely their situation. `,
             style: {
