@@ -335,7 +335,7 @@ let view = {
             <div id="project-title">
                 <div id="project-titlesBox">
                     <h1>${coverData.title}</h1>
-                    <h2>${coverData.subTitle}</h2>
+                    <!--h2>${coverData.subTitle}</h2-->
                 </div>
                 <div id="project-purpose">
                     <p>${coverData.purpose}</p>
@@ -411,21 +411,31 @@ let view = {
 
         return div;
     },
-    getProjectTextBoxInsideDisplay: function getProjectTextBoxInsideDisplay(sectionInfo) {
+    getProjectInformationInsideDisplay: function getProjectInformationInsideDisplay(sectionInfo) {
         let div = document.createElement('div');
-        div.className = 'project-text-box-display-InsideSection';
-        let textStringLines = sectionInfo.text.split('\n');
+        div.className = 'project-information-box-InsideDisplay';
 
-        div.innerHTML = `
-        <h2>${sectionInfo.title}</h2>
-        <h3>${sectionInfo.subTitle}</h3>
-        <!--p>${sectionInfo.text}</p-->
-        `;
-        textStringLines.forEach(line => {
-            let lineNode = document.createElement('p');
-            lineNode.innerHTML = `${line}<br>`;
-            div.appendChild(lineNode);
-        });
+        if (sectionInfo.media === true) {
+            let image = document.createElement('img');
+            image.className = '';
+            image.src = sectionInfo.url;
+            div.appendChild(image);
+        } else {
+            let textStringLines = sectionInfo.text.split('\n');
+
+            div.innerHTML = `
+                <div class="text-box-padding">
+                    <h2>${sectionInfo.title}</h2>
+                    <h3>${sectionInfo.subTitle}</h3>
+                </div>   
+                    `;
+            textStringLines.forEach(line => {
+                let lineNode = document.createElement('p');
+                lineNode.innerHTML = `${line}<br>`;
+                div.querySelector('.text-box-padding').appendChild(lineNode);
+            });
+        }
+
         return div;
     },
 
@@ -437,7 +447,14 @@ let view = {
         `;
         let InsideDisplay = div.querySelector(".project-display-InsideSection");
         //.project-display-InsideSection is the box with 1400px width
-        InsideDisplay.appendChild(this.getProjectTextBoxInsideDisplay(sectionInfo));
+
+        div.style.background = sectionInfo.style.background;
+        div.style.color = sectionInfo.style.color;
+
+
+        InsideDisplay.appendChild(this.getProjectInformationInsideDisplay(sectionInfo));
+
+
         return div;
     },
 
@@ -531,7 +548,10 @@ let view = {
         div.appendChild(this.getProjectBriefData(project.briefData));
         div.appendChild(this.getProjectContentContainer(project.sections));
         div.appendChild(this.getThankYouContainer(projectIndex, projectHolder.length));
-
+        let bgColor = project.style.background;
+        let color = project.style.color;
+        div.querySelector('#project-content-container').style.background = bgColor;
+        div.querySelector('#project-content-container').style.color = color;
         return div;
     },
 

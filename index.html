@@ -15,74 +15,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="page-content-style.css" />
     <!--link rel="stylesheet" type="text/css" media="screen" href="project-page-style.css" /-->
     <link rel="stylesheet" type="text/css" media="screen" href="project-style.css" />
-
-
-    <script async src="https://www.youtube.com/iframe_api"></script>
-    <!--Or use a CDN -->
     <script src="https://cdn.rawgit.com/adriancooney/console.image/c9e6d4fd/console.image.min.js"></script>
 </head>
 
 <body>
-    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-    <div id="player"></div>
-
-    <script>
-        // 2. This code loads the IFrame Player API code asynchronously.
-        var tag = document.createElement('script');
-
-        tag.src = "https://www.youtube.com/iframe_api";
-        var firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-        // 3. This function creates an <iframe> (and YouTube player)
-        //    after the API code downloads.
-       
-    </script>
-<script>
-        function onYouTubeIframeAPIReady() {
-             var player;
-             player = new YT.Player('YouTubeBackgroundVideoPlayer', {
-                 videoId: 'rbmRyxe87PA', // YouTube Video IDhttps://youtu.be/g6idU-GWSxA  _oZTvCParEs rbmRyxe87PA
-                 width: 1920, // Player width (in px)
-                 height: 1080, // Player height (in px)
-                 playerVars: {
-                     playlist: 'rbmRyxe87PA',
-                     autoplay: 1, // Auto-play the video on load
-                     autohide: 1,
-                     disablekb: 1,
-                     controls: 0, // Hide pause/play buttons in player
-                     showinfo: 0, // Hide the video title
-                     modestbranding: 1, // Hide the Youtube Logo
-                     loop: 1, // Run the video in a loop
-                     fs: 0, // Hide the full screen button
-                     autohide: 0, // Hide video controls when playing
-                     rel: 0,
-                     enablejsapi: 1
-                 },
-                 events: {
-                     onReady: function (e) {
-                         e.target.mute();
-                         e.target.setPlaybackQuality('hd1080');
-                     },
-                     onStateChange: function (e) {
-                         if (e && e.data === 1) {
-                             var videoHolder = document.getElementById('home-banner-box');
-                             let projectCoverPageContainer = document.querySelector(
-                                 '#project-coverPageContainer');
-
-                             if (videoHolder && videoHolder.id) {
-                                 videoHolder.classList.remove('loading');
-                                 projectCoverPageContainer.classList.remove('loading');
-
-                             }
-                         } else if (e && e.data === 0) {
-                             e.target.playVideo()
-                         }
-                     }
-                 }
-             });
-         }
-    </script>
     <div id="Root">
         
     </div>

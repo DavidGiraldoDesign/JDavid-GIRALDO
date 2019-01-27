@@ -5,6 +5,9 @@
     #imageCover {
         min-height: 600px;
     }
+    #project-coverPage h1 {
+        font-size: 80px;
+    }
     #YouTubeBackgroundVideoPlayer {
         display: none;
     }
@@ -30,6 +33,9 @@
     #imageCover {
         min-height: 800px;
     }
+    #project-coverPage h1 {
+        font-size: 100px;
+    }
     #YouTubeBackgroundVideoPlayer {
         display: flex;
     }
@@ -54,36 +60,37 @@
 
 /*------------------------ Back button */
 
-#Root {}
-
 #backToPorjectBar {
     cursor: pointer;
     position: fixed;
     z-index: 10;
-    background-color: rgb(50,50,50);
+    background-color: rgb(50, 50, 50);
     top: 0;
     width: 200px;
     height: 50px;
     display: flex;
-    transition: top 0.3s;
+    
     color: white;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 0px 5px black;
-    
-    -webkit-transition: .5s  ease;
-    transition: .5s  ease;
+
+    transition: top 0.3s;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
 }
 
 #backToPorjectBar:hover {
-    background-color: rgb(255,255,255);
+    background-color: rgb(255, 255, 255);
     color: black;
 }
-#backToPorjectBar h1{
+
+#backToPorjectBar h1 {
     font-size: 20px;
     font-family: 'Didact Gothic', sans-serif;
     font-weight: normal;
 }
+
 /*------------------------  */
 
 /*#project-container div {
@@ -167,7 +174,7 @@
     width: 100%;
     display: flex;
     background-color: transparent;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, .2), rgba(0, 0, 0, .0));
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, .2), rgba(0, 0, 0, .0));
 }
 
 #project-title {
@@ -180,7 +187,7 @@
 }
 
 #project-titlesBox {
-    height: 200px;
+    height: auto;
 }
 
 #project-purpose {
@@ -213,7 +220,12 @@
 #project-sub-header-down {
     display: flex;
     width: 100%;
-    justify-content: space-between
+}
+
+.project-sub-header-block {
+    text-align: center;
+    width: 200px;
+    margin-right: 20px;
 }
 
 /*---------------------------------------*/
@@ -237,10 +249,13 @@
 .project-display-InsideSection {
     max-width: 1400px;
     width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    display: flex;
+    justify-content: center;
+ 
 }
 
 /*------------------------------------------ Font Style*/
@@ -250,7 +265,6 @@
 #project-coverPage h1 {
     font-family: 'Barlow', sans-serif;
     color: white;
-    font-size: 120px;
 }
 
 #project-coverPage h2 {
@@ -264,7 +278,7 @@
 #project-coverPage p {
     font-family: 'Didact Gothic', sans-serif;
     color: white;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 /*-------- project-briefData ---------------------*/
@@ -288,25 +302,36 @@
     line-height: 1.5;
 }
 
-/*-------- text-box-display-InsideSection ---------------------*/
+/*-------- information-box-display-InsideSection ---------------------*/
 
-.project-text-box-display-InsideSection {
-    color: rgb(80, 80, 80);
+
+.project-information-box-InsideDisplay img{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 1400px;
+    width: 100%;
 }
+.text-box-padding{
 
-.project-text-box-display-InsideSection h2 {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right:20px;
+
+}
+.project-information-box-InsideDisplay h2 {
     font-family: 'Barlow', sans-serif;
     font-size: 24px;
     padding-bottom: 20px;
 }
 
-.project-text-box-display-InsideSection h3 {
+.project-information-box-InsideDisplay h3 {
     font-family: 'Barlow', sans-serif;
     font-size: 18px;
     padding-bottom: 10px;
 }
 
-.project-text-box-display-InsideSection p {
+.project-information-box-InsideDisplay p {
     font-family: 'Didact Gothic', sans-serif;
     font-size: 18px;
     text-align: justify;
@@ -373,7 +398,7 @@
 
 #thankYouContainer p {
     font-family: 'Didact Gothic', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 #thankYouContainer a {
