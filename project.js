@@ -257,7 +257,7 @@ const projectHictio = {
 }
 const projectGinef = {
     style: {
-        background: 'rgb(255, 233, 238)',
+        background: 'rgb(255, 252, 250)',
         color: ''
     },
     coverData: {
@@ -265,7 +265,7 @@ const projectGinef = {
         subTitle: '',
         purpose: 'Birth control methods recommender system App for young women',
         youTubeVideoID: null,
-        imageCover: 'http://lorempixel.com/output/cats-q-g-1920-1080-10.jpg'
+        imageCover: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217651/portfolio-ginef/cover-ginef.png'
     },
     briefData: {
         longTitle: 'Human Computer Interaction for Improving Reliability of Birth Control Method Recommender Systems for young Women.',
@@ -278,7 +278,31 @@ const projectGinef = {
     sections: [{
             title: '',
             subTitle: '',
-            text: 'Ginef is a mobile/web application that offers a recommendation service of birth control methods. It is tailored for young women having or begging their sexual relations, and have doubts about witch method is more accurate for their life style and preferences. Furthermore, it allows to have the opinion of the boyfriend in order to help make the decision as a couple. Its recommendation is not a medical prescription, thought, it is a guide to help women and gynecologists during their medical appointments',
+            text: 'Ginef is a birth control method recommender app that delivers a more satisfying decision making experience and reliable results. It is tailored for young women having or beginning their sexual relations, and have doubts about witch method is more accurate for their life style and preferences. Furthermore, if the woman has a love partner, she could add his opinion to the recommender system in order to make the decision as a couple.',
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217647/portfolio-ginef/logo-ginef.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217654/portfolio-ginef/intro-ginef.png',
+            youTubeVideoID:null,
             style: {
                 background: '',
                 color: ''
@@ -297,8 +321,32 @@ const projectGinef = {
         },
         {
             title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217647/portfolio-ginef/methods-ginef.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
             subTitle: 'Field work',
             text: 'The field work allows us to understand which factors take place into the decision making process about birth control methods. 48 women, between 15 and 24 years old, with an active sexual life, were interviewed.',
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217646/portfolio-ginef/doctor-ginef.png',
+            youTubeVideoID:null,
             style: {
                 background: '',
                 color: ''
@@ -317,10 +365,12 @@ const projectGinef = {
             }
         },
         {
-            title: 'The design:',
+            title: '',
             subTitle: '',
-            text: `Accordingly with the identified variables and discoveries, we design a birth control method recommender service that brings a reliable and satisficing decision making experience for young women during their first approach toward sexual life. 
-`,
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217645/portfolio-ginef/factors-ginef.png',
+            youTubeVideoID:null,
             style: {
                 background: '',
                 color: ''
@@ -333,6 +383,88 @@ const projectGinef = {
             \n The result lead us toward a mobile application approach, reducing the amount of information displayed in the interface, and narrow it down to one question at a time.
             
 `,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217653/portfolio-ginef/ux-writing-ginef.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217646/portfolio-ginef/firts-aproach-ginef.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217655/portfolio-ginef/user-test-ginef.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217649/portfolio-ginef/new-aproach-ginef.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: 'The design:',
+            subTitle: '',
+            text: `Accordingly with the identified variables and discoveries, we design a birth control method recommender service that brings a reliable and satisficing decision making experience for young women during their first approach toward sexual life. 
+`,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217650/portfolio-ginef/principal-ginef.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217645/portfolio-ginef/assests-ginef.png',
+            youTubeVideoID:null,
             style: {
                 background: '',
                 color: ''
@@ -358,6 +490,18 @@ const projectGinef = {
         },
         {
             title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217649/portfolio-ginef/login-ginef.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
             subTitle: '2)	Gathering information',
             text: `Through a direct method of gathering information, the user answers a sort of questions regarding the variables involved into the decision making process. Each question is answered with “agree” (1) , “disagree” (-1) or “indifferent” (0).`,
             style: {
@@ -367,8 +511,32 @@ const projectGinef = {
         },
         {
             title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217647/portfolio-ginef/diagram-ginef.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
             subTitle: '3)	Results and editing',
             text: `Ginef disclose the results base on the user’s answers. It organizes the methods within a scale that goes from the more convenient to the less of them. Each of these answers can be edited.`,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217649/portfolio-ginef/result-ginef.png',
+            youTubeVideoID:null,
             style: {
                 background: '',
                 color: ''
@@ -445,7 +613,7 @@ const projectBeo = {
 }
 const projectShell = {
     style: {
-        background: 'rgb(255, 255, 255)',
+        background: 'rgb(25, 25, 25)',
         color: 'rgb(80, 80, 80)'
     },
     coverData: {
@@ -453,7 +621,7 @@ const projectShell = {
         subTitle: '',
         purpose: 'Ergonomic evaluation and brand communication for packaging design',
         youTubeVideoID: null,
-        imageCover: 'http://lorempixel.com/output/cats-q-g-1920-1080-10.jpg'
+        imageCover: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209627/portfolio-shell/cover-shell.png'
     },
     briefData: {
         longTitle: 'Redesigning the Shell’s Helix-Ultra motor oil bottle through ergonomic evaluation and brand communication for packaging design.',
@@ -475,10 +643,166 @@ const projectShell = {
         {
             title: '',
             subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209641/portfolio-shell/intro-shell.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
             text: 'I developed an ergonomic analysis of the bottle´s handle to understand the angles and efforts of the wrist when a person uses the bottle.   ',
             style: {
                 background: 'rgb(50,50,50)',
                 color: 'rgb(250,250,250)'
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209634/portfolio-shell/bocetos-shell.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209631/portfolio-shell/model-shell.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209630/portfolio-shell/drawing-shell.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209629/portfolio-shell/pallete-shell.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209633/portfolio-shell/car-behind-shell.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209647/portfolio-shell/versus-shell.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209642/portfolio-shell/oil-fying-shell.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209640/portfolio-shell/oil-fall-shell.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209642/portfolio-shell/pouring-oil-shell.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209634/portfolio-shell/all-colors-shell.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209644/portfolio-shell/whell-shell.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },
+        {
+            title: '',
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209626/portfolio-shell/behance-coin-shell.png',
+            youTubeVideoID:null,
+            style: {
+                background: '',
+                color: ''
             }
         },
         {
