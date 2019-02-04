@@ -1,6 +1,6 @@
 const projectBeo = {
     style: {
-        background: 'rgb(195,205,210)',
+        background: 'rgb(226,241,248',
         color: 'rgb(80,80,80)'
     },
     coverData: {
@@ -23,7 +23,7 @@ const projectBeo = {
             subTitle: '',
             text: 'The BeoPlay S1 A2 is an elegant piece of furniture, following the Bang&Olusen´s brand DNA esthetic to pursue beauty and functionality. It offers a middle table to place food and control beverage´s temperature, and two towers that creates a surround sound environment.',
             style: {
-                background: '',
+                background: 'rgb(195,205,210)',
                 color: ''
             }
         },
@@ -35,7 +35,7 @@ const projectBeo = {
             url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549211398/portfolio-beoplay/intro-beoplay.png',
             youTubeVideoID: null,
             style: {
-                background: '',
+                background: 'rgb(195,205,210)',
                 color: ''
             }
         },
@@ -188,19 +188,19 @@ const projectBeo = {
             subTitle: 'The twin towers',
             text: 'Each tower can be located according to the room´s area and the user´s needs. They are sync together with the table.',
             style: {
-                background: 'linear-gradient(to top, rgba(213,206,205, 1), rgba(226,241,248, 1))',
+                background: 'rgb(226,241,248)',
                 color: ''
             }
         },
         {
-            title: '', // Twin towers 
+            title: '', // Twin towers with sound waves
             subTitle: '',
             text: ``,
             media: true,
             url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549211422/portfolio-beoplay/twin-towers-beoplay.png',
             youTubeVideoID: null,
             style: {
-                background: 'rgb(213,206,205)',
+                background: 'linear-gradient(to top, rgba(213,206,205, 1), rgba(226,241,248, 1))',
                 color: ''
             }
         },
@@ -224,10 +224,46 @@ const projectBeo = {
             url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549211401/portfolio-beoplay/balcony-beoplay.png',
             youTubeVideoID: null,
             style: {
-                background: 'rgb(213,206,205)',
+                background: 'linear-gradient(to top, rgba(226,241,248, 1),rgba(213,206,205, 1))',
                 color: ''
             }
         },
-        
+        {
+            title: 'd', // Under the hood
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549211418/portfolio-beoplay/xray-beoplay.png',
+            youTubeVideoID: null,
+            style: {
+                background: 'rgb(226,241,248)',
+                color: ''
+            }
+        },
+        {
+            title: '', // Under the table hood 
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549211416/portfolio-beoplay/table-explotion-beoplay.png',
+            youTubeVideoID: null,
+            style: {
+                background: 'rgb(226,241,248)',
+                color: ''
+            }
+        },
+        {
+            title: '', // Under the towers hood 
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549211417/portfolio-beoplay/towers-explotion-beoplay.png',
+            youTubeVideoID: null,
+            style: {
+                background: 'rgb(226,241,248)',
+                color: ''
+            }
+        },
+
     ]
 }

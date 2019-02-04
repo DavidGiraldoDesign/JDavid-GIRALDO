@@ -209,18 +209,6 @@ const projectGinef = {
             }
         },
         {
-            title: '', //logo
-            subTitle: '',
-            text: ``,
-            media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217647/portfolio-ginef/logo-ginef.png',
-            youTubeVideoID: null,
-            style: {
-                background: '',
-                color: ''
-            }
-        },
-        {
             title: '', // Comercial render with flower
             subTitle: '',
             text: ``,
