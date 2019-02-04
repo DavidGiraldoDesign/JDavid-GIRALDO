@@ -178,7 +178,7 @@
     width: 100%;
     display: flex;
     background-color: transparent;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, .2), rgba(0, 0, 0, .0));
+    background: linear-gradient(to top, rgba(0, 0, 0, .3),  rgba(0, 0, 0, .0));
 }
 
 #project-title {
@@ -268,6 +268,7 @@
 #project-coverPage h1 {
     font-family: 'Barlow', sans-serif;
     color: white;
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
 }
 
 #project-coverPage h2 {
@@ -330,13 +331,13 @@
 
 .project-information-box-InsideDisplay h2 {
     font-family: 'Barlow', sans-serif;
-    font-size: 24px;
+    font-size: 45px;
     padding-bottom: 20px;
 }
 
 .project-information-box-InsideDisplay h3 {
     font-family: 'Barlow', sans-serif;
-    font-size: 18px;
+    font-size: 30px;
     padding-bottom: 10px;
 }
 
