@@ -177,10 +177,11 @@ let view = {
         div.id = `homeArticle`;
         div.className = `page`;
         div.innerHTML = `
-        <div class="sectionBlock">
+      
             <h1>Hi!</h1>
-            <h3>I’m  a design student from Colombia, currently looking for an <span class="bolder">AWESOME INTERNSHIP</span></h3>
-        </div>`;
+            <h3>I’m  a design student from Colombia, currently looking for an 
+            <br><span class="bolder">AWESOME INTERNSHIP</span></h3>
+       `;
 
         return div;
     },
@@ -258,15 +259,18 @@ let view = {
         div.innerHTML = `
         <div class="sectionBlock">
             <h1> Projects </h1>
-            <h3> Datos varios </h3>
         </div>
-        <div class="sectionBlock">
-            <ul>
-                <li class="project-trigger">Hictio</li>
-                <li class="project-trigger">Ginef</li>
-                <li class="project-trigger">BeoLab</li>
-                <li class="project-trigger">Helix</li>
-            </ul>
+        <div class="projects-sectionBlock">
+                <div class="project-trigger">
+                <img src="https://res.cloudinary.com/dpnemhlg6/image/upload/v1549326017/project-hictio_axxj2a.png" alt="josedavid-hictio">
+            
+                </div>
+                <div class="project-trigger">
+                <img src="https://res.cloudinary.com/dpnemhlg6/image/upload/v1549326017/project-ginef_q3bnpk.png" alt="josedavid-ginef"></div>
+                <div class="project-trigger">
+                <img src="https://res.cloudinary.com/dpnemhlg6/image/upload/v1549326017/project-beoplay_uds564.png" alt="josedavid-beoplay"></div>
+                <div class="project-trigger">
+                <img src="https://res.cloudinary.com/dpnemhlg6/image/upload/v1549326017/project-shell_xbry0e.png" alt="josedavid-shell"></div>
         </div>
         `;
         let projectTriggers = div.querySelectorAll('.project-trigger');
@@ -285,13 +289,15 @@ let view = {
         div.innerHTML = `
         <!--div class="sectionBlock"-->
         <div class="thankYouBlock">
-            <h1> Thank you for wathing </h1>
+            <h1> Thank you 
+            <br> for wathing </h1>
         </div>
         <div class="thankYouBlock">    
             <p>
             Did you enjoy my work? 
             <br>
-            Let me know if you think I could be part of your team during my internship in 2019
+            Let me know if you think I could be part of 
+            <br> your team during my internship in 2019
             </p>
         </div>
         <div class="thankYouBlock">     
