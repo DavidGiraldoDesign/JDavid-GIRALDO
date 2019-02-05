@@ -10,7 +10,7 @@
     let root = document.querySelector('#Root');
     let bntsMenu = document.querySelectorAll('.btn-menu');
     let conerTitles = document.querySelectorAll('.cornerTitle');
- 
+
 
 
 
@@ -43,32 +43,25 @@
 
                         switch (index) {
                             case 0:
-                                lowerTitles.style.opacity = '1';
+                                menuBackground.style.display = 'none';
+                                bodyColor.style.backgroundImage = 'url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1549234041/fondo-josedavid_dv6hqd.png")';
                                 break;
 
                             case 1:
-                                lowerTitles.style.opacity = '0';
+                                menuBackground.style.display = 'block';
+                                bodyColor.style.backgroundImage = 'none';
                                 break;
                             case 2:
-                                lowerTitles.style.opacity = '1';
+                                menuBackground.style.display = 'block';
+                                bodyColor.style.backgroundImage = 'none';
                                 break;
                             case 3:
-                                lowerTitles.style.opacity = '1';
+                                menuBackground.style.display = 'none';
+                                bodyColor.style.backgroundImage = 'url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1549396616/thankyou-background_rp6p4d.png")';
                                 break;
                         }
 
-                        if (index == 0) {
-                            bodyColor.style.backgroundImage = 'url("josefondoweb.png")';
-                        } else {
-                            bodyColor.style.backgroundImage = 'none';
-                        }
-                        if (index == 1) {
-                            menuBackground.style.display = 'block';
-                        } else {
-                            menuBackground.style.display = 'none';
-                        }
 
-                    
 
                         if (index == 3) {
                             bodyColor.style.backgroundColor = 'rgb(20,20,20)';
@@ -139,7 +132,7 @@
         });
     }
 
-    view.onNextProject = (actualProjectIndex,portfolioSize) => {
+    view.onNextProject = (actualProjectIndex, portfolioSize) => {
         let pagehasChange = false;
         let gobalTiming = 0;
         view.animate({
@@ -153,10 +146,10 @@
 
                 if (progress >= 0.5) {
                     if (!pagehasChange) {
-                        if(actualProjectIndex<portfolioSize-1){
+                        if (actualProjectIndex < portfolioSize - 1) {
                             actualProjectIndex++;
-                        }else{
-                            actualProjectIndex=0;
+                        } else {
+                            actualProjectIndex = 0;
                         }
                         view.renderProject(actualProjectIndex);
                         pagehasChange = true;
@@ -167,7 +160,7 @@
         });
     }
 
-    view.onPreviousProject = (actualProjectIndex,portfolioSize) => {
+    view.onPreviousProject = (actualProjectIndex, portfolioSize) => {
         let pagehasChange = false;
         let gobalTiming = 0;
         view.animate({
@@ -181,10 +174,10 @@
 
                 if (progress >= 0.5) {
                     if (!pagehasChange) {
-                        if(actualProjectIndex>0){
+                        if (actualProjectIndex > 0) {
                             actualProjectIndex--;
-                        }else{
-                            actualProjectIndex=3;
+                        } else {
+                            actualProjectIndex = 3;
                         }
                         view.renderProject(actualProjectIndex);
                         pagehasChange = true;

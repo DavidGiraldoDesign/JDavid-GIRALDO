@@ -13,7 +13,7 @@ let view = {
         <div id="upperTitles">
             <h3 class="cornerTitle" id="josedavidTitle"> JoseDavid <span class="bolder">GIRALDO</span></h3>
             
-            <a class="cornerTitle" id="emailTitle-mobile" href="mailto:josedavidgm1995@gmail.com?Subject=Internship%202019" target="_top">
+            <a class="cornerTitle" id="emailTitle-mobile" href="mailto:josedavidgm1995@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
             <h3>Send me an <span class="bolder">EMAIL</span></h3></a>
         </div>
         <div id="lowerTitles">
@@ -184,15 +184,54 @@ let view = {
 
         return div;
     },
+    getInstagramGrid: function getInstagramGrid() {
+        let div = document.createElement('div');
+        div.id = 'insta-grid'
+        let instagramPhotos = [
+            'https://instagram.fbog11-1.fna.fbcdn.net/vp/1a190bba4c7323a4205c03f94b76586f/5CFA70F1/t51.2885-15/e35/15251845_175814982886639_7416042849440890880_n.jpg?_nc_ht=instagram.fbog11-1.fna.fbcdn.net',
+            'https://instagram.fbog10-1.fna.fbcdn.net/vp/7407932cd9b438c32e055ed96a695700/5CE8C8F6/t51.2885-15/e35/15623772_1729101030662463_6946259700266565632_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
+            'https://instagram.fbog10-1.fna.fbcdn.net/vp/495f15fe2b08bad7c38fd217846a0377/5CE96CA6/t51.2885-15/e35/15623804_2184482281777038_5580832001356726272_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
+            'https://instagram.fbog10-1.fna.fbcdn.net/vp/abefb48f42ae0b9d5c8764546e9d7ec3/5D005A44/t51.2885-15/e35/15624352_397876170552713_1959734654508466176_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
+            'https://instagram.fbog10-1.fna.fbcdn.net/vp/3ae4c36485dc664d765ae18eb78ea224/5CE3D608/t51.2885-15/e35/13561619_294159274255613_1635755852_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
+            'https://instagram.fbog10-1.fna.fbcdn.net/vp/ee8d201773b1170f6da15052bd2594a9/5CF1931D/t51.2885-15/e35/23164486_140865729886856_2725328827176714240_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
+            'https://instagram.fbog10-1.fna.fbcdn.net/vp/8ff59e181a236042202157f348dfd268/5CFA2738/t51.2885-15/e35/31326372_1865073563784968_3478208835791880192_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
+            'https://instagram.fbog11-1.fna.fbcdn.net/vp/605530fd63c74486dc612be4c031143b/5CFFEF13/t51.2885-15/e35/42678350_688662804847334_5222866340392334746_n.jpg?_nc_ht=instagram.fbog11-1.fna.fbcdn.net',
+            'https://instagram.fbog10-1.fna.fbcdn.net/vp/85bc6fd629a6e2d7d219732adeefb6c8/5CF7CFC6/t51.2885-15/e35/14487410_978453042300857_8267105149017653248_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net'
+        ];
+
+        instagramPhotos.forEach((e, i) => {
+            let instaImg = document.createElement('img');
+            instaImg.src = e;
+            div.appendChild(instaImg);
+        });
+        return div;
+    },
+
+
     getSecondPage: function getSecondPage() {
         let div = document.createElement(`article`);
         div.id = `aboutArticle`;
         div.className = `page`;
         div.innerHTML = `
         <div class="sectionBlock">
-            <h1> About </h1>
+            <h1> Hi! I´m Jose </h1>
+        </div>
+        <div id="about-jose-photo">
+            <img src="/about-jose.png">
         </div>
         <div class="sectionBlock">
+            <div class="text-inside-sectionBlock">
+                <p> My name is Jose David GIRALDO Mosquera, I am an outgoing and active Industrial & Interactive Media Design student at Icesi University in Cali - Colombia (South America), currently looking for an internship.
+                <br><br>
+                I am aware that I still have too much to learn, nevertheless I am capable to work in collaborative environments and give support in UX design, human centered design, design thinking, sketching, prototyping, 3d modeling and coding.
+                <br><br>
+                I would love to be able to participate in projects with real clients and be part of a Product/Industrial Design studio with a well constituted team.
+                </p>
+            </div>
+        </div>
+        <div id="instaGrid-Holder"></div>
+        
+        <!--div class="sectionBlock">
             <div>
                 <p> My name is Jose David GIRALDO Mosquera, I am an outgoing and active Industrial & Interactive Media Design student at Icesi University in Cali - Colombia (South America), currently looking for an internship.
                 <br><br>
@@ -246,9 +285,14 @@ let view = {
                     
             
             </div>
+        </div-->
+        <div class="sectionBlock">
+            <div class="text-inside-sectionBlock">
+            <p id="rights">© 2019 JoseDavid GIRALDO / All Rights Reserved</p>
+            </div>
         </div>
         `;
-
+        div.querySelector('#instaGrid-Holder').appendChild(this.getInstagramGrid());
         return div;
     },
     getThirdPage: function getThirdPage() {
@@ -286,23 +330,23 @@ let view = {
         div.id = `contactArticle`;
         div.className = `page`;
         div.innerHTML = `
-        <!--div class="sectionBlock"-->
-        <div class="thankYouBlock">
+     
+        <!--div class="thankYouBlock"-->
             <h1> Thank you 
             <br> for wathing </h1>
-        </div>
-        <div class="thankYouBlock">    
+            <br>
             <p>
             Did you enjoy my work? 
             <br>
             Let me know if you think I could be part of 
             <br> your team during my internship in 2019
             </p>
-        </div>
-        <div class="thankYouBlock">     
-            <h2>josedavidgm1995@gmail.com</h2>
-        </div>
-        <!--/div-->
+     
+     
+        <a id="email-contact" href="mailto:josedavidgm1995@gmail.com?Subject=Internship%202019" target="_top">
+        <h2>josedavidgm1995@gmail.com</h2></a>
+      
+      
        `;
 
         return div;
@@ -418,19 +462,19 @@ let view = {
         div.className = 'project-information-box-InsideDisplay';
 
         if (sectionInfo.media === true) {
-            if(sectionInfo.url!==null){
+            if (sectionInfo.url !== null) {
                 let image = document.createElement('img');
                 image.className = '';
                 image.src = sectionInfo.url;
                 div.appendChild(image);
-            }else{
+            } else {
                 let youTubeDiv = document.createElement('div');
-                youTubeDiv.className='youTube-InsideDisplay';
+                youTubeDiv.className = 'youTube-InsideDisplay';
                 youTubeDiv.innerHTML = `
                 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${sectionInfo.youTubeVideoID}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
                 div.appendChild(youTubeDiv);
             }
-            
+
         } else {
             let textStringLines = sectionInfo.text.split('\n');
 
