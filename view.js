@@ -47,7 +47,7 @@ let view = {
             <ul class="blackMenu">
                 <li><button class="btn-menu" value="0">Home</button></li>
                 <li><button class="btn-menu" value="34">About</button></li>
-                <li><button class="btn-menu" value="67">Portfolio</button></li>                    
+                <li><button class="btn-menu" value="67">Work</button></li>                    
                 <li><button class="btn-menu" value="100">Contact</button></li>
             </ul>
             
@@ -214,7 +214,7 @@ let view = {
         div.className = `page`;
         div.innerHTML = `
         <div class="sectionBlock">
-            <h1> Hi! I´m Jose </h1>
+            <h1> "Hola" I´m David </h1>
         </div>
         <div id="about-jose-photo">
             <img src="/about-jose.png">
@@ -331,22 +331,19 @@ let view = {
         div.className = `page`;
         div.innerHTML = `
      
-        <!--div class="thankYouBlock"-->
+        <div class="thankYouBlock">
             <h1> Thank you 
             <br> for wathing </h1>
             <br>
-            <p>
-            Did you enjoy my work? 
+            <p>Did you enjoy my work? 
             <br>
             Let me know if you think I could be part of 
             <br> your team during my internship in 2019
             </p>
-     
-     
-        <a id="email-contact" href="mailto:josedavidgm1995@gmail.com?Subject=Internship%202019" target="_top">
-        <h2>josedavidgm1995@gmail.com</h2></a>
-      
-      
+            <br>
+            <a id="email-contact" href="mailto:josedavidgm1995@gmail.com?Subject=Internship%202019" target="_top">
+            <h2>josedavidgm1995@gmail.com</h2></a>
+      </div>
        `;
 
         return div;
@@ -636,6 +633,9 @@ let view = {
     },
     //------------------------------------------------- Render single Page
     renderPage: function renderPage(n) {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        this.bodyElement.scrollTop = 0;
         this.setPageNumber(n);
         let p = document.querySelector(`.pagesContainer`);
         p.scrollTop = 0;
