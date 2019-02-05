@@ -12,7 +12,7 @@ let view = {
         <div id="menuBackground"></div>
         <div id="upperTitles">
             <h3 class="cornerTitle" id="josedavidTitle"> JoseDavid <span class="bolder">GIRALDO</span></h3>
-            <h3 class="cornerTitle" id="portfolioTitle">Go to my <span class="bolder">PORTFOLIO</span></h3>
+            
             <a class="cornerTitle" id="emailTitle-mobile" href="mailto:josedavidgm1995@gmail.com?Subject=Internship%202019" target="_top">
             <h3>Send me an <span class="bolder">EMAIL</span></h3></a>
         </div>
@@ -23,8 +23,6 @@ let view = {
                 <li><a id="linkedin" href="https://www.linkedin.com/in/josedavidgiraldom/" target="_blank"></a></li>
                 <li><a id="instagram" href="https://www.instagram.com/_david.giraldo/" target="_blank"></a></li>        
             </ul>
-            <a id="emailTitle" href="mailto:josedavidgm1995@gmail.com?Subject=Internship%202019" target="_top">
-            <h3 class="cornerTitle">Send me an <span class="bolder">EMAIL</span></h3></a>
         </div>`;
 
         let b = div.querySelector('#behance');
@@ -177,11 +175,12 @@ let view = {
         div.id = `homeArticle`;
         div.className = `page`;
         div.innerHTML = `
-      
-            <h1>Hi!</h1>
-            <h3>I’m  a design student from Colombia, currently looking for an 
-            <br><span class="bolder">AWESOME INTERNSHIP</span></h3>
-       `;
+            <div id="home-message">
+                <h1>Hi!</h1>
+                <h3>I’m  a design student from Colombia, currently looking for an 
+                <br><span class="bolder">AWESOME INTERNSHIP</span></h3>
+            </div>
+          `;
 
         return div;
     },

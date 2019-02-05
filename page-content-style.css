@@ -20,11 +20,13 @@ body {
     #homeArticle {
         justify-content: flex-start;
     }
-    #homeArticle .sectionBlock {
+    #home-message{
+        max-width: 70%;
+        margin-left: 10px;
         padding-top: 20px;
-        width: 70%;
     }
     #homeArticle h1 {
+        text-align: left;
         font-size: 100px;
     }
     #homeArticle h3 {
@@ -64,12 +66,16 @@ body {
     }
     #homeArticle {
         justify-content: center;
+        width: 100%;
+        height: 100%;
     }
-    #homeArticle .sectionBlock {
-        width: 60%;
+    #home-message{
+        max-width: 600px;
+        margin-left: 300px;
     }
+   
     #homeArticle h1 {
-        text-align: left;;
+        text-align: left;
         font-size: 150px;
     }
     #homeArticle h3 {
@@ -100,11 +106,13 @@ body {
     align-content: center;
     padding: 0;
     margin-top: 8%;
+    
 }
 
 article {
     /*width:100%;
     max-width: 1000px;*/
+    
     padding-bottom: 100px;
     height: 100%;
     display: flex;
@@ -127,13 +135,18 @@ article {
     /*align-content: center;*/
     align-items: flex-start;
     color: rgb(25, 25, 25);
+  
+    height:600px;
 }
-
+#home-message{
+    display: flex;
+    flex-direction: column;
+}
 #homeArticle h3 {
     /*font-family: 'Comfortaa', cursive;*/
     font-family: 'Didact Gothic', sans-serif;
     font-weight: lighter;
-    color: rgb(50, 50, 50);
+    color: rgb(25, 25, 25);
 }
 
 #homeArticle span {
@@ -163,7 +176,6 @@ article {
 
 .sectionBlock {
     margin-bottom: 30px;
-    background: red;
  
 }
 

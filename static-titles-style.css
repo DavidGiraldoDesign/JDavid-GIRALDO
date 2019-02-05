@@ -15,12 +15,9 @@
     }
 
     #emailTitle-mobile {
-        display: block;
+        margin-right: 0;
+        margin-top: 0;
         margin-right: 20px;
-    }
-
-    #portfolioTitle {
-        display: none;
     }
 
     #lowerTitles {
@@ -49,21 +46,20 @@
         margin-left: 40px;
         margin-top: 40px;
     }
-    #portfolioTitle {
-        margin-right: 40px;
-        margin-top: 40px;
-        background-color: transparent;
-    }
 
     #emailTitle-mobile {
-        display: none;
+        margin-right: 40px;
+        margin-top: 40px;
+        
     }
     #lowerTitles {
         display: flex;
+        
     }
-
     #socialNetWorksButtonsContainer {
         display: flex;
+        flex-direction: column;
+        height: 150px;
     }
 
 }
@@ -78,7 +74,7 @@
     font-family: 'Didact Gothic', sans-serif;
     font-size: 16px;
     font-weight: lighter;
-    color: rgb(50, 50, 50);
+    /*color: rgb(50, 50, 50);*/
 }
 
 a:link,
@@ -90,8 +86,8 @@ a:active {
 }
 
  a {
-    font-size: 16px;
     color: rgb(50, 50, 50);
+    font-size: 16px;
 }
 
 .bolder {
@@ -115,16 +111,11 @@ a:active {
     bottom: 0;
     height: auto;
     width: 100%;
-    background-color: transparent;
     justify-content: space-between;
     align-items: center;
 }
 
-#emailTitle {
-    margin-right: 80px;
-    margin-bottom: 80px;
-    background-color: transparent;
-}
+
 
 /*Social network´s logos style*/
 #socialNetWorksButtonsContainer {
@@ -135,15 +126,15 @@ a:active {
     align-items: center;
     list-style-type: none;
     padding: 0;
-    margin-left: 80px;
+    margin-left: 0px;
     margin-bottom: 80px;
     background-color: transparent;
     width: 10%;
 }
 
 #socialNetWorksButtonsContainer svg {
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     margin: 0;
     padding: 0;
 }

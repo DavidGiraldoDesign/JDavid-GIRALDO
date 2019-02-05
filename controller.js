@@ -10,7 +10,7 @@
     let root = document.querySelector('#Root');
     let bntsMenu = document.querySelectorAll('.btn-menu');
     let conerTitles = document.querySelectorAll('.cornerTitle');
-    let portfolioTitle = document.querySelector('#portfolioTitle');
+ 
 
 
 
@@ -68,11 +68,7 @@
                             menuBackground.style.display = 'none';
                         }
 
-                        if (index == 2) {
-                            portfolioTitle.style.opacity = '0';
-                        } else {
-                            portfolioTitle.style.opacity = '1';
-                        }
+                    
 
                         if (index == 3) {
                             bodyColor.style.backgroundColor = 'rgb(20,20,20)';
