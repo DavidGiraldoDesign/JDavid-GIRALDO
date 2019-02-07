@@ -181,7 +181,7 @@ article {
 #about-jose-photo{
     display: flex;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 #about-jose-photo img{
     width: 100%;
@@ -194,11 +194,12 @@ article {
     position: absolute;
     display: flex;
     flex-direction: column;
-    padding-bottom: 200px;
+    padding-bottom: 50px;
 }
 
 #instaGrid-Holder {
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 #insta-grid {
@@ -228,9 +229,22 @@ article {
     color: rgb(250, 250, 250);
 }
 .thankYouBlock{
+    margin-top: 50px;
+
     display: flex;
     flex-direction: column;
     
+}
+#thanks-photo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+#thanks-photo img{
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
 }
 #contactArticle p {
     text-align: center;
@@ -284,26 +298,29 @@ article img {
 }
 
 .project-trigger {
+    
+    border-radius: 10px;
     background: transparent;
-    width: 230px;
-    height: 390px;
+    width: 238px;
+    height: 398px;
     margin-right: 50px;
     margin-left: 50px;
     margin-top: 80px;
     overflow: visible;
-    box-shadow: 0px 0px 0px rgb(100, 100, 100);
+    box-shadow: 0px 0px 5px rgb(100, 100, 100);
     -webkit-transition: .2s ease;
     transition: .2s ease;
 }
 
 .project-trigger img {
-    top: -46px;
-    left: -60px;
+    opacity: 1;
+    top: -42px;
+    left: -57px;
     position: relative;
     width: 350px;
 }
 
 .project-trigger:hover {
     top: 20px;
-    box-shadow: 0px 0px 30px rgb(100, 100, 100);
+    box-shadow: 0px 0px 30px rgb(80, 80, 100);
 }

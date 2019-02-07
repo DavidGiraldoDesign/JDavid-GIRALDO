@@ -188,14 +188,16 @@ let view = {
         let div = document.createElement('div');
         div.id = 'insta-grid'
         let instagramPhotos = [
-            'https://instagram.fbog11-1.fna.fbcdn.net/vp/1a190bba4c7323a4205c03f94b76586f/5CFA70F1/t51.2885-15/e35/15251845_175814982886639_7416042849440890880_n.jpg?_nc_ht=instagram.fbog11-1.fna.fbcdn.net',
-            'https://instagram.fbog10-1.fna.fbcdn.net/vp/7407932cd9b438c32e055ed96a695700/5CE8C8F6/t51.2885-15/e35/15623772_1729101030662463_6946259700266565632_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
-            'https://instagram.fbog10-1.fna.fbcdn.net/vp/495f15fe2b08bad7c38fd217846a0377/5CE96CA6/t51.2885-15/e35/15623804_2184482281777038_5580832001356726272_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
-            'https://instagram.fbog10-1.fna.fbcdn.net/vp/abefb48f42ae0b9d5c8764546e9d7ec3/5D005A44/t51.2885-15/e35/15624352_397876170552713_1959734654508466176_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
-            'https://instagram.fbog10-1.fna.fbcdn.net/vp/3ae4c36485dc664d765ae18eb78ea224/5CE3D608/t51.2885-15/e35/13561619_294159274255613_1635755852_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
-            'https://instagram.fbog10-1.fna.fbcdn.net/vp/ee8d201773b1170f6da15052bd2594a9/5CF1931D/t51.2885-15/e35/23164486_140865729886856_2725328827176714240_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
-            'https://instagram.fbog10-1.fna.fbcdn.net/vp/8ff59e181a236042202157f348dfd268/5CFA2738/t51.2885-15/e35/31326372_1865073563784968_3478208835791880192_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
             'https://instagram.fbog11-1.fna.fbcdn.net/vp/605530fd63c74486dc612be4c031143b/5CFFEF13/t51.2885-15/e35/42678350_688662804847334_5222866340392334746_n.jpg?_nc_ht=instagram.fbog11-1.fna.fbcdn.net',
+            'https://instagram.fbog10-1.fna.fbcdn.net/vp/3ae4c36485dc664d765ae18eb78ea224/5CE3D608/t51.2885-15/e35/13561619_294159274255613_1635755852_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
+            'https://instagram.fbog10-1.fna.fbcdn.net/vp/495f15fe2b08bad7c38fd217846a0377/5CE96CA6/t51.2885-15/e35/15623804_2184482281777038_5580832001356726272_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
+            
+            'https://instagram.fbog10-1.fna.fbcdn.net/vp/7407932cd9b438c32e055ed96a695700/5CE8C8F6/t51.2885-15/e35/15623772_1729101030662463_6946259700266565632_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
+            'https://instagram.fbog10-1.fna.fbcdn.net/vp/abefb48f42ae0b9d5c8764546e9d7ec3/5D005A44/t51.2885-15/e35/15624352_397876170552713_1959734654508466176_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
+            'https://instagram.fbog10-1.fna.fbcdn.net/vp/ee8d201773b1170f6da15052bd2594a9/5CF1931D/t51.2885-15/e35/23164486_140865729886856_2725328827176714240_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
+            
+            'https://instagram.fbog11-1.fna.fbcdn.net/vp/1a190bba4c7323a4205c03f94b76586f/5CFA70F1/t51.2885-15/e35/15251845_175814982886639_7416042849440890880_n.jpg?_nc_ht=instagram.fbog11-1.fna.fbcdn.net',
+            'https://instagram.fbog10-1.fna.fbcdn.net/vp/8ff59e181a236042202157f348dfd268/5CFA2738/t51.2885-15/e35/31326372_1865073563784968_3478208835791880192_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
             'https://instagram.fbog10-1.fna.fbcdn.net/vp/85bc6fd629a6e2d7d219732adeefb6c8/5CF7CFC6/t51.2885-15/e35/14487410_978453042300857_8267105149017653248_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net'
         ];
 
@@ -214,78 +216,34 @@ let view = {
         div.className = `page`;
         div.innerHTML = `
         <div class="sectionBlock">
-            <h1> "Hola" I´m David </h1>
+            <h1> "Hola", I´m David </h1>
+            
         </div>
+
         <div id="about-jose-photo">
             <img src="/about-jose.png">
         </div>
+
         <div class="sectionBlock">
             <div class="text-inside-sectionBlock">
-                <p> My name is Jose David GIRALDO Mosquera, I am an outgoing and active Industrial & Interactive Media Design student at Icesi University in Cali - Colombia (South America), currently looking for an internship.
+                <p> I consider myself an outgoing person and curious designer student with a lot initiative, passionate about art, technology, and product development, with strong problem-solving abilities, and attention to details. And I also like cats and pizza.  An important thing about me is that I like to take ownership of my work and I usually develop a strong sense of belonging, beside I have good time management and decision-making skills to handle many projects simultaneously. Thanks God coffee exits!
                 <br><br>
-                I am aware that I still have too much to learn, nevertheless I am capable to work in collaborative environments and give support in UX design, human centered design, design thinking, sketching, prototyping, 3d modeling and coding.
-                <br><br>
-                I would love to be able to participate in projects with real clients and be part of a Product/Industrial Design studio with a well constituted team.
+                For me, design is about working in collaborative environments, and I am a team player who is easy to get along with, and therefore I like to maintain a positive and friendly team environment.
                 </p>
             </div>
         </div>
+
         <div id="instaGrid-Holder"></div>
-        
-        <!--div class="sectionBlock">
-            <div>
-                <p> My name is Jose David GIRALDO Mosquera, I am an outgoing and active Industrial & Interactive Media Design student at Icesi University in Cali - Colombia (South America), currently looking for an internship.
+
+        <div class="sectionBlock">
+            <div class="text-inside-sectionBlock">
+                <p> At the present time. I am studying Industrial Design and Interactive Media Design at Icesi University in Cali – Colombia. Where I have been a student monitor and a research assistant. That is, giving my support to teachers by providing assistance to students in: universal design, usability, accessibility, product sketching and digital rendering, 3d modeling and printing, as well as making prototypes for investigations.
                 <br><br>
-                I am aware that I still have too much to learn, nevertheless I am capable to work in collaborative environments and give support in UX design, human centered design, design thinking, sketching, prototyping, 3d modeling and coding.
-                <br><br>
-                I would love to be able to participate in projects with real clients and be part of a Product/Industrial Design studio with a well constituted team.
+                Furthermore I have participated in several non-academic activities such as: designing the University´s Open House advertising pieces for the Industrial Design career, and be part of the creation of the Industrial Design Student Group of Icesi University. I also won a Behance Award Coin in industrial design (2016), participate in the MASISA Student Design Contest (2016) been 3° place in Colombia, and 1° place in the PAVCO Student Design Contest #DiseñaConPavco (2015). And last but not least, I have a SolidWorks Associate certification in Mechanical Design (2014) and complete an online course, Design Kit: Prototyping, provided by +Acumen and IDEO.org (2018).
                 </p>
-                <h2> Education </h2>
-                <h3> Icesi University (undergraduate student) since 2012 - to date: </h3>
-                <p>
-                    1. Industrial Design - IX semester
-                    <br>
-                    2. Interactive Media Design - IX semester
-                </p>
-                <h3> Certifications: </h3>
-                <p>
-                    1. Design Kit: Prototyping, provided by +Acumen and IDEO.org (2018).
-                    <br>
-                    2. SolidWorks Associate - Mechanical Design (2014).
-                </p>
-                <h2> Recognitions </h2>   
-                <p>
-                    1. Behance Appreciation Award Coin in product design (2016).
-                    <br>
-                    2. MASISA Student Design Contest (2016) - 3º Place in Colombia and a special mention in design presentation skills.
-                    <br>
-                    3. PAVCO Student Design Contest #DiseñaConPavco - 1º Place (2015).
-                </p>
-                <h2> Student monitor: </h2> 
-                <p>
-                During my semesters at Icesi University, since 2014, I have been a student monitor, giving my support to teachers by providing  assistance to students requiring additional educational guidance  in the following subjects:
-                <br><br>
-                Universal Design, usability and accessibility, / Industrial design sketching and analog rendering / 3D modeling with Rhino 5, 3D printing using MakerBot, and product rendering with V-Ray.
-                <br><br>
-                Furthermore I conducted a 4 week class about using “Behance as a Industrial design portfolio”.
-                </p>
-                <h2>  Research assistant: </h2> 
-                <p>
-                I gave my support in industrial design (3d modeling and prototyping)  for the “Platoon-based Cyclists Cooperative System” project - A solution for smart transportation and human-to-machine interfaces.
-                </p>
-                <h2>  Co-founder of the Industrial design´s Student Group of Icesi University </h2> 
-                <p>
-                I am a co-founder and the former “Director of design and communication” of the Icesi´s Industrial design student group: “Conceptos”. Creating the brand communication strategies, and visual styling. From: August  2017 to December 2018.
-                <br>
-                I also design the  “Open House” image for the Industrial Design program at Icesi University each year from 2016 to 2018.
-                <br><br>
-                <a href="https://www.instagram.com/conceptosicesi/">Instagram</a>
-                <a href="https://www.facebook.com/conceptosicesi ">Facebook</a>
-                </p>
-                
-                    
-            
             </div>
-        </div-->
+        </div>
+
         <div class="sectionBlock">
             <div class="text-inside-sectionBlock">
             <p id="rights">© 2019 JoseDavid GIRALDO / All Rights Reserved</p>
@@ -303,17 +261,18 @@ let view = {
         <div class="sectionBlock">
             <h1> Projects </h1>
         </div>
+        
         <div class="projects-sectionBlock">
                 <div class="project-trigger">
-                <img src="https://res.cloudinary.com/dpnemhlg6/image/upload/v1549326017/project-hictio_axxj2a.png" alt="josedavid-hictio">
+                <img src="/project-hictio.png" alt="josedavid-hictio">
             
                 </div>
                 <div class="project-trigger">
-                <img src="https://res.cloudinary.com/dpnemhlg6/image/upload/v1549326017/project-ginef_q3bnpk.png" alt="josedavid-ginef"></div>
+                <img src="/project-ginef.png" alt="josedavid-ginef"></div>
                 <div class="project-trigger">
-                <img src="https://res.cloudinary.com/dpnemhlg6/image/upload/v1549326017/project-beoplay_uds564.png" alt="josedavid-beoplay"></div>
+                <img src="/project-beoplay.png" alt="josedavid-beoplay"></div>
                 <div class="project-trigger">
-                <img src="https://res.cloudinary.com/dpnemhlg6/image/upload/v1549326017/project-shell_xbry0e.png" alt="josedavid-shell"></div>
+                <img src="/project-shell.png" alt="josedavid-shell"></div>
         </div>
         `;
         let projectTriggers = div.querySelectorAll('.project-trigger');
@@ -335,14 +294,21 @@ let view = {
             <h1> Thank you 
             <br> for wathing </h1>
             <br>
+            <div id="thanks-photo">
+                
+                <a id="email-contact" href="mailto:josedavidgm1995@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
+                <img src="/thanks-photo.png"></a>
+            </div>
+            <br>
             <p>Did you enjoy my work? 
             <br>
             Let me know if you think I could be part of 
-            <br> your team during my internship in 2019
+            <br> your team during my internship in 2019.
             </p>
             <br>
-            <a id="email-contact" href="mailto:josedavidgm1995@gmail.com?Subject=Internship%202019" target="_top">
-            <h2>josedavidgm1995@gmail.com</h2></a>
+            <!--a id="email-contact" href="mailto:josedavidgm1995@gmail.com?Subject=Internship%202019" target="_top">
+            <h2>josedavidgm1995@gmail.com</h2></a-->
+            <br><br><br>
       </div>
        `;
 

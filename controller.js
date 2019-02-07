@@ -193,9 +193,16 @@
 var t1 = performance.now();
 //console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
 
-var styles = [
+var styleA = [
     'border: 1px solid #3E0E02', 'color: black', 'display: block', 'line-height: 40px', 'text-align: center', 'font-size: 18px', 'font-weight: bold'
 ].join(';');
+var styleB = [
+    'color: black', 'display: block', 'line-height: 40px', 'text-align: center', 'font-size: 14px', 'font-weight: normal'
+].join(';');
 
-console.log('%c Hey Human Welcome to my Code ', styles);
+console.log('%c Hey Human Welcome to my Code ', styleA);
 console.image("https://media.giphy.com/media/XreQmk7ETCak0/giphy.gif");
+console.log('%c This portfolio was made from scratch by me, using vanilla javascript. ', styleB);
+console.log('%c © 2019 JoseDavid GIRALDO / All Rights Reserved ', styleB);
+
+
