@@ -295,10 +295,11 @@ let view = {
             <br> for wathing </h1>
             <br>
             <div id="thanks-photo">
-                
                 <a id="email-contact" href="mailto:josedavidgm1995@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
                 <img src="/thanks-photo.png"></a>
+                <p>( Click me )</p> 
             </div>
+            
             <br>
             <p>Did you enjoy my work? 
             <br>
