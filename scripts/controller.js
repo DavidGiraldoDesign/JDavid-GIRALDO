@@ -5,7 +5,7 @@
     let steps = 0;
 
     let lowerTitles = document.querySelector('#lowerTitles');
-    let menuBackground = document.querySelector('#menuBackground');
+  
     let bodyColor = document.querySelector('body');
     let root = document.querySelector('#Root');
     let bntsMenu = document.querySelectorAll('.btn-menu');
@@ -15,6 +15,7 @@
 
 
     view.onAnimateRange = (range, rangeStartPosition, destination, index) => {
+        let menuBackground = document.querySelector('#menuBackground');
         if (rangeStartPosition == destination) {
             return
         }
