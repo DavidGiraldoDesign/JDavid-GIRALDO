@@ -1,37 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="My portfolio-2019 with a mobile web app implementation.">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1"-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
     <title>JoseDavid Giraldo</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="assets/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default ">
+    <meta name="apple-mobile-web-app-title" content="J David Giraldo">
+    <link rel="apple-touch-icon-precomposed" href="assets/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="assets/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="assets/favicon.png">
+
 
     <link href="https://fonts.googleapis.com/css?family=Barlow:700|Comfortaa|Didact+Gothic" rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/main-style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/navegation-menu-style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/static-titles-style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/page-content-style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/project-style.css" />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="main-style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="navegation-menu-style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="static-titles-style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="page-content-style.css" />
-    <!--link rel="stylesheet" type="text/css" media="screen" href="project-page-style.css" /-->
-    <link rel="stylesheet" type="text/css" media="screen" href="project-style.css" />
     <script src="https://cdn.rawgit.com/adriancooney/console.image/c9e6d4fd/console.image.min.js"></script>
 </head>
 
 <body>
-    <div id="Root">
-        
-    </div>
+    <div id="Root"></div>
 
-    
-    <script type="text/javascript" src="hictio.js"></script>
-    <script type="text/javascript" src="ginef.js"></script>
-    <script type="text/javascript" src="shell.js"></script>
-    <script type="text/javascript" src="beoplay.js"></script>
-    <script type="text/javascript" src="project.js"></script>
-    <script type="text/javascript" src="svg.js"></script>
-    <script type="text/javascript" src="view.js"></script>
-    <script type="text/javascript" src="controller.js"></script>
+    <!-- Projects infomation -->
+    <script type="text/javascript" src="scripts/hictio.js"></script>
+    <script type="text/javascript" src="scripts/ginef.js"></script>
+    <script type="text/javascript" src="scripts/shell.js"></script>
+    <script type="text/javascript" src="scripts/beoplay.js"></script>
+    <script type="text/javascript" src="scripts/project.js"></script>
+    <!-- Assets -->
+    <script type="text/javascript" src="scripts/svg.js"></script>
+    <!-- MVC -->
+    <script type="text/javascript" src="scripts/view.js"></script>
+    <script type="text/javascript" src="scripts/controller.js"></script>
 </body>
 
 </html>

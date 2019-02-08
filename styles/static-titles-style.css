@@ -1,0 +1,144 @@
+@media only screen and (orientation: portrait) {
+    #menuBackground{
+        display: none;
+    }
+    #upperTitles {
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 2px rgb(180, 180, 180);
+        justify-content: space-between;
+        height: 50px;
+        z-index: 3;
+    }
+
+    #josedavidTitle {
+        margin-left: 20px;
+    }
+
+    #emailTitle-mobile {
+        margin-right: 0;
+        margin-top: 0;
+        margin-right: 20px;
+    }
+
+    #lowerTitles {
+        display: none;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    #menuBackground{
+        z-index: 1;
+        display: none;
+        top: 0;
+        position: fixed;
+        width: 100%;
+        height: 120px;
+    }
+
+    #upperTitles {
+        z-index: 2;
+        background-color: transparent;
+        justify-content: space-between;
+        height: auto;
+    }
+
+    #josedavidTitle {
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+
+    #emailTitle-mobile {
+        margin-right: 40px;
+        margin-top: 40px;
+        
+    }
+    #lowerTitles {
+        display: flex;
+        
+    }
+    #socialNetWorksButtonsContainer {
+        display: flex;
+        flex-direction: column;
+        height: 150px;
+    }
+
+}
+#menuBackground{
+    
+    background: white;
+    /*box-shadow: 0px 0px 3px rgb(180, 180, 180);*/
+}
+/*General styles*/
+#upperTitles h3, #lowerTitles h3 {
+    cursor: pointer;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    /*color: rgb(50, 50, 50);*/
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ a {
+    color: rgb(50, 50, 50);
+    font-size: 16px;
+}
+
+.bolder {
+    font-family: 'Barlow', sans-serif;
+
+}
+
+/*--------------*/
+
+#upperTitles {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+#lowerTitles {
+    position: fixed;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+/*Social network´s logos style*/
+#socialNetWorksButtonsContainer {
+    background: transparent;
+    /*width: 500px;*/
+
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin-left: 0px;
+    margin-bottom: 50px;
+    background-color: transparent;
+    width: 10%;
+}
+
+#socialNetWorksButtonsContainer svg {
+    width: 25px;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+#socialNetWorksButtonsContainer svg path {
+    fill: rgb(150, 150, 150);
+}
