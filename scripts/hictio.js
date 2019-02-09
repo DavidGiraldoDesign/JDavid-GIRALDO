@@ -7,8 +7,8 @@ const projectHictio = {
         title: 'Hictio',
         subTitle: 'Interactive museography',
         purpose: 'Enhance autonomy, and satisfaction of visual impaired people who visit an aquarium located in the Zoo of Cali, Colombia.',
-        youTubeVideoID: 'jIMBqsfZtBE',
-        imageCover: 'http://lorempixel.com/output/cats-q-g-1920-1080-10.jpg'
+        youTubeVideoID: null,
+        imageCover: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549747479/portfolio-hictio/cover-hictio.png'
     },
     briefData: {
         longTitle: 'Interactive Products for Enhancing Accessibility of the Visually Impaired in Touristic Environments',
@@ -33,7 +33,7 @@ const projectHictio = {
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549232865/portfolio-hictio/intro-hictio.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549748216/portfolio-hictio/intro-hictio.png',
             youTubeVideoID: null,
             style: {
                 background: 'rgb(25,25,25)',
@@ -62,7 +62,7 @@ const projectHictio = {
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549232878/portfolio-hictio/necessity-hictio.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549747026/portfolio-hictio/necessity-hictio.png',
             youTubeVideoID: null,
             style: {
                 background: 'rgb(25,25,25)',
@@ -89,7 +89,7 @@ const projectHictio = {
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549232876/portfolio-hictio/discoveries-hictio.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549747034/portfolio-hictio/discoveries-hictio.png',
             youTubeVideoID: null,
             style: {
                 background: 'rgb(25,25,25)',
@@ -243,6 +243,17 @@ const projectHictio = {
                 color: ''
             }
         }, {
+            title: '', //Comercial image
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549747042/portfolio-hictio/principal-hictio.png',
+            youTubeVideoID: null,
+            style: {
+                background: 'rgb(255,246,223)',
+                color: ''
+            }
+        }, {
             title: '',
             subTitle: '',
             text: `Introducing Hictio; a smart combination of physical and digital product ecosystem to enhance the user experience at the “Zoológico de Cali” aquarium and improve the recall of information about the exhibits.
@@ -303,7 +314,7 @@ const projectHictio = {
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549232866/portfolio-hictio/beacons-app-hictio.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549747030/portfolio-hictio/beacons-hictio.png',
             youTubeVideoID: null,
             style: {
                 background: '',
@@ -322,7 +333,7 @@ const projectHictio = {
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549232862/portfolio-hictio/finding-wall-hictio.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549747029/portfolio-hictio/finding-wall-hictio.png',
             youTubeVideoID: null,
             style: {
                 background: '',
@@ -341,7 +352,7 @@ const projectHictio = {
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549232873/portfolio-hictio/nfc-reader-hictio.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549747033/portfolio-hictio/nfc-reader-hictio.png',
             youTubeVideoID: null,
             style: {
                 background: '',
@@ -356,17 +367,66 @@ const projectHictio = {
                 color: ''
             }
         }, {
-            title: '', //NFC Reader
+            title: '', //Vibro-tactil replicas
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549232884/portfolio-hictio/vibro-tactil-hictio.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549747026/portfolio-hictio/vibro-tactil-hictio.png',
             youTubeVideoID: null,
             style: {
                 background: '',
                 color: ''
             }
-        },
+        }, {
+            title: '', //Environment render
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549747042/portfolio-hictio/environment-hictio.png',
+            youTubeVideoID: null,
+            style: {
+                background: 'rgb(10,10,32)',
+                color: ''
+            }
+        }, {
+            title: 'dede',
+            subTitle: '',
+            text: `important text`,
+            style: {
+                background: 'rgb(10,10,32)',
+                color: 'rgb(250,250,250)'
+            }
+        }, {
+            title: '', //exploted view of beacon and writsband
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549747025/portfolio-hictio/beacon-explotion-hictio.png',
+            youTubeVideoID: null,
+            style: {
+                background: 'rgb(10,10,32)',
+                color: 'rgb(250,250,250)'
+            }
+        }, {
+            title: 'dede',
+            subTitle: '',
+            text: `important text`,
+            style: {
+                background: 'rgb(10,10,32)',
+                color: 'rgb(250,250,250)'
+            }
+        }, {
+            title: '', //exploted view of beacon and writsband
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549747021/portfolio-hictio/wall-explotion-hictio.png',
+            youTubeVideoID: null,
+            style: {
+                background: 'rgb(10,10,32)',
+                color: 'rgb(250,250,250)'
+            }
+        }
 
     ]
 }
