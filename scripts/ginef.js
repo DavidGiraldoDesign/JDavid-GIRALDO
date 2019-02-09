@@ -29,23 +29,11 @@ const projectGinef = {
             }
         },
         {
-            title: '', //logo
-            subTitle: '',
-            text: ``,
-            media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217647/portfolio-ginef/logo-ginef.png',
-            youTubeVideoID: null,
-            style: {
-                background: '',
-                color: ''
-            }
-        },
-        {
             title: '', //girl holding app
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217654/portfolio-ginef/intro-ginef.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549714469/portfolio-ginef/intro-ginef.png',
             youTubeVideoID: null,
             style: {
                 background: '',
@@ -138,7 +126,7 @@ const projectGinef = {
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217653/portfolio-ginef/ux-writing-ginef.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549714469/portfolio-ginef/ux-writing-ginef.png',
             youTubeVideoID: null,
             style: {
                 background: '',

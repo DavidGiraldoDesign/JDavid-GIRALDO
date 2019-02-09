@@ -1,6 +1,6 @@
 const projectShell = {
     style: {
-        background: 'rgb(25, 25, 25)',
+        background: 'rgb(20, 20, 20)',
         color: 'rgb(150, 150, 150)'
     },
     coverData: {
@@ -32,7 +32,7 @@ const projectShell = {
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209641/portfolio-shell/intro-shell.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549714159/portfolio-shell/intro-shell.png',
             youTubeVideoID: null,
             style: {
                 background: '',
@@ -119,7 +119,7 @@ const projectShell = {
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209633/portfolio-shell/car-behind-shell.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549714152/portfolio-shell/car-behind-shell.png',
             youTubeVideoID: null,
             style: {
                 background: '',
@@ -131,7 +131,7 @@ const projectShell = {
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209647/portfolio-shell/versus-shell.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549714152/portfolio-shell/versus-shell.png',
             youTubeVideoID: null,
             style: {
                 background: '',
@@ -143,7 +143,7 @@ const projectShell = {
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209642/portfolio-shell/oil-fying-shell.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549714154/portfolio-shell/oil-flying-shell.png',
             youTubeVideoID: null,
             style: {
                 background: '',
@@ -191,19 +191,7 @@ const projectShell = {
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209644/portfolio-shell/whell-shell.png',
-            youTubeVideoID: null,
-            style: {
-                background: '',
-                color: ''
-            }
-        },
-        {
-            title: '', // Behance
-            subTitle: '',
-            text: ``,
-            media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209626/portfolio-shell/behance-coin-shell.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549714159/portfolio-shell/behance-coin-shell.png',
             youTubeVideoID: null,
             style: {
                 background: '',
