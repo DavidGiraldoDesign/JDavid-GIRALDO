@@ -21,8 +21,7 @@ const projectGinef = {
     sections: [{
             title: '',
             subTitle: '',
-            text: `Ginef is a birth control method recommender app that delivers a more satisfying decision making experience and reliable results. It is tailored for young women having or beginning their sexual relations, and have doubts about witch method is more accurate for their life style and preferences. Furthermore, if the woman has a love partner, she could add his opinion to the recommender system in order to make the decision as a couple. 
-            \n The recommendation result is not a medical prescription, it is a guide to help women to be prepared and feel more confidence with their medical appointments. `,
+            text: `Ginef is a birth control method recommender app that delivers a more satisfying decision making experience and reliable results. It is tailored for young women having or beginning their sexual relations, and have doubts about witch method is more accurate for their life style and preferences. Furthermore, if the woman has a love partner, she could add his opinion to the recommender system in order to make the decision as a couple.`,
             style: {
                 background: '',
                 color: ''
@@ -35,6 +34,14 @@ const projectGinef = {
             media: true,
             url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549714469/portfolio-ginef/intro-ginef.png',
             youTubeVideoID: null,
+            style: {
+                background: '',
+                color: ''
+            }
+        },{
+            title: '',
+            subTitle: '',
+            text: `The recommendation result is not a medical prescription, it is a guide to help women to be prepared and feel more confidence with their medical appointments. `,
             style: {
                 background: '',
                 color: ''
@@ -136,13 +143,13 @@ const projectGinef = {
         {
             title: '',
             subTitle: '',
-            text: `Using a content-based filtering approach, we design a functional prototype deployed in a web platform, then we conducted a task analysis to test the usability of the interface, and evaluate the precision of the recommender´s algorithm.`,
+            text: `Using a content-based filtering approach, we design a functional prototype deployed in a web platform, then we conducted a task analysis to test the usability of the interface, and evaluate the precision of the recommender´s algorithm.
+            \n Go visit our former prototype at: https://mi-metodo-preferido.herokuapp.com/`,
             style: {
                 background: '',
                 color: ''
             }
-        },
-        {
+        },{
             title: '', //frist approach
             subTitle: '',
             text: ``,

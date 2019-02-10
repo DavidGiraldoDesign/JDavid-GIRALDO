@@ -22,7 +22,6 @@ const projectHictio = {
             title: '',
             subTitle: '',
             text: `Hictio offers an accessible and interactive museography experience for the aquarium of the “Zoologico de Cali” in Cali, Colombia. Enhancing the user experience through physical and digital design. 
-            \n This system makes it possible for blind and sighted people to learn about the fish inside the aquarium using: a mobile app designed for Hictio, wristbands with near-field communication technology, Bluetooth low energy (BLE) beacons for proximity experiences, and vibro-tactile silicone fish replicas attached to a wall. 
             `,
             style: {
                 background: 'rgb(25,25,25)',
@@ -40,15 +39,16 @@ const projectHictio = {
                 color: ''
             }
         }, {
-            title: 'Situation',
+            title: '',
             subTitle: '',
-            text: ``,
+            text: `This system makes it possible for blind and sighted people to learn about the fish inside the aquarium using: a mobile app designed for Hictio, wristbands with near-field communication technology, Bluetooth low energy (BLE) beacons for proximity experiences, and vibro-tactile silicone fish replicas attached to a wall. 
+            `,
             style: {
                 background: 'rgb(25,25,25)',
                 color: 'rgb(200,200,200)'
             }
         }, {
-            title: '',
+            title: 'Situation',
             subTitle: '',
             text: `There are almost 9 thousand blind people in Cali city. Although they like to enjoy social gatherings, the city´s infrastructure makes it difficult to them to enjoy touristic environments. 
             \n The “Zoologico de Cali” is one of the most emblematic and touristic places of the city. But unfortunately, it has a lack of accessibility for blind and partially sighted people.  
@@ -111,7 +111,7 @@ const projectHictio = {
             text: ``,
             style: {
                 background: 'rgb(255,255,255)',
-                color: 'rgb(200,200,200)'
+                color: 'rgb(100,100,100)'
             }
         }, {
             title: '', //Postips
@@ -237,7 +237,7 @@ const projectHictio = {
         }, {
             title: 'The design approach ',
             subTitle: '',
-            text: ``,
+            text: `Introducing Hictio; a smart combination of physical and digital product ecosystem to enhance the user experience at the “Zoológico de Cali” aquarium and improve the recall of information about the exhibits.`,
             style: {
                 background: '',
                 color: ''
@@ -256,8 +256,7 @@ const projectHictio = {
         }, {
             title: '',
             subTitle: '',
-            text: `Introducing Hictio; a smart combination of physical and digital product ecosystem to enhance the user experience at the “Zoológico de Cali” aquarium and improve the recall of information about the exhibits.
-        \n It integrates a group of vibro-tactile fish replicas attached to a piece of furniture. Slap-wristbands with NFC tags for each visitor triggers the interaction. Bluetooth low energy beacons creates proximity-based experiences and marks up different fishes’ exhibits inside the aquarium. And an accessible mobile app guides the experience through audio narration.
+            text: `It integrates a group of vibro-tactile fish replicas attached to a piece of furniture. Slap-wristbands with NFC tags for each visitor triggers the interaction. Bluetooth low energy beacons creates proximity-based experiences and marks up different fishes’ exhibits inside the aquarium. And an accessible mobile app guides the experience through audio narration.
         `,
             style: {
                 background: '',
@@ -283,9 +282,9 @@ const projectHictio = {
                 color: ''
             }
         }, {
-            title: 'User interface and interaction flow',
-            subTitle: '',
-            text: `1. Hictio is a button-less app, with gesture-based navigation. This allows the user to interact with swipe gesture and touch control; once for listen the narrator and twice to confirm an action or trigger an interaction.`,
+            title: 'UX/UI flow',
+            subTitle: '1. Gesture-based navigation',
+            text: `Hictio is a button-less app, with gesture-based navigation. This allows the user to interact with swipe gesture and touch control; once for listen the narrator and twice to confirm an action or trigger an interaction.`,
             style: {
                 background: '',
                 color: ''
@@ -303,8 +302,8 @@ const projectHictio = {
             }
         }, {
             title: '',
-            subTitle: '',
-            text: `2. When BLE beacons are detected, the app shows and tell the user where is (s)he located, and triggers an interaction to add that specific into the app. Like the PokemonGo App with BLE technology instead of GPS. `,
+            subTitle: '2. Proximity-based experiences',
+            text: `When BLE beacons are detected, the app shows and tell the user where is (s)he located, and triggers an interaction to add that specific into the app. Like the PokemonGo App with BLE technology instead of GPS. `,
             style: {
                 background: '',
                 color: ''
@@ -322,8 +321,8 @@ const projectHictio = {
             }
         }, {
             title: '',
-            subTitle: '',
-            text: `3. The interactive furniture it is located in the middle of the aquarium, it holds a TCP-IP Server with LAN connection, hosted in a Raspberry PI B+. The visitors could send messages to the server in order to find the furniture through sound.`,
+            subTitle: '3. UX for physical products ',
+            text: `The interactive furniture it is located in the middle of the aquarium, it holds a TCP-IP Server with LAN connection, hosted in a Raspberry PI B+. The visitors could send messages to the server in order to find the furniture through sound.`,
             style: {
                 background: '',
                 color: ''
@@ -341,8 +340,8 @@ const projectHictio = {
             }
         }, {
             title: '',
-            subTitle: '',
-            text: `4. Once the user is in front of the furniture, the visitor puts the NFC tag wristband near the NFC reader. Now the server knows exactly to which smartphone is connected with, in order to send instructions that triggers the interaction on the mobile app.`,
+            subTitle: '4. NFC-tag wristband',
+            text: `Once the user is in front of the furniture, the visitor puts the NFC-tag wristband near the NFC reader. Now the server knows exactly to which smartphone is connected with, in order to send instructions that triggers the interaction on the mobile app.`,
             style: {
                 background: '',
                 color: ''
@@ -360,8 +359,8 @@ const projectHictio = {
             }
         }, {
             title: '',
-            subTitle: '',
-            text: `5. Each fish replica has vibro-tactile sensors under its rubber skin that detect whether the fish has been touched or not. Different areas of the fish’s body triggers different stories in the app.`,
+            subTitle: '5. Vibro-tactile stimuli & narratives',
+            text: `Each fish replica has vibro-tactile sensors under its rubber skin that detect whether the fish has been touched or not. Different areas of the fish’s body triggers different stories in the app.`,
             style: {
                 background: '',
                 color: ''
@@ -389,14 +388,30 @@ const projectHictio = {
                 color: ''
             }
         }, {
-            title: 'dede',
-            subTitle: '',
-            text: `important text`,
+            title: 'Extras',
+            subTitle: 'Industrial design technical details ',
+            text: ``,
             style: {
                 background: 'rgb(10,10,32)',
                 color: 'rgb(250,250,250)'
             }
         }, {
+            title: '',
+            subTitle: '1. Slap-wristband ',
+            text: `We decided to add an NFC tag (1) inside a custom slap-wristband, with a silicone rubber body (2), which holds a UID (unique identification) to bind it with each user´s mobile app. That creates a private TCP-IP communication between the phone and the interactive furniture. Underneath it has a message in braille (3) that also works as an anti-slip surface.`,
+            style: {
+                background: 'rgb(10,10,32)',
+                color: 'rgb(250,250,250)'
+            }
+        },{
+            title: '',
+            subTitle: '2. Beacon',
+            text: `A injection-molded ABS body (1), integrated with a BLE module (2).`,
+            style: {
+                background: 'rgb(10,10,32)',
+                color: 'rgb(250,250,250)'
+            }
+        },{
             title: '', //exploted view of beacon and writsband
             subTitle: '',
             text: ``,
@@ -408,9 +423,9 @@ const projectHictio = {
                 color: 'rgb(250,250,250)'
             }
         }, {
-            title: 'dede',
-            subTitle: '',
-            text: `important text`,
+            title: '',
+            subTitle: '3. Furniture/Wall ',
+            text: `A Roto-molded polyethylene body (1), Integrated with a Single board computer – Raspberry Pi hosting a TCP-IP server (2), 4 Concrete modules for assembly (3), 4 Translucent silicone rubber surfaces with 3d figures of fish (4), 4 RFID Reader to place the wristband (5) And a bunch of capacitive modules with vibe motors and LEDs.`,
             style: {
                 background: 'rgb(10,10,32)',
                 color: 'rgb(250,250,250)'

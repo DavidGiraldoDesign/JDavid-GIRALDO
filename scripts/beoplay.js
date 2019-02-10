@@ -1,7 +1,7 @@
 const projectBeo = {
     style: {
         background: 'rgb(226,241,248)',
-        color: 'rgb(188,207,218)'
+        color: 'rgb(50,56,70)'
     },
     coverData: {
         title: 'BeoPlay S1 A2',
@@ -119,18 +119,8 @@ const projectBeo = {
                 background: 'rgb(226,241,248)',
                 color: ''
             }
-        },
-        {
-            title: 'BeoPlay S1 A2 features ',
-            subTitle: '',
-            text: '',
-            style: {
-                background: 'rgb(226,241,248)',
-                color: ''
-            }
-        },
-        {
-            title: '',
+        },{
+            title: 'BeoPlay S1 A2 features',
             subTitle: '',
             text: 'To bring an integrated user experience, and based on the Bang&Olufsen´s app, the whole system is controlled by a small device situated on top of the middle table, with a touch display to set music, adjust the table´s temperature, and change illumination.',
             style: {

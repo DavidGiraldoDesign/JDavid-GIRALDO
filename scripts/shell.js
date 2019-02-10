@@ -80,18 +80,8 @@ const projectShell = {
                 background: '',
                 color: ''
             }
-        },
-        {
-            title: 'Art Direction ',
-            subTitle: '',
-            text: '',
-            style: {
-                background: '',
-                color: ''
-            }
-        },
-        {
-            title: '',
+        },{
+            title: 'Art Direction',
             subTitle: '',
             text: 'As a team, regarding the Formula One race cars, we design the visual appeal for the advertisement pieces and sales presentations. Using textures that regards the Formula One circuit and the pit stops, we were able to create an image of a product accurate for high performance engines.',
             style: {
