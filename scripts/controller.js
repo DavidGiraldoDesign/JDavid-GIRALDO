@@ -1,3 +1,4 @@
+var t0 = performance.now();
 (function controller(view, projectHolder) {
     view.render();
     let staticDiameter = 8;
@@ -10,9 +11,6 @@
     let root = document.querySelector('#Root');
     let bntsMenu = document.querySelectorAll('.btn-menu');
     let conerTitles = document.querySelectorAll('.cornerTitle');
-
-
-
 
     view.onAnimateRange = (range, rangeStartPosition, destination, index) => {
         let menuBackground = document.querySelector('#menuBackground');
@@ -53,6 +51,7 @@
                                 bodyColor.style.backgroundImage = 'none';
                                 break;
                             case 2:
+                    
                                 menuBackground.style.display = 'block';
                                 bodyColor.style.backgroundImage = 'none';
                                 break;
@@ -192,7 +191,7 @@
 })(view, projectHolder);
 
 var t1 = performance.now();
-//console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
+console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.");
 
 var styleA = [
     'border: 1px solid #3E0E02', 'color: black', 'display: block', 'line-height: 40px', 'text-align: center', 'font-size: 18px', 'font-weight: bold'

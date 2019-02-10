@@ -71,7 +71,6 @@ let view = {
 
         buttons.forEach((btn, index) => {
             btn.addEventListener('click', (e) => {
-                // console.log(`Index = ${index} | Button value = ${e.target.value}`);
                 let rangeStartPosition = Number.parseInt(range.value, 10);
                 let destination = e.target.value;
                 this.onAnimateRange(range, rangeStartPosition, destination, index);
@@ -332,7 +331,6 @@ let view = {
         if (youTubeVideoID === null) {
             let videoBackground = div.querySelector('#YouTubeBackgroundVideoPlayer');
             videoBackground.style.display = 'none';
-            console.log('no hay video');
         }
 
 
@@ -525,7 +523,6 @@ let view = {
 
         let backToTop = div.querySelector('#backToTop');
         backToTop.addEventListener('click', e => {
-            console.log('back to top');
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         });
@@ -651,7 +648,6 @@ let view = {
         <style data="page-style-animation" type="text/css"></style>   
         `;
         p.appendChild(this.getPagesArray()[this.getPageNumber()]);
-        //console.log(`Actual page number: ${this.getPageNumber()}`);
     },
     renderPageProjects: function renderPageProjects(n) {
         this.bodyElement.innerHTML = ``;
@@ -663,12 +659,13 @@ let view = {
         //this.bodyElement.appendChild(this.getNavegationMenu(67));
         this.bodyElement.appendChild(this.getPageContainer());
         this.setPageNumber(n);
+        let menuBackground = document.querySelector('#menuBackground');
+        menuBackground.style.display = 'block';
         let p = document.querySelector(`.pagesContainer`);
         p.innerHTML = `
         <style data="page-style-animation" type="text/css"></style>   
         `;
         p.appendChild(this.getPagesArray()[this.getPageNumber()]);
-        //console.log(`Actual page number: ${this.getPageNumber()}`);
     },
     //------------------------------------------------- Render single Project
     renderProject: function renderProject(projectIndex) {
