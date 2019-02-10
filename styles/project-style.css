@@ -64,24 +64,62 @@
     }
 }
 
-/*------------------------ Back button */
+/*------------------------ Arrow menu bar button */
 
-#backToPorjectBar {
-    cursor: pointer;
+#arrowsMenuBar {
     position: fixed;
     z-index: 10;
     background-color: rgb(50, 50, 50);
     top: 0;
-    width: 200px;
+    right: 0;
+    width: 180px;
+    height: 50px;
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 0px 5px black;
+    transition: top 0.3s ease;
+    -webkit-transition: top 0.3s ease;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 16px;
+}
+#arrowsMenuBar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    outline: none;
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 14px;
+    color: rgb(150, 150, 150);
+    -webkit-transition: .5s color ease;
+    transition: .5s color ease;
+}
+#arrowsMenuBar button:hover {
+    color: rgb(255, 255, 255);
+}
+/*------------------------ Back button */
+
+#backToPorjectBar {
+    position: fixed;
+    z-index: 10;
+    background-color: rgb(50, 50, 50);
+    top: 0;
+    width: 180px;
     height: 50px;
     display: flex;
     color: white;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     box-shadow: 0px 0px 5px black;
-    transition: top 0.3s;
-    -webkit-transition: .5s ease;
-    transition: .5s ease;
+    transition: top 0.3s ease;
+    -webkit-transition: top 0.3s ease;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
 }
 
 #backToPorjectBar:hover {
@@ -90,9 +128,15 @@
 }
 
 #backToPorjectBar h1 {
+    cursor: pointer;
     font-size: 20px;
     font-family: 'Didact Gothic', sans-serif;
     font-weight: normal;
+}
+
+#backToPorjectBar button {
+    cursor: pointer;
+    height: 50px;
 }
 
 /*------------------------  */
@@ -178,7 +222,7 @@
     width: 100%;
     display: flex;
     background-color: transparent;
-    background: linear-gradient(to top, rgba(0, 0, 0, .3),  rgba(0, 0, 0, .0));
+    background: linear-gradient(to top, rgba(0, 0, 0, .3), rgba(0, 0, 0, .0));
 }
 
 #project-title {
@@ -384,21 +428,29 @@
 }
 
 .thankYouBlock {
-    padding-bottom: 50px;
+    padding-bottom: 0px;
     text-align: center;
     display: flex;
     width: 100%;
     justify-content: center;
     align-content: center;
 }
-
-#nextPrev {
-    justify-content: space-around;
+#project-thanks-photo {
+    margin-bottom: 20px;
 }
+
+#project-thanks-photo img {
+    width: 150px;
+    height: 150px;
+}
+
+/*#nextPrev {
+    justify-content: space-around;
+}*/
 
 #thankYouContainer h1 {
     font-family: 'Barlow', sans-serif;
-    font-size: 80px;
+    font-size: 50px;
     line-height: .9;
 }
 

@@ -45,9 +45,8 @@ let view = {
     getNavegationMenu: function getNavegationMenu(value) {
         let div = document.createElement(`div`);
         div.id = `navigationMenuContainer`;
-    
+
         div.innerHTML = `
-            
             <ul id="titles-menu">
                 <li><button class="btn-menu" value="0">Home</button></li>
                 <li><button class="btn-menu" value="34">About</button></li>
@@ -223,11 +222,11 @@ let view = {
             <h1> "Hola", I´m David </h1>
             
         </div>
-
-        <div id="about-jose-photo">
-            <img src="assets/about-jose.png">
+        <div class="sectionBlock">
+            <div id="about-jose-photo">
+                <img src="assets/about-jose.png">
+            </div>
         </div>
-
         <div class="sectionBlock">
             <div class="text-inside-sectionBlock">
                 <p> I consider myself an outgoing person and curious designer student with a lot initiative, passionate about art, technology, and product development, with strong problem-solving abilities, and attention to details. And I also like cats and pizza.  An important thing about me is that I like to take ownership of my work and I usually develop a strong sense of belonging, beside I have good time management and decision-making skills to handle many projects simultaneously. Thanks God coffee exits!
@@ -497,20 +496,27 @@ let view = {
                     <p id="backToTop">Back to top</p>
                 </button>
             </div>
-            <div class="thankYouBlock" id="nextPrev">
+            <!-- div class="thankYouBlock" id="nextPrev">
                 <button><p id="previousProject">Previous Project</p></button>
                 <p>${actualProjectIndex+1}/${portfolioSize}</p>
                 <button><p id="nextProject">Next Project</p></button>
-            </div>
+            </div -->
             <div class="thankYouBlock">
                 <h1>Thank you for watching</h1>
             </div>
-            <div class="thankYouBlock">
+            <!-- div class="thankYouBlock">
                 <button>
                     <a href="mailto:josedavidgm1995@gmail.com?Subject=Internship%202019" target="_top">
                         <p>Send me an<span class="bolder">EMAIL</span></p>
                     </a>
                 </button>
+            </div -->
+            <div class="thankYouBlock">
+                <div id="project-thanks-photo">
+                    <a id="email-contact" href="mailto:josedavidgm1995@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
+                    <img src="assets/thanks-photo.png"></a>
+                    <p>( Click me for send an <span class="bolder">EMAIL</span> )</p> 
+                </div>
             </div>
             <div class="thankYouBlock">
                 <p>© 2019 JoseDavid GIRALDO / All Rights Reserved</p>
@@ -524,7 +530,7 @@ let view = {
             document.documentElement.scrollTop = 0;
         });
 
-
+/*
         let nextProject = div.querySelector('#nextProject');
         nextProject.addEventListener('click', e => {
             this.onNextProject(actualProjectIndex, portfolioSize);
@@ -532,33 +538,64 @@ let view = {
         let previousProject = div.querySelector('#previousProject');
         previousProject.addEventListener('click', e => {
             this.onPreviousProject(actualProjectIndex, portfolioSize);
-        });
+        });*/
 
         return div;
     },
-    getBackToPorjectsMenuBar: function getBackToPorjectsMenuBar() {
+    getArrowsMenuBar: function getArrowsMenuBar(actualProjectIndex, portfolioSize) {
         let div = document.createElement('div');
-        div.id = 'backToPorjectBar';
+        div.id = 'arrowsMenuBar';
         div.innerHTML = `
-            <h1 id="backToPorjectButton">Back to <span class="bolder">Projects</span></h1>
+                <button><p id="up-previousProject">Previous</p></button>
+                <p>${actualProjectIndex+1}/${portfolioSize}</p>
+                <button><p id="up-nextProject">Next</p></button>
         `;
-        let btn = div.querySelector('#backToPorjectButton');
-        btn.addEventListener('click', (e) => {
-            this.onReturnToProjects();
-
-        });
 
         let prevScrollpos = window.pageYOffset;
         window.onscroll = function () {
             let currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos) {
-                div.style.top = "0";
+                div.style.top = "0px";
             } else {
                 div.style.top = "-60px";
             }
             prevScrollpos = currentScrollPos;
         }
 
+        let previousProject = div.querySelector('#up-previousProject');
+        previousProject.addEventListener('click', e => {
+            this.onPreviousProject(actualProjectIndex, portfolioSize);
+        });
+        let nextProject = div.querySelector('#up-nextProject');
+        nextProject.addEventListener('click', e => {
+            this.onNextProject(actualProjectIndex, portfolioSize);
+        });
+        return div;
+    },
+    getBackToPorjectsMenuBar: function getBackToPorjectsMenuBar() {
+        let div = document.createElement('div');
+        div.id = 'backToPorjectBar';
+        div.innerHTML = `
+            <div>
+                <h1 id="backToPorjectButton">Back to <span class="bolder">Projects</span></h1>
+            </div>
+        `;
+
+        let btn = div.querySelector('#backToPorjectButton');
+        btn.addEventListener('click', (e) => {
+            this.onReturnToProjects();
+        });
+
+        let prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                div.style.top = "0px";
+            } else {
+                div.style.top = "0px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
         return div;
     },
     getProjectContainer: function getProjectContainer(project, projectIndex, projectHolder) {
@@ -569,6 +606,8 @@ let view = {
         div.appendChild(this.getProjectBriefData(project.briefData));
         div.appendChild(this.getProjectContentContainer(project.sections));
         div.appendChild(this.getThankYouContainer(projectIndex, projectHolder.length));
+        div.appendChild(this.getArrowsMenuBar(projectIndex, projectHolder.length));
+   
         let bgColor = project.style.background;
         let color = project.style.color;
         div.querySelector('#project-content-container').style.background = bgColor;

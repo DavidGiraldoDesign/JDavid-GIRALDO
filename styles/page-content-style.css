@@ -17,68 +17,63 @@ body {
         background-size: auto 100%;
         background-position: 60% 50%;
     }
-
     #homeArticle {
         justify-content: flex-start;
     }
-
     #home-message {
-        max-width: 70%;
-        margin-left: 10px;
-        padding-top: 20px;
+        max-width: 60%;
+        margin-left: 0;
+        padding-top: 10px;
     }
-
     #homeArticle h1 {
         text-align: left;
-        font-size: 100px;
+        font-size: 80px;
     }
-
     #homeArticle h3 {
         font-size: 25px;
         line-height: 1.1;
     }
-
     #homeArticle span {
         font-size: 12px;
     }
-
     #homeArticle .bolder {
         font-size: 30px;
     }
-
     #instaGrid-Holder {
         display: none;
         width: 100%;
     }
-
     #aboutArticle {
         max-width: 100%;
     }
-
+    #aboutArticle h1{
+        font-size: 40px;
+    }
+    #about-jose-photo img {
+        max-width: 250px;
+        height: auto;
+    }
     article {
         padding-left: 20px;
         padding-right: 20px;
         padding-top: 20px;
     }
-
     #contactArticle {
         height: 50px;
     }
-
     #contactArticle h1 {
         padding-top: 20px;
-        font-size: 60px;
+        font-size: 40px;
     }
-
     #contactArticle h2 {
         padding: 0;
     }
-
     #contactArticle p {
         padding: 0;
     }
-    #thanks-photo {
-        display: none;
+    #thanks-photo img {
+        width: 150px;
+        height: 150px;
     }
 }
 
@@ -87,47 +82,44 @@ body {
         background-size: auto;
         background-position: 50% 50%;
     }
-
     #homeArticle {
         justify-content: center;
         width: 100%;
         height: 100%;
     }
-
     #home-message {
         margin-top: 100px;
         max-width: 600px;
         margin-left: 300px;
     }
-
     #homeArticle h1 {
         text-align: left;
         font-size: 150px;
     }
-
     #homeArticle h3 {
         font-size: 40px;
         line-height: 1.2;
     }
-
     #homeArticle span {
         font-size: 15px;
     }
-
     #homeArticle .bolder {
         font-size: 50px;
     }
-
     #instaGrid-Holder {
         width: 1000px;
         display: flex;
     }
-
     #aboutArticle {
         max-width: 1400px;
     }
-    #thanks-photo {
-        display: block;
+    #about-jose-photo img {
+        max-width: 400px;
+        height: auto;
+    }
+    #thanks-photo img {
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -188,6 +180,7 @@ article {
 }
 
 /*--------------------------------- About ----------------------*/
+
 .sectionBlock {
     margin-top: 20px;
     margin-bottom: 30px;
@@ -209,16 +202,16 @@ article {
 /*-------------*/
 
 #about-jose-photo {
-    display: flex;
+    /*display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px;*/
 }
 
 #about-jose-photo img {
-    width: 100%;
-    height: 100%;
-    max-width: 424px;
-    max-height: 500px;
+    /*max-width: 400px;
+    height: auto;
+    /*max-width: 424px;
+    max-height: 500px;*/
 }
 
 #aboutArticle {
@@ -253,7 +246,7 @@ article {
 #contactArticle {
     position: absolute;
     background: transparent;
-    height: 70%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -264,16 +257,10 @@ article {
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-
 }
 
 #thanks-photo {
     margin-bottom: 20px;
-}
-
-#thanks-photo img {
-    width: 300px;
-    height: 300px;
 }
 
 #contactArticle p {
@@ -328,7 +315,6 @@ article img {
 }
 
 .project-trigger {
-
     border-radius: 10px;
     background: transparent;
     width: 238px;
