@@ -47,32 +47,29 @@ const projectShell = {
                 background: '',
                 color: ''
             }
-        },
-        {
-            title: '', //Bottle skechts
+        }, {
+            title: '', //Video
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209634/portfolio-shell/bocetos-shell.png',
+            url: null,
+            youTubeVideoID: 'pQrXon1R8cY',
+            style: {
+                background: '',
+                color: ''
+            }
+        }, {
+            title: '', //Bottle skechts & 3D model process
+            subTitle: '',
+            text: ``,
+            media: true,
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549756293/portfolio-shell/bocetos-shell.png',
             youTubeVideoID: null,
             style: {
                 background: '',
                 color: ''
             }
-        },
-        {
-            title: '', //3D model process
-            subTitle: '',
-            text: ``,
-            media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209631/portfolio-shell/model-shell.png',
-            youTubeVideoID: null,
-            style: {
-                background: '',
-                color: ''
-            }
-        },
-        {
+        }, {
             title: '', // BluePrint and manufacture
             subTitle: '',
             text: ``,
