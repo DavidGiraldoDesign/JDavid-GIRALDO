@@ -5,14 +5,14 @@ let view = {
 
     bodyElement: document.querySelector(`#Root`),
 
-    getCornerTitle: function getCornerTitle() {
+    getCornerTitle: function getCornerTitle(menu) {
         let div = document.createElement('div');
         div.id = 'cornerTitles';
         div.innerHTML = `
         <div id="menuBackground"></div>
         <div id="upperTitles">
             <h3 class="cornerTitle" id="josedavidTitle"> JoseDavid <span class="bolder">GIRALDO</span></h3>
-            
+            <div id="menu-holder"></div>
             <a class="cornerTitle" id="emailTitle-mobile" href="mailto:josedavidgm1995@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
             <h3>Send me an <span class="bolder">EMAIL</span></h3></a>
         </div>
@@ -34,17 +34,21 @@ let view = {
         let i = div.querySelector('#instagram');
         i.appendChild(svg.getInstagram());
 
+
+        div.querySelector('#menu-holder').appendChild(menu);
+
         return div;
 
     },
 
+    //getNavegationMenu: function getNavegationMenu(value) {
     getNavegationMenu: function getNavegationMenu(value) {
         let div = document.createElement(`div`);
         div.id = `navigationMenuContainer`;
-
+    
         div.innerHTML = `
             
-            <ul class="blackMenu">
+            <ul id="titles-menu">
                 <li><button class="btn-menu" value="0">Home</button></li>
                 <li><button class="btn-menu" value="34">About</button></li>
                 <li><button class="btn-menu" value="67">Work</button></li>                    
@@ -52,12 +56,12 @@ let view = {
             </ul>
             
             <div id="slideContainer">
-                <div id="indicatorContainer">
+                <!-- div id="indicatorContainer">
                     <div class="indicator"></div>
                     <div class="indicator"></div>
                     <div class="indicator"></div>
                     <div class="indicator"></div>
-                </div>
+                </div -->
                 <style data="slider-style-animation" type="text/css"></style>
                 <input type="range" min="0" max="100" value="${value}" steps="1" class="slider" id="navigationMenuSlider" disabled>
             </div>
@@ -191,11 +195,11 @@ let view = {
             'https://instagram.fbog11-1.fna.fbcdn.net/vp/605530fd63c74486dc612be4c031143b/5CFFEF13/t51.2885-15/e35/42678350_688662804847334_5222866340392334746_n.jpg?_nc_ht=instagram.fbog11-1.fna.fbcdn.net',
             'https://instagram.fbog10-1.fna.fbcdn.net/vp/3ae4c36485dc664d765ae18eb78ea224/5CE3D608/t51.2885-15/e35/13561619_294159274255613_1635755852_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
             'https://instagram.fbog10-1.fna.fbcdn.net/vp/495f15fe2b08bad7c38fd217846a0377/5CE96CA6/t51.2885-15/e35/15623804_2184482281777038_5580832001356726272_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
-            
+
             'https://instagram.fbog10-1.fna.fbcdn.net/vp/7407932cd9b438c32e055ed96a695700/5CE8C8F6/t51.2885-15/e35/15623772_1729101030662463_6946259700266565632_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
             'https://instagram.fbog10-1.fna.fbcdn.net/vp/abefb48f42ae0b9d5c8764546e9d7ec3/5D005A44/t51.2885-15/e35/15624352_397876170552713_1959734654508466176_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
             'https://instagram.fbog10-1.fna.fbcdn.net/vp/ee8d201773b1170f6da15052bd2594a9/5CF1931D/t51.2885-15/e35/23164486_140865729886856_2725328827176714240_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
-            
+
             'https://instagram.fbog11-1.fna.fbcdn.net/vp/1a190bba4c7323a4205c03f94b76586f/5CFA70F1/t51.2885-15/e35/15251845_175814982886639_7416042849440890880_n.jpg?_nc_ht=instagram.fbog11-1.fna.fbcdn.net',
             'https://instagram.fbog10-1.fna.fbcdn.net/vp/8ff59e181a236042202157f348dfd268/5CFA2738/t51.2885-15/e35/31326372_1865073563784968_3478208835791880192_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net',
             'https://instagram.fbog10-1.fna.fbcdn.net/vp/85bc6fd629a6e2d7d219732adeefb6c8/5CF7CFC6/t51.2885-15/e35/14487410_978453042300857_8267105149017653248_n.jpg?_nc_ht=instagram.fbog10-1.fna.fbcdn.net'
@@ -613,8 +617,11 @@ let view = {
     renderPageProjects: function renderPageProjects(n) {
         this.bodyElement.innerHTML = ``;
         this.bodyElement.scrollTop = 0;
-        this.bodyElement.appendChild(this.getCornerTitle());
-        this.bodyElement.appendChild(this.getNavegationMenu(67));
+
+        let menu = this.getNavegationMenu(67);
+        this.bodyElement.appendChild(this.getCornerTitle(menu));
+        //this.bodyElement.appendChild(this.getCornerTitle());
+        //this.bodyElement.appendChild(this.getNavegationMenu(67));
         this.bodyElement.appendChild(this.getPageContainer());
         this.setPageNumber(n);
         let p = document.querySelector(`.pagesContainer`);
@@ -640,8 +647,10 @@ let view = {
     render: function render() {
 
         this.bodyElement.innerHTML = ``;
-        this.bodyElement.appendChild(this.getCornerTitle());
-        this.bodyElement.appendChild(this.getNavegationMenu(0));
+        let menu = this.getNavegationMenu(0);
+        this.bodyElement.appendChild(this.getCornerTitle(menu));
+        //this.bodyElement.appendChild(this.getNavegationMenu(0));
+
         this.bodyElement.appendChild(this.getPageContainer());
     }
 

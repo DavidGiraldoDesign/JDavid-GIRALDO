@@ -1,7 +1,7 @@
 (function controller(view, projectHolder) {
     view.render();
-    let staticDiameter = 15;
-    let squeeze = 12;
+    let staticDiameter = 8;
+    let squeeze = 6;
     let steps = 0;
 
     let lowerTitles = document.querySelector('#lowerTitles');

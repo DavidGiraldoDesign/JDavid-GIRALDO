@@ -1,5 +1,5 @@
 @media only screen and (orientation: portrait) {
-    #menuBackground{
+    #menuBackground {
         display: none;
     }
     #upperTitles {
@@ -9,24 +9,37 @@
         height: 50px;
         z-index: 3;
     }
+    #menu-holder {
+        position: fixed;
+        justify-content: baseline;
+        width: 100%;
+        height: 80px;
+        bottom: 0px;
 
-    #josedavidTitle {
-        margin-left: 20px;
     }
-
-    #emailTitle-mobile {
-        margin-right: 0;
-        margin-top: 0;
-        margin-right: 20px;
+    #josedavidTitle {/*--------- JoseDavid GIRALDO */
+        position: absolute;
+        left: 0;
+        margin-top:0px;
+        margin-left: 10px;
+        width: 150px;
+      
     }
-
+    #emailTitle-mobile {/*--------- Send me an EMAIL */
+        text-align: right;
+        position: absolute;
+        right: 0;
+        margin-top:0px;
+        margin-right: 10px;
+        width: 150px;
+    }
     #lowerTitles {
         display: none;
     }
 }
 
 @media only screen and (orientation: landscape) {
-    #menuBackground{
+    #menuBackground {
         z-index: 1;
         display: none;
         top: 0;
@@ -34,41 +47,57 @@
         width: 100%;
         height: 120px;
     }
-
     #upperTitles {
-        z-index: 2;
-        background-color: transparent;
+        height: 100px;
+        z-index: 3;
         justify-content: space-between;
         height: auto;
     }
-
-    #josedavidTitle {
-        margin-left: 40px;
-        margin-top: 40px;
+    #menu-holder {
+        width: 100%;
+        height: 100%;
+        background: red;
+        display: flex;
+        justify-content: center;
     }
-
-    #emailTitle-mobile {
-        margin-right: 40px;
-        margin-top: 40px;
-        
+    #josedavidTitle {/*--------- JoseDavid GIRALDO */
+        position: absolute;
+        left: 0;
+        margin-top:60px;
+        margin-left: 60px;
+        width: 150px;
+    
+       
+    }
+    #emailTitle-mobile {/*--------- Send me an EMAIL */
+        position: absolute;
+        right: 0;
+        margin-top:60px;
+        margin-right: 60px;
+        width: 150px;
+     
+        text-align: right;
+      
     }
     #lowerTitles {
         display: flex;
-        
     }
     #socialNetWorksButtonsContainer {
         display: flex;
         flex-direction: column;
         height: 150px;
     }
-
 }
-#menuBackground{
+
+#menuBackground {
     background: white;
     /*box-shadow: 0px 0px 3px rgb(180, 180, 180);*/
 }
+
 /*General styles*/
-#upperTitles h3, #lowerTitles h3 {
+
+#upperTitles h3,
+#lowerTitles h3 {
     cursor: pointer;
     font-family: 'Didact Gothic', sans-serif;
     font-size: 16px;
@@ -84,14 +113,13 @@ a:active {
     display: inline-block;
 }
 
- a {
+a {
     color: rgb(50, 50, 50);
     font-size: 16px;
 }
 
 .bolder {
     font-family: 'Barlow', sans-serif;
-
 }
 
 /*--------------*/
@@ -102,8 +130,8 @@ a:active {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
-
 
 #lowerTitles {
     position: fixed;
@@ -114,13 +142,11 @@ a:active {
     align-items: center;
 }
 
-
-
 /*Social network´s logos style*/
+
 #socialNetWorksButtonsContainer {
     background: transparent;
     /*width: 500px;*/
-
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
