@@ -295,11 +295,17 @@ let view = {
             <br> for wathing </h1>
             <br>
             <div id="thanks-photo">
-                <a id="email-contact" href="mailto:josedavidgm1995@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
-                <img src="assets/thanks-photo.png"></a>
-                <p>( Click me )</p> 
+                <div id="clicking-photos">   
+                     <a id="email-contact" href="mailto:josedavidgm1995@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
+                    
+                        <img id="m-clicking" src="https://media.giphy.com/media/pFwRzOLfuGHok/giphy.gif">
+                        <img id="j-clicking" src="assets/thanks-photo.png">
+                    
+                     </a>
+                </div>
+                
             </div>
-            
+            <p>( Click me )</p> 
             <br>
             <p>Did you enjoy my work? 
             <br>
@@ -704,7 +710,23 @@ let view = {
         <div>
             <p>Please wait</p>
         </div>
+        <ul id="pre-loader-social" >
+            <li><a id="pre-loader-behance"  href="https://www.behance.net/JoseDavidGiraldoM" target="_blank"></a></li>
+            <li><a id="pre-loader-github"   href="https://github.com/josedavidgm1995" target="_blank"></a></li>
+            <li><a id="pre-loader-linkedin" href="https://www.linkedin.com/in/josedavidgiraldom/" target="_blank"></a></li>
+            <li><a id="pre-loader-instagram" href="https://www.instagram.com/_david.giraldo/" target="_blank"></a></li>        
+        </ul>
     `;
+
+    let b = div.querySelector('#pre-loader-behance');
+    b.appendChild(svg.getBehance());
+    let g = div.querySelector('#pre-loader-github');
+    g.appendChild(svg.getGithub());
+    let lk = div.querySelector('#pre-loader-linkedin');
+    lk.appendChild(svg.getLinkedin());
+    let i = div.querySelector('#pre-loader-instagram');
+    i.appendChild(svg.getInstagram());
+
     let l = div.querySelector('#loading'); 
     let f = div.querySelector('#finally'); 
 
