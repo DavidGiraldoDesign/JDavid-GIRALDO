@@ -527,15 +527,15 @@ let view = {
             document.documentElement.scrollTop = 0;
         });
 
-/*
-        let nextProject = div.querySelector('#nextProject');
-        nextProject.addEventListener('click', e => {
-            this.onNextProject(actualProjectIndex, portfolioSize);
-        });
-        let previousProject = div.querySelector('#previousProject');
-        previousProject.addEventListener('click', e => {
-            this.onPreviousProject(actualProjectIndex, portfolioSize);
-        });*/
+        /*
+                let nextProject = div.querySelector('#nextProject');
+                nextProject.addEventListener('click', e => {
+                    this.onNextProject(actualProjectIndex, portfolioSize);
+                });
+                let previousProject = div.querySelector('#previousProject');
+                previousProject.addEventListener('click', e => {
+                    this.onPreviousProject(actualProjectIndex, portfolioSize);
+                });*/
 
         return div;
     },
@@ -604,7 +604,7 @@ let view = {
         div.appendChild(this.getProjectContentContainer(project.sections));
         div.appendChild(this.getThankYouContainer(projectIndex, projectHolder.length));
         div.appendChild(this.getArrowsMenuBar(projectIndex, projectHolder.length));
-   
+
         let bgColor = project.style.background;
         let color = project.style.color;
         div.querySelector('#project-content-container').style.background = bgColor;
@@ -688,6 +688,35 @@ let view = {
         //this.bodyElement.appendChild(this.getNavegationMenu(0));
 
         this.bodyElement.appendChild(this.getPageContainer());
-    }
+    },
 
 };
+//=============================== Loading screen
+(function renderPreLoadScreen() {
+    let div = document.createElement('div');
+    div.id = "pre-loader";
+    div.innerHTML = `
+        <div>
+            <h1 id="loading">Loading...</h1>
+            <h1 id="finally">Finally!</h1>
+        </div>
+            <img src="https://media.giphy.com/media/OiC5BKaPVLl60/giphy.gif">
+        <div>
+            <p>Please wait</p>
+        </div>
+    `;
+    let l = div.querySelector('#loading'); 
+    let f = div.querySelector('#finally'); 
+
+    document.querySelector('body').appendChild(div);
+    window.addEventListener('load', (e) => {
+            div.style.opacity='0';
+            l.style.display='none';
+            f.style.display='block';
+        window.setTimeout(e =>{ 
+            div.style.display='none';
+            div.style.zIndex='-99';
+        }, 1000, 'Opacity 0');
+    });
+
+})();
