@@ -11,7 +11,7 @@ let view = {
         div.innerHTML = `
         <div id="menuBackground"></div>
         <div id="upperTitles">
-            <h3 class="cornerTitle" id="josedavidTitle"> JoseDavid <span class="bolder">GIRALDO</span></h3>
+            <h3 class="cornerTitle" id="josedavidTitle"> David <span class="bolder">GIRALDO</span></h3>
             <div id="menu-holder"></div>
             <a class="cornerTitle" id="emailTitle-mobile" href="mailto:josedavidgm1995@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
             <h3>Send me an <span class="bolder">EMAIL</span></h3></a>
@@ -703,10 +703,10 @@ let view = {
     div.id = "pre-loader";
     div.innerHTML = `
         <div>
-            <h1 id="loading">Loading...</h1>
+            <h1 id="loading">Loading</h1>
             <h1 id="finally">Finally!</h1>
         </div>
-            <img src="https://media.giphy.com/media/OiC5BKaPVLl60/giphy.gif">
+            <img src="/assets/android-desktop.png">
         <div>
             <p>Please wait</p>
         </div>
@@ -738,7 +738,7 @@ let view = {
         window.setTimeout(e =>{ 
             div.style.display='none';
             div.style.zIndex='-99';
-        }, 1000, 'Opacity 0');
+        }, 1500, 'Opacity 0');
     });
 
 })();
