@@ -2,28 +2,36 @@
     .video-background {
         display: none;
     }
+
     #imageCover {
         min-height: 600px;
     }
+
     #project-coverPage h1 {
         font-size: 80px;
     }
+
     #YouTubeBackgroundVideoPlayer {
         display: none;
     }
+
     #project-coverPage {
         height: 600px;
     }
+
     #project-title {
         width: 100%;
         padding-left: 20px;
     }
+
     #project-header {
         width: 100%;
     }
+
     #project-tools-list {
         display: none;
     }
+
     .youTube-InsideDisplay {
         display: none;
     }
@@ -33,25 +41,32 @@
     .video-background {
         display: flex;
     }
+
     #imageCover {
         min-height: 800px;
     }
+
     #project-coverPage h1 {
         font-size: 100px;
     }
+
     #YouTubeBackgroundVideoPlayer {
         display: flex;
     }
+
     #project-coverPage {
         height: 800px;
     }
+
     #project-title {
         width: 100%;
         padding-left: 150px;
     }
+
     #project-header {
         width: 60%;
     }
+
     #project-tools-list {
         display: flex;
         padding-left: 40px;
@@ -59,6 +74,7 @@
         flex-direction: column;
         justify-content: space-around;
     }
+
     .youTube-InsideDisplay {
         display: flex;
     }
@@ -67,23 +83,14 @@
 /*------------------------ Arrow menu bar button */
 
 #arrowsMenuBar {
-    position: fixed;
-    z-index: 10;
-    background-color: rgb(50, 50, 50);
-    top: 0;
-    right: 0;
-    width: 180px;
-    height: 50px;
     display: flex;
-    color: white;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0px 0px 5px black;
-    transition: top 0.3s ease;
-    -webkit-transition: top 0.3s ease;
+    width: 200px;
     font-family: 'Didact Gothic', sans-serif;
     font-size: 16px;
 }
+
 #arrowsMenuBar button {
     background: none;
     border: none;
@@ -98,9 +105,7 @@
     -webkit-transition: .5s color ease;
     transition: .5s color ease;
 }
-#arrowsMenuBar button:hover {
-    color: rgb(255, 255, 255);
-}
+
 /*------------------------ Back button */
 
 #backToPorjectBar {
@@ -108,18 +113,21 @@
     z-index: 10;
     background-color: rgb(50, 50, 50);
     top: 0;
-    width: 180px;
+    width: 400px;
     height: 50px;
     display: flex;
     color: white;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     box-shadow: 0px 0px 5px black;
     transition: top 0.3s ease;
     -webkit-transition: top 0.3s ease;
     -webkit-transition: .3s ease;
     transition: .3s ease;
+}
+
+#backToPorjectBar button:hover {
+    color: black;
 }
 
 #backToPorjectBar:hover {
@@ -200,6 +208,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -211,6 +220,7 @@
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -435,6 +445,7 @@
     justify-content: center;
     align-content: center;
 }
+
 #project-thanks-photo {
     margin-bottom: 20px;
 }

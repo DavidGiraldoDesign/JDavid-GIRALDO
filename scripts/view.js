@@ -248,7 +248,7 @@ let view = {
 
         <div class="sectionBlock">
             <div class="text-inside-sectionBlock">
-            <p id="rights">© 2019 JoseDavid GIRALDO / All Rights Reserved</p>
+            <p id="rights">© 2019 David GIRALDO / All Rights Reserved</p>
             </div>
         </div>
         `;
@@ -523,7 +523,7 @@ let view = {
                 </div>
             </div>
             <div class="thankYouBlock">
-                <p>© 2019 JoseDavid GIRALDO / All Rights Reserved</p>
+                <p>© 2019 David GIRALDO / All Rights Reserved</p>
             </div>
         `;
 
@@ -545,26 +545,20 @@ let view = {
 
         return div;
     },
-    getArrowsMenuBar: function getArrowsMenuBar(actualProjectIndex, portfolioSize) {
+    getBackToPorjectsMenuBar: function getBackToPorjectsMenuBar(actualProjectIndex, portfolioSize) {
         let div = document.createElement('div');
-        div.id = 'arrowsMenuBar';
+        div.id = 'backToPorjectBar';
         div.innerHTML = `
+            <div>
+                <h1 id="backToPorjectButton">Back to <span class="bolder">Projects</span></h1>
+            </div>
+            <div id="arrowsMenuBar">
                 <button><p id="up-previousProject">Previous</p></button>
                 <p>${actualProjectIndex+1}/${portfolioSize}</p>
                 <button><p id="up-nextProject">Next</p></button>
+            </div>
         `;
-
-        let prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            let currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                div.style.top = "0px";
-            } else {
-                div.style.top = "-60px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
-
+        //------
         let previousProject = div.querySelector('#up-previousProject');
         previousProject.addEventListener('click', e => {
             this.onPreviousProject(actualProjectIndex, portfolioSize);
@@ -573,17 +567,7 @@ let view = {
         nextProject.addEventListener('click', e => {
             this.onNextProject(actualProjectIndex, portfolioSize);
         });
-        return div;
-    },
-    getBackToPorjectsMenuBar: function getBackToPorjectsMenuBar() {
-        let div = document.createElement('div');
-        div.id = 'backToPorjectBar';
-        div.innerHTML = `
-            <div>
-                <h1 id="backToPorjectButton">Back to <span class="bolder">Projects</span></h1>
-            </div>
-        `;
-
+        //----------------------------
         let btn = div.querySelector('#backToPorjectButton');
         btn.addEventListener('click', (e) => {
             this.onReturnToProjects();
@@ -609,7 +593,6 @@ let view = {
         div.appendChild(this.getProjectBriefData(project.briefData));
         div.appendChild(this.getProjectContentContainer(project.sections));
         div.appendChild(this.getThankYouContainer(projectIndex, projectHolder.length));
-        div.appendChild(this.getArrowsMenuBar(projectIndex, projectHolder.length));
 
         let bgColor = project.style.background;
         let color = project.style.color;
@@ -682,7 +665,7 @@ let view = {
         this.bodyElement.scrollTop = 0;
         // this.bodyElement.clientHeight=0;
         //this.bodyElement.scrollHeight=0;
-        this.bodyElement.appendChild(this.getBackToPorjectsMenuBar());
+        this.bodyElement.appendChild(this.getBackToPorjectsMenuBar(projectIndex, projectHolder.length));
         this.bodyElement.appendChild(this.getProjectContainer(projectHolder[projectIndex], projectIndex, projectHolder));
     },
     //===================================================================== Initial Render
@@ -727,17 +710,17 @@ let view = {
     let i = div.querySelector('#pre-loader-instagram');
     i.appendChild(svg.getInstagram());
 
-    let l = div.querySelector('#loading'); 
-    let f = div.querySelector('#finally'); 
+    let l = div.querySelector('#loading');
+    let f = div.querySelector('#finally');
 
     document.querySelector('body').appendChild(div);
     window.addEventListener('load', (e) => {
-            div.style.opacity='0';
-            l.style.display='none';
-            f.style.display='block';
-        window.setTimeout(e =>{ 
-            div.style.display='none';
-            div.style.zIndex='-99';
+        div.style.opacity = '0';
+        l.style.display = 'none';
+        f.style.display = 'block';
+        window.setTimeout(e => {
+            div.style.display = 'none';
+            div.style.zIndex = '-99';
         }, 1500, 'Opacity 0');
     });
 
