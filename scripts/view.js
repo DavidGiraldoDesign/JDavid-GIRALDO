@@ -292,7 +292,7 @@ let view = {
      
         <div class="thankYouBlock">
             <h1> Thank you 
-            <br> for wathing </h1>
+            <br> for watching </h1>
             <br>
             <div id="thanks-photo">
                 <div id="clicking-photos">   
@@ -395,6 +395,9 @@ let view = {
                     <p>${briefData.techTools}</p>
                 </div>
             </div>
+        </div>
+        <div id="CTA-briefData">
+              <button>+ More</button>
         </div>
         `;
         return div;
