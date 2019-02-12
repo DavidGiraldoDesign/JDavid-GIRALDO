@@ -1,6 +1,4 @@
 var t0 = performance.now();
-
-
 let view = {
 
     bodyElement: document.querySelector(`#Root`),
@@ -33,15 +31,10 @@ let view = {
         l.appendChild(svg.getLinkedin());
         let i = div.querySelector('#instagram');
         i.appendChild(svg.getInstagram());
-
-
         div.querySelector('#menu-holder').appendChild(menu);
-
         return div;
-
     },
 
-    //getNavegationMenu: function getNavegationMenu(value) {
     getNavegationMenu: function getNavegationMenu(value) {
         let div = document.createElement(`div`);
         div.id = `navigationMenuContainer`;
@@ -81,8 +74,6 @@ let view = {
     },
 
     //======================================== ANIMATION DEFINITION
-
-
     setPageExitAnimation: function setPageExitAnimation(raw) {
         let top = (raw * 50) * 2;
         let opacity = .9 - ((raw * 1) * 2);
@@ -110,7 +101,6 @@ let view = {
           }
         `;
     },
-
     setSliderStyleAnimation: function setSliderStyleAnimation(diameter) {
         let style = this.bodyElement.querySelector(`[data="slider-style-animation"]`);
         style.innerHTML = `
@@ -128,7 +118,6 @@ let view = {
         }
         `;
     },
-
     animate: function animate({
         duration,
         timing,
@@ -151,7 +140,6 @@ let view = {
             }
         });
     },
-
     makeEaseInOut: function makeEaseInOut(timing) {
         return function (timeFraction) {
             if (timeFraction < .5)
@@ -163,7 +151,6 @@ let view = {
 
     //=====================================================================
     pageNumber: 0,
-
     getPageNumber: function getPageNumber() {
         return this.pageNumber;
     },
@@ -281,7 +268,6 @@ let view = {
                 this.onShowProject(i);
             });
         });
-
         return div;
     },
     getForthPage: function getForthPage() {
@@ -318,13 +304,11 @@ let view = {
             <br><br><br>
       </div>
        `;
-
         return div;
     },
     //------------------------------------------------- Project pages structure
 
     getYouTubeBackGroundVideo: function getYouTubeBackGroundVideo(youTubeVideoID, imageCover) {
-
         let div = document.createElement('div');
         div.id = 'background-youtube-video';
         div.innerHTML = `
@@ -338,8 +322,6 @@ let view = {
             let videoBackground = div.querySelector('#YouTubeBackgroundVideoPlayer');
             videoBackground.style.display = 'none';
         }
-
-
         return div;
     },
 
@@ -357,7 +339,6 @@ let view = {
                 </div>
             </div>
         `;
-        //div.appendChild(this.getYouTubeBackGroundVideo(coverData.youTubeVideoID));
         div.insertBefore(this.getYouTubeBackGroundVideo(coverData.youTubeVideoID, coverData.imageCover), div.childNodes[0]);
         return div;
     },
@@ -403,36 +384,9 @@ let view = {
         return div;
     },
     //---------------------- Project content micro architecture
-    getProjectMediaBoxInsideDisplay: function getProjectMediaBoxInsideDisplay(mediaLink, type) {
-        let div = document.createElement('div');
-        div.className = 'project-media-box-display-InsideSection';
-
-        if (typeof type === 'string') {
-            switch (type) {
-                case 'image':
-                    div.innerHTML = `
-                <img src="${mediaLink}" alt="josedavid GIRALDO Portfolio">
-                `;
-                    break;
-                case 'gif':
-                    div.innerHTML = `
-                <img src="${mediaLink}" alt="josedavid GIRALDO Portfolio">
-                `;
-                    break;
-                case 'video':
-                    div.innerHTML = `
-                <iframe src="https://www.youtube.com/embed/${mediaLink}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                `;
-                    break;
-            }
-        }
-
-        return div;
-    },
     getProjectInformationInsideDisplay: function getProjectInformationInsideDisplay(sectionInfo) {
         let div = document.createElement('div');
         div.className = 'project-information-box-InsideDisplay';
-
         if (sectionInfo.media === true) {
             if (sectionInfo.url !== null) {
                 let image = document.createElement('img');
@@ -446,7 +400,6 @@ let view = {
                 <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${sectionInfo.youTubeVideoID}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
                 div.appendChild(youTubeDiv);
             }
-
         } else {
             let textStringLines = sectionInfo.text.split('\n');
 
@@ -462,7 +415,6 @@ let view = {
                 div.querySelector('.text-box-padding').appendChild(lineNode);
             });
         }
-
         return div;
     },
 
@@ -474,14 +426,9 @@ let view = {
         `;
         let InsideDisplay = div.querySelector(".project-display-InsideSection");
         //.project-display-InsideSection is the box with 1400px width
-
         div.style.background = sectionInfo.style.background;
         div.style.color = sectionInfo.style.color;
-
-
         InsideDisplay.appendChild(this.getProjectInformationInsideDisplay(sectionInfo));
-
-
         return div;
     },
 
@@ -525,17 +472,6 @@ let view = {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         });
-
-        /*
-                let nextProject = div.querySelector('#nextProject');
-                nextProject.addEventListener('click', e => {
-                    this.onNextProject(actualProjectIndex, portfolioSize);
-                });
-                let previousProject = div.querySelector('#previousProject');
-                previousProject.addEventListener('click', e => {
-                    this.onPreviousProject(actualProjectIndex, portfolioSize);
-                });*/
-
         return div;
     },
     getBackToPorjectsMenuBar: function getBackToPorjectsMenuBar(actualProjectIndex, portfolioSize) {
@@ -611,18 +547,12 @@ let view = {
         div.innerHTML = `
         <style data="page-style-animation" type="text/css"></style>    
         `;
-        //<div>© 2019 Jose David Giraldo / All Rights Reserved</div>
-
         div.appendChild(this.getPagesArray()[this.pageNumber]);
-
-        let page = div.querySelector(".page");
         return div;
     },
     //------------------------------------------------- Render single Page
     renderPage: function renderPage(n) {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-        this.bodyElement.scrollTop = 0;
+        this.returntoTopView();
         this.setPageNumber(n);
         let p = document.querySelector(`.pagesContainer`);
         p.scrollTop = 0;
@@ -633,12 +563,9 @@ let view = {
     },
     renderPageProjects: function renderPageProjects(n) {
         this.bodyElement.innerHTML = ``;
-        this.bodyElement.scrollTop = 0;
-
+        this.returntoTopView();
         let menu = this.getNavegationMenu(67);
         this.bodyElement.appendChild(this.getCornerTitle(menu));
-        //this.bodyElement.appendChild(this.getCornerTitle());
-        //this.bodyElement.appendChild(this.getNavegationMenu(67));
         this.bodyElement.appendChild(this.getPageContainer());
         this.setPageNumber(n);
         let menuBackground = document.querySelector('#menuBackground');
@@ -652,26 +579,22 @@ let view = {
     //------------------------------------------------- Render single Project
     renderProject: function renderProject(projectIndex) {
         this.bodyElement.innerHTML = ``;
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-        // window.screenTop=0;
-        this.bodyElement.scrollTop = 0;
-        // this.bodyElement.clientHeight=0;
-        //this.bodyElement.scrollHeight=0;
+        this.returntoTopView();
         this.bodyElement.appendChild(this.getBackToPorjectsMenuBar(projectIndex, projectHolder.length));
         this.bodyElement.appendChild(this.getProjectContainer(projectHolder[projectIndex], projectIndex, projectHolder));
     },
     //===================================================================== Initial Render
     render: function render() {
-
         this.bodyElement.innerHTML = ``;
         let menu = this.getNavegationMenu(0);
         this.bodyElement.appendChild(this.getCornerTitle(menu));
-        //this.bodyElement.appendChild(this.getNavegationMenu(0));
-
         this.bodyElement.appendChild(this.getPageContainer());
     },
-
+    returntoTopView: function returntoTopView() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        this.bodyElement.scrollTop = 0;
+    }
 };
 //=============================== Loading screen
 (function renderPreLoadScreen() {
