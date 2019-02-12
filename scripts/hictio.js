@@ -224,6 +224,15 @@ const projectHictio = {
                 color: ''
             }
         }, {
+            title: 'Concept Sketching',
+            subTitle: '',
+            text: `We explore different ways to deliver a meaningful experience through furniture design
+            to place the vibro-tactile fish replicas, and wristband design to install the NCF-tags.`,
+            style: {
+                background: 'rgb(255,255,255)',
+                color: ''
+            }
+        },{
             title: '', //Sketching
             subTitle: '',
             text: ``,
@@ -247,7 +256,7 @@ const projectHictio = {
             subTitle: '',
             text: ``,
             media: true,
-            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549747042/portfolio-hictio/principal-hictio.png',
+            url: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549933465/portfolio-hictio/principal-hictio.png',
             youTubeVideoID: null,
             style: {
                 background: 'rgb(255,246,223)',

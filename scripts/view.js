@@ -556,9 +556,9 @@ let view = {
                 <h1 id="backToPorjectButton">Back to <span class="bolder">Projects</span></h1>
             </div>
             <div id="arrowsMenuBar">
-                <button><p id="up-previousProject">Previous</p></button>
+                <button id="up-previousProject"><p>Previous</p></button>
                 <p>${actualProjectIndex+1}/${portfolioSize}</p>
-                <button><p id="up-nextProject">Next</p></button>
+                <button id="up-nextProject"><p>Next</p></button>
             </div>
         `;
         //------
