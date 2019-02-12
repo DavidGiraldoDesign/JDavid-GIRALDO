@@ -58,7 +58,7 @@
     }
 
     #project-coverPage h1 {
-        font-size: 100px;
+        font-size: 70px;
     }
 
     #YouTubeBackgroundVideoPlayer {
@@ -245,7 +245,7 @@
     width: 100%;
     display: flex;
     background-color: transparent;
-    background: linear-gradient(to top, rgba(0, 0, 0, .3), rgba(0, 0, 0, .0));
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
 }
 
 #project-title {

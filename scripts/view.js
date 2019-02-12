@@ -499,25 +499,15 @@ let view = {
         div.id = 'thankYouContainer';
         div.innerHTML = `
             <div class="thankYouBlock">
-                <button>
-                    <p id="backToTop">Back to top</p>
+                <button id="backToTop">
+                    <p>Back to top</p>
                 </button>
             </div>
-            <!-- div class="thankYouBlock" id="nextPrev">
-                <button><p id="previousProject">Previous Project</p></button>
-                <p>${actualProjectIndex+1}/${portfolioSize}</p>
-                <button><p id="nextProject">Next Project</p></button>
-            </div -->
+            
             <div class="thankYouBlock">
                 <h1>Thank you for watching</h1>
             </div>
-            <!-- div class="thankYouBlock">
-                <button>
-                    <a href="mailto:josedavidgm1995@gmail.com?Subject=Internship%202019" target="_top">
-                        <p>Send me an<span class="bolder">EMAIL</span></p>
-                    </a>
-                </button>
-            </div -->
+            
             <div class="thankYouBlock">
                 <div id="project-thanks-photo">
                     <a id="email-contact" href="mailto:josedavidgm1995@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
