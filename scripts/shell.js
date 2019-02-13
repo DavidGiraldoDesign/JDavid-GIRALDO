@@ -12,7 +12,7 @@ const projectShell = {
     },
     briefData: {
         longTitle: 'Redesign the Shell´s helix-ultra engine oil bottle through ergonomics and brand communication for packaging design',
-        team: 'Jose David Giraldo | Luisa Oviedo | Santiago Alonso',
+        team: 'David Giraldo | Luisa Oviedo | Santiago Alonso',
         scope: 'Academic',
         date: '2014',
         researchTools: 'Ergonomic evaluation / Brand analizis / SCAMPER',
@@ -21,7 +21,7 @@ const projectShell = {
     sections: [{
             title: '',
             subTitle: '',
-            text: 'The helix bottle Ferrari edition is a new concept looking toward a more aggressive and attractive design, delivering a more ergonomic handling with a compelling form and visual design. This new appearance communicates a message of strength and dynamism.',
+            text: 'The helix bottle Ferrari edition is a new concept looking toward a more aggressive and attractive design, delivering a more ergonomic handling with a compelling form and visual design. This new appearance transmits a message of strength and dynamism.',
             style: {
                 background: '',
                 color: ''

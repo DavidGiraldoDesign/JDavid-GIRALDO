@@ -11,8 +11,8 @@ const projectGinef = {
         imageCover: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217651/portfolio-ginef/cover-ginef.png'
     },
     briefData: {
-        longTitle: 'UX Design applied to recommender apps of birth control methods for young women to enhance reliability of the result.',
-        team: 'Jose David Giraldo | Maria Camila Morales',
+        longTitle: 'UX Design applied to birth control method recommendation App for young women to enhance reliability of the result',
+        team: 'David Giraldo | Maria Camila Morales',
         scope: 'Academic',
         date: '2017',
         researchTools: 'Personas / Design principle / Usability test / Conducted interview / Information architecture / Recommender algorithms / User centered design / HCI',
@@ -21,7 +21,7 @@ const projectGinef = {
     sections: [{
             title: '',
             subTitle: '',
-            text: `Ginef is a birth control method recommender app that delivers a more satisfying decision making experience and reliable results. It is tailored for young women having or beginning their sexual relations, and have doubts about witch method is more accurate for their life style and preferences. Furthermore, if the woman has a love partner, she could add his opinion to the recommender system in order to make the decision as a couple.`,
+            text: `Ginef is a birth control method recommendation App that delivers a more satisfying decision-making experience and reliable results. It is tailored for young women having or beginning their sexual relations, and have doubts about witch method is more accurate for their life style and preferences. Furthermore, if the woman has a love partner, she could add his opinion to the recommender system in order to make the decision as a couple.`,
             style: {
                 background: '',
                 color: ''
@@ -71,7 +71,7 @@ const projectGinef = {
         {
             title: '',
             subTitle: '',
-            text: `During a medical appointment, most of the times, the gynecologist only takes into consideration the woman´s biological factors in order to make a medical prescription. That is, the gynecologist may disregard factors related to her life style.`,
+            text: `During a medical appointment, most of the times, the gynecologist only takes into consideration the woman's biological factors in order to make a medical prescription. That is, the gynecologist may disregard factors related to her life style.`,
             style: {
                 background: '',
                 color: ''
@@ -143,7 +143,7 @@ const projectGinef = {
         {
             title: '',
             subTitle: '',
-            text: `Using a content-based filtering approach, we design a functional prototype deployed in a web platform, then we conducted a task analysis to test the usability of the interface, and evaluate the precision of the recommender´s algorithm.
+            text: `Using a content-based filtering approach, we design a functional prototype deployed in a web platform, then we conducted a task analysis to test the usability of the interface, and evaluate the precision of the recommender's algorithm.
             \n Go visit our former prototype at: https://mi-metodo-preferido.herokuapp.com/`,
             style: {
                 background: '',
@@ -272,8 +272,8 @@ const projectGinef = {
         {
             title: '',
             subTitle: '3)	Results, editing and Guide report',
-            text: `Ginef discloses the results based on the use´s answers. It organized the methods within a scale that goes from the more convenient to the less convenient. Each of these answers can be edited. 
-            \n The result acts as a guide to pursue a more accurate medical perception to the patient´s life style. 
+            text: `Ginef discloses the results based on the use's answers. It organized the methods within a scale that goes from the more convenient to the less convenient. Each of these answers can be edited. 
+            \n The result acts as a guide to pursue a more accurate medical perception to the patient's life style. 
             \n If the woman has a love partner, she can add a second profile, where he can answers the same questions to be taken in consideration. `,
             style: {
                 background: '',

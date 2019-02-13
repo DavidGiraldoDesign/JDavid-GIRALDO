@@ -12,7 +12,7 @@ const projectBeo = {
     },
     briefData: {
         longTitle: 'Brand innovation for consumer electronics to enhance social gathering experiences around music, food, and illumination.',
-        team: 'Jose David Giraldo | Natalia Valencia',
+        team: 'David Giraldo | Natalia Valencia',
         scope: 'Academic',
         date: '2015',
         researchTools: 'Personas / Design principle / SCAMPER',
@@ -21,7 +21,7 @@ const projectBeo = {
     sections: [{
             title: '',
             subTitle: '',
-            text: 'The BeoPlay S1 A2 is an elegant piece of furniture, following the Bang&Olusen´s brand DNA esthetic to pursue beauty and functionality. It offers a middle table to place food and control beverage´s temperature, and two towers that creates a surround sound environment.',
+            text: `The BeoPlay S1 A2 is an elegant piece of furniture, following the Bang&Olusen's brand DNA esthetic to pursue beauty and functionality. It offers a middle table to place food and control beverage's temperature, and two towers that creates a surround sound environment.`,
             style: {
                 background: 'rgb(199,213,221)',
                 color: ''
@@ -122,7 +122,7 @@ const projectBeo = {
         },{
             title: 'BeoPlay S1 A2 features',
             subTitle: '',
-            text: 'To bring an integrated user experience, and based on the Bang&Olufsen´s app, the whole system is controlled by a small device situated on top of the middle table, with a touch display to set music, adjust the table´s temperature, and change illumination.',
+            text: `To bring an integrated user experience, and based on the Bang&Olufsen's app, the whole system is controlled by a small device situated on top of the middle table, with a touch display to set music, adjust the table's temperature, and change illumination.`,
             style: {
                 background: 'rgb(226,241,248)',
                 color: ''
@@ -143,7 +143,7 @@ const projectBeo = {
         {
             title: '',
             subTitle: 'The middle table ',
-            text: 'It offers a wide surface to place food, with a compartment to hold beverages. The beverages´ area temperature can be set for cold or hot beverages as well.',
+            text: `It offers a wide surface to place food, with a compartment to hold beverages. The beverages' area temperature can be set for cold or hot beverages as well.`,
             style: {
                 background: 'rgb(226,241,248)',
                 color: ''
@@ -176,7 +176,7 @@ const projectBeo = {
         {
             title: '',
             subTitle: 'The twin towers',
-            text: 'Each tower can be located according to the room´s area and the user´s needs. They are sync together with the table.',
+            text: `Each tower can be located according to the room's area and the user's needs. They are synced together with the table.`,
             style: {
                 background: 'rgb(226,241,248)',
                 color: ''

@@ -12,7 +12,7 @@ const projectHictio = {
     },
     briefData: {
         longTitle: 'Interactive Products for Enhancing Accessibility of the Visually Impaired in Touristic Environments',
-        team: 'Jose David Giraldo | Camilo Montoya',
+        team: 'David Giraldo | Camilo Montoya',
         scope: 'Graduate thesis',
         date: '2018',
         researchTools: 'Personas / Customer journey map / Conducted interview / Fly in the wall / Draw it / Design principle / Universal design / User centered design / User engagement',
@@ -79,7 +79,7 @@ const projectHictio = {
         }, {
             title: 'Field Work ',
             subTitle: 'Human-centered design approach',
-            text: `We visited the zoo with two blind persons for study the experience. We asked them to think aloud their impressions as they were going through the aquarium. Moreover, we went through the area where the butterflies and birds are with our eyes covered to better understand how a blind person feel in that situation.`,
+            text: `We visited the zoo with two blind people for study the experience. We asked them to think aloud their impressions as they were going through the aquarium. Moreover, we went through the area where the butterflies and birds are with our eyes covered to better understand how a blind person feels in that situation.`,
             style: {
                 background: 'rgb(25,25,25)',
                 color: 'rgb(200,200,200)'
@@ -226,8 +226,7 @@ const projectHictio = {
         }, {
             title: 'Concept Sketching',
             subTitle: '',
-            text: `We explore different ways to deliver a meaningful experience through furniture design
-            to place the vibro-tactile fish replicas, and wristband design to install the NCF-tags.`,
+            text: `We explored different ways to deliver a meaningful experience through furniture design in which to place the vibro-tactile fish replicas, and wristband design to install the NCF-tags.`,
             style: {
                 background: 'rgb(255,255,255)',
                 color: ''

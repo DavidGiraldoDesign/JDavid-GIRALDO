@@ -215,7 +215,7 @@ let view = {
         </div>
         <div class="sectionBlock">
             <div class="text-inside-sectionBlock">
-                <p> I consider myself an outgoing person and curious designer student with a lot initiative, passionate about art, technology, and product development, with strong problem-solving abilities, and attention to details. And I also like cats and pizza.  An important thing about me is that I like to take ownership of my work and I usually develop a strong sense of belonging, beside I have good time management and decision-making skills to handle many projects simultaneously. Thanks God coffee exits!
+                <p> I consider myself an outgoing person and curious design student with a lot initiative, passionate about art, technology, and product development, with strong problem-solving abilities, and attention to details. And I also like cats and pizza. An important thing about me is that I like to take ownership of my work and I usually develop a strong sense of belonging, besides I have good time management and decision-making skills to handle many projects simultaneously. Thank God coffee exists! 
                 <br><br>
                 For me, design is about working in collaborative environments, and I am a team player who is easy to get along with, and therefore I like to maintain a positive and friendly team environment.
                 </p>
@@ -226,7 +226,7 @@ let view = {
 
         <div class="sectionBlock">
             <div class="text-inside-sectionBlock">
-                <p> At the present time. I am studying Industrial Design and Interactive Media Design at Icesi University in Cali – Colombia. Where I have been a student monitor and a research assistant. That is, giving my support to teachers by providing assistance to students in: universal design, usability, accessibility, product sketching and digital rendering, 3d modeling and printing, as well as making prototypes for investigations.
+                <p> At the present time. I am studying Industrial Design and Interactive Media Design at Icesi University in Cali – Colombia. Where I have been a teaching and research assistant. That is, give my support to teachers by providing assistance to students in: universal design, usability, accessibility, product sketching and digital rendering, 3d modeling and printing, as well as making prototypes for investigations. 
                 <br><br>
                 Furthermore I have participated in several non-academic activities such as: designing the University´s Open House advertising pieces for the Industrial Design career, and be part of the creation of the Industrial Design Student Group of Icesi University. I also won a Behance Award Coin in industrial design (2016), participate in the MASISA Student Design Contest (2016) been 3° place in Colombia, and 1° place in the PAVCO Student Design Contest #DiseñaConPavco (2015). And last but not least, I have a SolidWorks Associate certification in Mechanical Design (2014) and complete an online course, Design Kit: Prototyping, provided by +Acumen and IDEO.org (2018).
                 </p>
