@@ -9,7 +9,7 @@ let view = {
         div.innerHTML = `
         <div id="menuBackground"></div>
         <div id="upperTitles">
-            <h3 class="cornerTitle" id="josedavidTitle"> David <span class="bolder">GIRALDO</span></h3>
+            <h3 class="cornerTitle" id="josedavidTitle">David<span class="bolder">GIRALDO</span></h3>
             <div id="menu-holder"></div>
             <a class="cornerTitle" id="emailTitle-mobile" href="mailto:josedavidgm1995@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
             <h3>Send me an <span class="bolder">EMAIL</span></h3></a>
@@ -32,6 +32,7 @@ let view = {
         let i = div.querySelector('#instagram');
         i.appendChild(svg.getInstagram());
         div.querySelector('#menu-holder').appendChild(menu);
+
         return div;
     },
 
@@ -205,7 +206,7 @@ let view = {
         div.className = `page`;
         div.innerHTML = `
         <div class="sectionBlock">
-            <h1> "Hola", I´m David </h1>
+            <h1> Hola, I'm David </h1>
             
         </div>
         <div class="sectionBlock">
