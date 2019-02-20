@@ -4,7 +4,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1549234041/fondo-josedavid_dv6hqd.png");
+    /*background-image: url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1549234041/fondo-josedavid_dv6hqd.png");*/
+    background-image: url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1550702219/david-background-b_j6qmho.png");
     display: inline-block;
     vertical-align: middle;
     background-color: white;
@@ -94,10 +95,10 @@ body {
     }
 
     #m-clicking {
-        margin-left: 5px;
-        margin-top: 5px;
-        width: 140px;
-        height: 140px;
+        margin-left: 40px;
+        margin-top: 40px;
+        width: 80px;
+        height: 80px;
     }
 
     #j-clicking {
@@ -167,10 +168,10 @@ body {
     }
 
     #m-clicking {
-        margin-left: 5px;
-        margin-top: 5px;
-        width: 190px;
-        height: 190px;
+        margin-left: 60px;
+        margin-top: 50px;
+        width: 100px;
+        height: 100px;
     }
 
     #j-clicking {
@@ -344,7 +345,7 @@ article {
 
 #m-clicking {
     position: absolute;
-    border-radius: 100px;
+    /*border-radius: 100px;*/
 }
 
 #contactArticle p {

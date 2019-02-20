@@ -9,7 +9,7 @@ let view = {
         div.innerHTML = `
         <div id="menuBackground"></div>
         <div id="upperTitles">
-            <h3 class="cornerTitle" id="josedavidTitle">David<span class="bolder">GIRALDO</span></h3>
+            <h3 class="cornerTitle" id="josedavidTitle">David <span class="bolder">GIRALDO</span></h3>
             <div id="menu-holder"></div>
             <a class="cornerTitle" id="emailTitle-mobile" href="mailto:josedavidgm1995@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
             <h3>Send me an <span class="bolder">EMAIL</span></h3></a>
@@ -168,7 +168,7 @@ let view = {
             <div id="home-message">
                 <h1>Hi!</h1>
                 <h3>I’m  a design student from Colombia, currently looking for an 
-                <br><span class="bolder">AWESOME INTERNSHIP</span></h3>
+                <br><span class="bolder">INTERNSHIP.</span></h3>
             </div>
           `;
 
@@ -285,7 +285,8 @@ let view = {
                 <div id="clicking-photos">   
                      <a id="email-contact" href="mailto:josedavidgm1995@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
                     
-                        <img id="m-clicking" src="https://media.giphy.com/media/pFwRzOLfuGHok/giphy.gif">
+                        <!--img id="m-clicking" src="https://media.giphy.com/media/pFwRzOLfuGHok/giphy.gif"-->
+                        <img id="m-clicking" src="/assets/logoD.png">
                         <img id="j-clicking" src="assets/thanks-photo.png">
                     
                      </a>
@@ -480,7 +481,7 @@ let view = {
         div.id = 'backToPorjectBar';
         div.innerHTML = `
             <div>
-                <h1 id="backToPorjectButton">Back to <span class="bolder">Projects</span></h1>
+                <h1 id="backToPorjectButton">Back to <span class="bolder">PROJECTS</span></h1>
             </div>
             <div id="arrowsMenuBar">
                 <button id="up-previousProject"><p>Previous</p></button>
@@ -565,10 +566,10 @@ let view = {
     renderPageProjects: function renderPageProjects(n) {
         this.bodyElement.innerHTML = ``;
         this.returntoTopView();
+        this.setPageNumber(n);
         let menu = this.getNavegationMenu(67);
         this.bodyElement.appendChild(this.getCornerTitle(menu));
         this.bodyElement.appendChild(this.getPageContainer());
-        this.setPageNumber(n);
         let menuBackground = document.querySelector('#menuBackground');
         menuBackground.style.display = 'block';
         let p = document.querySelector(`.pagesContainer`);

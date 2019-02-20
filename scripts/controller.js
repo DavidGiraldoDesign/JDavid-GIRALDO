@@ -5,14 +5,14 @@ var t0 = performance.now();
     let squeeze = 6;
     let steps = 0;
 
-    let lowerTitles = document.querySelector('#lowerTitles');
-  
     let bodyColor = document.querySelector('body');
     let root = document.querySelector('#Root');
-    let bntsMenu = document.querySelectorAll('.btn-menu');
-    let conerTitles = document.querySelectorAll('.cornerTitle');
 
     view.onAnimateRange = (range, rangeStartPosition, destination, index) => {
+        let lowerTitles = document.querySelector('#lowerTitles');
+        let bntsMenu = document.querySelectorAll('.btn-menu');
+        let conerTitles = document.querySelectorAll('.cornerTitle');
+
         let menuBackground = document.querySelector('#menuBackground');
         if (rangeStartPosition == destination) {
             return
@@ -43,7 +43,8 @@ var t0 = performance.now();
                         switch (index) {
                             case 0:
                                 menuBackground.style.display = 'none';
-                                bodyColor.style.backgroundImage = 'url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1549234041/fondo-josedavid_dv6hqd.png")';
+                               // bodyColor.style.backgroundImage = 'url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1549234041/fondo-josedavid_dv6hqd.png")';
+                               bodyColor.style.backgroundImage = 'url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1550702219/david-background-b_j6qmho.png")';
                                 break;
 
                             case 1:
@@ -74,7 +75,7 @@ var t0 = performance.now();
                         } else {
                             bodyColor.style.backgroundColor = 'rgb(255,255,255)';
                             bntsMenu.forEach(e => {
-                                e.style.color = 'rgb(100,100,100)';
+                                e.style.color = 'rgb(55,55,55)';
                             });
                             conerTitles.forEach(e => {
                                 e.style.color = 'rgb(55,55,55)';
@@ -127,6 +128,7 @@ var t0 = performance.now();
 
                 if (progress >= .5) {
                     view.renderPageProjects(2);
+                    
                 }
             }
         });

@@ -120,6 +120,8 @@ a {
 
 .bolder {
     font-family: 'Barlow', sans-serif;
+    font-style: italic;
+
 }
 
 /*--------------*/
@@ -169,7 +171,7 @@ a {
 }
 
 #socialNetWorksButtonsContainer svg path {
-    fill: rgb(150, 150, 150);
+    fill: rgb(90, 95, 100);
   
     
 }
