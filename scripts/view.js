@@ -168,7 +168,7 @@ let view = {
             <div id="home-message">
                 <h1>Hi!</h1>
                 <h3>I’m  a design student from Colombia, currently looking for an 
-                <br><span class="bolder">INTERNSHIP.</span></h3>
+                <span class="bolder">INTERNSHIP.</span></h3>
             </div>
           `;
 
@@ -198,7 +198,28 @@ let view = {
         });
         return div;
     },
+    //---------------------------------------------------- card structure
+    getInfoCard: function getInfoCard(img, icon, info,color) {
+        let div = document.createElement('div');
+        div.className = 'about-card';
+        div.innerHTML = `
+            <div class="card-photo">
+                <img src=${img}>
+            </div>
 
+            <div class="card-color-line" style="background:${color}"></div>
+
+            <div class="card-icon">
+                <img src=${icon}>
+            </div>
+            
+            <div class="card-info">
+                <p>${info}</p>
+            </div>
+        `;
+
+        return div;
+    },
 
     getSecondPage: function getSecondPage() {
         let div = document.createElement(`article`);
@@ -207,40 +228,63 @@ let view = {
         div.innerHTML = `
         <div class="sectionBlock">
             <h1> Hola, I'm David </h1>
-            
         </div>
-        <div class="sectionBlock">
+        <!-- div class="sectionBlock">
             <div id="about-jose-photo">
                 <img src="assets/about-jose.png">
             </div>
-        </div>
+        </div -->
         <div class="sectionBlock">
             <div class="text-inside-sectionBlock">
-                <p> I consider myself an outgoing person and curious design student with a lot initiative, passionate about art, technology, and product development, with strong problem-solving abilities, and attention to details. And I also like cats and pizza. An important thing about me is that I like to take ownership of my work and I usually develop a strong sense of belonging, besides I have good time management and decision-making skills to handle many projects simultaneously. Thank God coffee exists! 
-                <br><br>
-                For me, design is about working in collaborative environments, and I am a team player who is easy to get along with, and therefore I like to maintain a positive and friendly team environment.
+                <p>I am currently pursuing a dual degree in Industrial Design and Interactive Media Design at Icesi University since 2012. As a result, I have been learning how physical and digital products can interact to deliver a meaningful experience that suits user’s and business’ needs. 
+                <br><br>For me, design is about working in collaborative environments, and I am a team player who is easy to get along with, and therefore I like to maintain a positive and friendly team environment.
                 </p>
             </div>
         </div>
+        <div class="sectionBlock">
+            <h2> Competencies </h2>
+        </div>
+        <div class="cards-holder" id="competencies-Holder"></div>
 
-        <div id="instaGrid-Holder"></div>
+        <div class="sectionBlock">
+            <h2> Skill set </h2>
+        </div>
+        <div class="cards-holder" id="skillset-Holder"></div>
+
+        <div class="sectionBlock">
+            <h2> Awards, courses and certifications </h2>
+        </div>
+        <div class="cards-holder" id="awards-Holder"></div>
 
         <div class="sectionBlock">
             <div class="text-inside-sectionBlock">
-                <p> At the present time. I am studying Industrial Design and Interactive Media Design at Icesi University in Cali – Colombia. Where I have been a teaching and research assistant. That is, give my support to teachers by providing assistance to students in: universal design, usability, accessibility, product sketching and digital rendering, 3d modeling and printing, as well as making prototypes for investigations. 
-                <br><br>
-                Furthermore I have participated in several non-academic activities such as: designing the University´s Open House advertising pieces for the Industrial Design career, and be part of the creation of the Industrial Design Student Group of Icesi University. I also won a Behance Award Coin in industrial design (2016), participate in the MASISA Student Design Contest (2016) been 3° place in Colombia, and 1° place in the PAVCO Student Design Contest #DiseñaConPavco (2015). And last but not least, I have a SolidWorks Associate certification in Mechanical Design (2014) and complete an online course, Design Kit: Prototyping, provided by +Acumen and IDEO.org (2018).
-                </p>
+                <h2>Working as assistant</h2>
+                <p> I have been a teaching and research assistant. That is, give my support to teachers by providing assistance to students in: universal design, usability, accessibility, product sketching and digital rendering, 3d modeling and printing, as well as making prototypes for investigations.</p>
             </div>
         </div>
 
+        <!-- div id="instaGrid-Holder"></div -->
+ 
         <div class="sectionBlock">
             <div class="text-inside-sectionBlock">
             <p id="rights">© 2019 David GIRALDO / All Rights Reserved</p>
             </div>
         </div>
         `;
-        div.querySelector('#instaGrid-Holder').appendChild(this.getInstagramGrid());
+        //div.querySelector('#instaGrid-Holder').appendChild(this.getInstagramGrid());
+        let comp = div.querySelector('#competencies-Holder');
+        competencies.forEach((e, i) => {
+            comp.appendChild(this.getInfoCard(e.img, e.icon, e.info,e.color));
+        });
+        let skill = div.querySelector('#skillset-Holder');
+        skills.forEach((e, i) => {
+            skill.appendChild(this.getInfoCard(e.img, e.icon, e.info,e.color));
+        });
+        let award = div.querySelector('#awards-Holder');
+        awards.forEach((e, i) => {
+            award.appendChild(this.getInfoCard(e.img, e.icon, e.info,e.color));
+        });
+
         return div;
     },
     getThirdPage: function getThirdPage() {
@@ -248,9 +292,9 @@ let view = {
         div.id = `portfolioArticle`;
         div.className = `page`;
         div.innerHTML = `
-        <div class="sectionBlock">
+        <!-- div class="sectionBlock">
             <h1> Projects </h1>
-        </div>
+        </div -->
         
         <div class="projects-sectionBlock">
                 <div class="project-trigger">

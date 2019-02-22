@@ -4,8 +4,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /*background-image: url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1549234041/fondo-josedavid_dv6hqd.png");*/
-    background-image: url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1550702219/david-background-b_j6qmho.png");
+    
+    background-image: url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1550853017/a_vlzp8o.png");
+ 
     display: inline-block;
     vertical-align: middle;
     background-color: white;
@@ -24,9 +25,9 @@ body {
     }
 
     #home-message {
-        max-width: 60%;
-        margin-left: 0;
-        padding-top: 10px;
+        max-width: 50%;
+        margin-left: 10px;
+        padding-top: 50px;
     }
 
     #homeArticle h1 {
@@ -58,6 +59,20 @@ body {
 
     #aboutArticle h1 {
         font-size: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+    #aboutArticle h2 {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+    }
+
+    #aboutArticle p {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
     }
 
     #about-jose-photo img {
@@ -66,10 +81,11 @@ body {
     }
 
     article {
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 20px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-top: 0px;
     }
+
 
 
     #contactArticle h1 {
@@ -122,8 +138,8 @@ body {
 
     #home-message {
         margin-top: 100px;
-        max-width: 600px;
-        margin-left: 300px;
+        max-width: 500px;
+        margin-left: 25%;
     }
 
     #homeArticle h1 {
@@ -261,6 +277,125 @@ article {
     font-size: 14px;
 }
 
+/*--------------------------------- About's Card set ----------------------*/
+@media only screen and (orientation: portrait) {
+
+    .cards-holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 0px 1px #afafaf;
+    }
+
+    .about-card {
+        /*border: 1px solid #c8c8c8;*/
+        border-bottom: 1px solid #c8c8c8;
+        background: white;
+        border-radius: 0px 0px 0px 0px;
+        width: 100%;
+        height: 110px;
+        display: flex;
+        margin-bottom: 0px;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+    }
+
+    .card-photo {
+        display: none;
+    }
+
+    .card-icon { /*---------------------------- emty ICONS */
+
+        display: block;
+        background: red;
+        width: 0px;
+        height: 110px;
+
+    }
+
+    .card-info {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-info p {
+        width: 100%;
+        font-size: 17px;
+        text-align: left;
+        line-height: 1;
+        
+    }
+
+    .card-color-line {
+        width: 5px;
+        height: 110px;
+    }
+}
+
+@media only screen and (orientation: landscape) {
+    .cards-holder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 0px 0px #afafaf;
+    }
+    .about-card:first-child {
+        /*border-top: 1px solid #c8c8c8;*/
+        
+    }
+    .about-card {
+        border-bottom: 0px solid #c8c8c8;
+        /*border-right: 1px solid #c8c8c8;*/
+        background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(100, 100, 100, 0.2));
+        border-radius: 10px 0px 0px 10px;
+
+        width: 700px;
+        height: 100px;
+        display: flex;
+        margin-bottom: 5px;
+        overflow: hidden;
+        transition: 0.5s ease-in-out;
+    }
+
+    .about-card:hover {
+        height: 300px;
+        
+        
+    }
+
+    .card-photo {
+        background: greenyellow;
+        width: 300px;
+        height: 300px;
+        display: block;
+    }
+
+    .card-icon {
+        display: none;
+    }
+
+    .card-info {
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-info p {
+        width: 350px;
+        font-size: 17px;
+        text-align: left;
+        line-height: 1.2;
+    }
+
+    .card-color-line {
+        width: 5px;
+        height: 300px;
+    }
+}
+
 /*-------------*/
 
 #about-jose-photo {
@@ -393,6 +528,7 @@ article img {
 /*------------------------------------- Portfolio page */
 
 .projects-sectionBlock {
+    margin-top: 5%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
