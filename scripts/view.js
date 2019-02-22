@@ -204,6 +204,7 @@ let view = {
         div.className = 'about-card';
         div.innerHTML = `
             <div class="card-photo">
+            
                 <img src=${img}>
             </div>
 
@@ -547,7 +548,7 @@ let view = {
         btn.addEventListener('click', (e) => {
             this.onReturnToProjects();
         });
-
+/*
         let prevScrollpos = window.pageYOffset;
         window.onscroll = function () {
             let currentScrollPos = window.pageYOffset;
@@ -557,7 +558,7 @@ let view = {
                 div.style.top = "0px";
             }
             prevScrollpos = currentScrollPos;
-        }
+        }*/
         return div;
     },
     getProjectContainer: function getProjectContainer(project, projectIndex, projectHolder) {

@@ -1,5 +1,6 @@
 @media only screen and (orientation: portrait) {
     #backToPorjectBar {
+        bottom: 0px;
         width: 100%;
     }
 
@@ -46,7 +47,8 @@
 
 @media only screen and (orientation: landscape) {
     #backToPorjectBar {
-        width: 400px;
+        top: 0px;
+        width: 600px;
     }
 
     .video-background {
@@ -100,7 +102,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 200px;
+    width: 180px;
     font-family: 'Didact Gothic', sans-serif;
     font-size: 16px;
 }
@@ -123,18 +125,17 @@
 
 
 #backToPorjectBar {
+  
     position: fixed;
     z-index: 10;
     background-color: rgb(50, 50, 50);
-    top: 0;
-    height: 50px;
+    height: 60px;
     display: flex;
     color: white;
     justify-content: space-around;
     align-items: center;
     box-shadow: 0px 0px 5px black;
-    transition: top 0.3s ease;
-    -webkit-transition: top 0.3s ease;
+   
     -webkit-transition: .3s ease;
     transition: .3s ease;
 }
@@ -157,7 +158,7 @@
 
 #backToPorjectBar button {
     cursor: pointer;
-    height: 50px;
+    height: 60px;
 }
 
 /*------------------------  */
