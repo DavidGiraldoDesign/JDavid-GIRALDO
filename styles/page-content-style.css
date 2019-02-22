@@ -285,20 +285,20 @@ article {
         display: flex;
         flex-direction: column;
         align-items: center;
-        box-shadow: 0px 0px 1px #afafaf;
+    
     }
-
+    .about-card:first-child{
+        border-top: 1px solid #c8c8c8;
+    }
     .about-card {
-        /*border: 1px solid #c8c8c8;*/
+      
         border-bottom: 1px solid #c8c8c8;
         background: white;
-        border-radius: 0px 0px 0px 0px;
         width: 100%;
         height: 110px;
         display: flex;
         margin-bottom: 0px;
         overflow: hidden;
-        transition: 0.5s ease-in-out;
     }
 
     .card-photo {
@@ -308,17 +308,29 @@ article {
     .card-icon {
         /*---------------------------- emty ICONS */
 
-        display: block;
-        background: red;
-        width: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: white;
+         
+        width: 110px;
         height: 110px;
+        overflow: hidden;
+
+
+    }
+
+    .card-icon img {
+        /*---------------------------- emty ICONS */
+        opacity: .5;
+        width: 90%;
 
     }
 
     .card-info {
         width: 400px;
+      
         display: flex;
-        justify-content: center;
         align-items: center;
     }
 
@@ -335,8 +347,8 @@ article {
     }
 
     .card-color-line {
-        width: 5px;
-        height: 110px;
+        width: 10px;
+        height: 110px; 
     }
 }
 

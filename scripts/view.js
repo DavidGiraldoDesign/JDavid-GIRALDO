@@ -199,7 +199,7 @@ let view = {
         return div;
     },
     //---------------------------------------------------- card structure
-    getInfoCard: function getInfoCard(img, icon,title, info,color) {
+    getInfoCard: function getInfoCard(img, icon, title, info, color) {
         let div = document.createElement('div');
         div.className = 'about-card';
         div.innerHTML = `
@@ -241,8 +241,7 @@ let view = {
         </div -->
         <div class="sectionBlock">
             <div class="text-inside-sectionBlock">
-                <p>I am currently pursuing a dual degree in Industrial Design and Interactive Media Design at Icesi University since 2012. As a result, I have been learning how physical and digital products can interact to deliver a meaningful experience that suits user’s and business’ needs. 
-                <br><br>For me, design is about working in collaborative environments, and I am a team player who is easy to get along with, and therefore I like to maintain a positive and friendly team environment.
+                <p>I am currently pursuing a dual degree in Industrial Design and Interactive Media Design at Icesi University in Cali - Colombia since 2012. As a result, I have learned how to design digital and physical products, and the interactions between them to deliver a meaningful experience that suits user’s and business’ needs.
                 </p>
             </div>
         </div>
@@ -263,6 +262,10 @@ let view = {
 
         <div class="sectionBlock">
             <div class="text-inside-sectionBlock">
+            <br>    
+            <p>For me, design is about working in collaborative environments, and I am a team player who is easy to get along with, and therefore I like to maintain a positive and friendly team environment.
+                </p>
+                
                 <h2>Working as assistant</h2>
                 <p> I have been a teaching and research assistant. That is, give my support to teachers by providing assistance to students in: universal design, usability, accessibility, product sketching and digital rendering, 3d modeling and printing, as well as making prototypes for investigations.</p>
             </div>
@@ -279,15 +282,15 @@ let view = {
         //div.querySelector('#instaGrid-Holder').appendChild(this.getInstagramGrid());
         let comp = div.querySelector('#competencies-Holder');
         competencies.forEach((e, i) => {
-            comp.appendChild(this.getInfoCard(e.img, e.icon,e.title, e.info,e.color));
+            comp.appendChild(this.getInfoCard(e.img, e.icon, e.title, e.info, e.color));
         });
         let skill = div.querySelector('#skillset-Holder');
         skills.forEach((e, i) => {
-            skill.appendChild(this.getInfoCard(e.img, e.icon,e.title, e.info,e.color));
+            skill.appendChild(this.getInfoCard(e.img, e.icon, e.title, e.info, e.color));
         });
         let award = div.querySelector('#awards-Holder');
         awards.forEach((e, i) => {
-            award.appendChild(this.getInfoCard(e.img, e.icon,e.title, e.info,e.color));
+            award.appendChild(this.getInfoCard(e.img, e.icon, e.title, e.info, e.color));
         });
 
         return div;
@@ -552,17 +555,17 @@ let view = {
         btn.addEventListener('click', (e) => {
             this.onReturnToProjects();
         });
-/*
-        let prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            let currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                div.style.top = "0px";
-            } else {
-                div.style.top = "0px";
-            }
-            prevScrollpos = currentScrollPos;
-        }*/
+        /*
+                let prevScrollpos = window.pageYOffset;
+                window.onscroll = function () {
+                    let currentScrollPos = window.pageYOffset;
+                    if (prevScrollpos > currentScrollPos) {
+                        div.style.top = "0px";
+                    } else {
+                        div.style.top = "0px";
+                    }
+                    prevScrollpos = currentScrollPos;
+                }*/
         return div;
     },
     getProjectContainer: function getProjectContainer(project, projectIndex, projectHolder) {
