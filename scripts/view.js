@@ -199,7 +199,7 @@ let view = {
         return div;
     },
     //---------------------------------------------------- card structure
-    getInfoCard: function getInfoCard(img, icon, info,color) {
+    getInfoCard: function getInfoCard(img, icon,title, info,color) {
         let div = document.createElement('div');
         div.className = 'about-card';
         div.innerHTML = `
@@ -213,7 +213,11 @@ let view = {
             <div class="card-icon">
                 <img src=${icon}>
             </div>
-            
+
+            <div class="card-title">
+                <h2>${title}</h2>
+            </div>
+
             <div class="card-info">
                 <p>${info}</p>
             </div>
@@ -275,15 +279,15 @@ let view = {
         //div.querySelector('#instaGrid-Holder').appendChild(this.getInstagramGrid());
         let comp = div.querySelector('#competencies-Holder');
         competencies.forEach((e, i) => {
-            comp.appendChild(this.getInfoCard(e.img, e.icon, e.info,e.color));
+            comp.appendChild(this.getInfoCard(e.img, e.icon,e.title, e.info,e.color));
         });
         let skill = div.querySelector('#skillset-Holder');
         skills.forEach((e, i) => {
-            skill.appendChild(this.getInfoCard(e.img, e.icon, e.info,e.color));
+            skill.appendChild(this.getInfoCard(e.img, e.icon,e.title, e.info,e.color));
         });
         let award = div.querySelector('#awards-Holder');
         awards.forEach((e, i) => {
-            award.appendChild(this.getInfoCard(e.img, e.icon, e.info,e.color));
+            award.appendChild(this.getInfoCard(e.img, e.icon,e.title, e.info,e.color));
         });
 
         return div;

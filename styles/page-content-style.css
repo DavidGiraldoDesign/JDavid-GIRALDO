@@ -322,6 +322,10 @@ article {
         align-items: center;
     }
 
+    .card-title {
+        display: none;
+    }
+
     .card-info p {
         width: 100%;
         font-size: 17px;
@@ -351,9 +355,9 @@ article {
     .about-card {
         border-bottom: 0px solid #c8c8c8;
         /*border-right: 1px solid #c8c8c8;*/
-        background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(100, 100, 100, 0.2));
+        /* background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(240, 240, 240, 1)); */
         border-radius: 10px 0px 0px 10px;
-
+        background: whitesmoke;
         width: 700px;
         height: 100px;
         display: flex;
@@ -363,14 +367,36 @@ article {
         filter: grayscale(100%);
         transition: 0.5s ease-in-out;
         -webkit-transition: 0.5s ease-in-out;
+    }
 
+    .card-title {
+        display: block;
+        width: 400px;
+        height: 100px;
+        margin-left: 305px;
+        position: absolute;
+        opacity: 1;
+        /* background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(240, 240, 240, 1)); */
+        background: whitesmoke;
+        -webkit-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+
+
+    }
+
+    .card-title:hover {
+        opacity: 0;
+    }
+
+    .card-title h2 {
+        margin-left: 20px;
+        font-size: 18px;
     }
 
     .about-card:hover {
         height: 300px;
         -webkit-filter: grayscale(0%);
         filter: grayscale(0%);
-
     }
 
     .card-photo {
@@ -378,14 +404,6 @@ article {
         width: 300px;
         height: 300px;
         display: block;
-    }
-
-
-    .card-photo p {
-
-        font-size: 14px;
-
-
     }
 
     .card-icon {
@@ -397,6 +415,9 @@ article {
         display: flex;
         justify-content: center;
         align-items: center;
+        opacity: 1;
+        -webkit-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-ou
     }
 
     .card-info p {
@@ -404,6 +425,11 @@ article {
         font-size: 17px;
         text-align: left;
         line-height: 1.2;
+
+    }
+
+    .card-info :hover {
+        opacity: 1;
     }
 
     .card-color-line {

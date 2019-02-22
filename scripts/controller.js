@@ -43,8 +43,8 @@ var t0 = performance.now();
                         switch (index) {
                             case 0:
                                 menuBackground.style.display = 'none';
-                               // bodyColor.style.backgroundImage = 'url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1549234041/fondo-josedavid_dv6hqd.png")';
-                               bodyColor.style.backgroundImage = 'url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1550853017/a_vlzp8o.png")';
+                                // bodyColor.style.backgroundImage = 'url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1549234041/fondo-josedavid_dv6hqd.png")';
+                                bodyColor.style.backgroundImage = 'url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1550853017/a_vlzp8o.png")';
                                 break;
 
                             case 1:
@@ -52,7 +52,7 @@ var t0 = performance.now();
                                 bodyColor.style.backgroundImage = 'none';
                                 break;
                             case 2:
-                    
+
                                 menuBackground.style.display = 'block';
                                 bodyColor.style.backgroundImage = 'none';
                                 break;
@@ -128,7 +128,7 @@ var t0 = performance.now();
 
                 if (progress >= .5) {
                     view.renderPageProjects(2);
-                    
+
                 }
             }
         });
@@ -206,5 +206,3 @@ console.log('%c Hey Human Welcome to my Code ', styleA);
 console.image("https://media.giphy.com/media/XreQmk7ETCak0/giphy.gif");
 console.log('%c This portfolio was made from scratch by me, using vanilla javascript. ', styleB);
 console.log('%c © 2019 David GIRALDO / All Rights Reserved ', styleB);
-
-
