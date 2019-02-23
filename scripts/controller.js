@@ -58,7 +58,7 @@ var t0 = performance.now();
                                 break;
                             case 3:
                                 menuBackground.style.display = 'none';
-                                bodyColor.style.backgroundImage = 'url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1549396616/thankyou-background_rp6p4d.png")';
+                                bodyColor.style.backgroundImage = 'url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1550889062/contact-background_gojk84.png")';
                                 break;
                         }
 
@@ -67,10 +67,10 @@ var t0 = performance.now();
                         if (index == 3) {
                             bodyColor.style.backgroundColor = 'rgb(20,20,20)';
                             bntsMenu.forEach(e => {
-                                e.style.color = 'rgb(120,120,120)';
+                                e.style.color = 'rgb(150,150,150)';
                             });
                             conerTitles.forEach(e => {
-                                e.style.color = 'rgb(120,120,120)';
+                                e.style.color = 'rgb(150,150,150)';
                             });
                         } else {
                             bodyColor.style.backgroundColor = 'rgb(255,255,255)';

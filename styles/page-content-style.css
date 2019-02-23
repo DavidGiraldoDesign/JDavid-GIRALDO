@@ -181,7 +181,7 @@ body {
         font-size: 40px;
         line-height: .9;
         color: white;
-       
+
     }
 
 
@@ -460,6 +460,7 @@ article {
         height: 100px;
         overflow: hidden;
     }
+
     .card-icon img {
         /*---------------------------- emty ICONS */
         opacity: .5;
