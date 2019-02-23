@@ -166,9 +166,11 @@ let view = {
         div.className = `page`;
         div.innerHTML = `
             <div id="home-message">
-                <h1>Hi!</h1>
+                <!-- h1>Hi!</h1>
                 <h3>I’m  a design student from Colombia, currently looking for an 
-                <span class="bolder">INTERNSHIP.</span></h3>
+                <span class="bolder">INTERNSHIP.</span></h3 -->
+                <h3>I DESIGN DIGITAL AND PHYSICAL PRODUCTS</h3>
+                <span id="h-copy">and the interaction between them.</span>
             </div>
           `;
 
@@ -210,14 +212,14 @@ let view = {
 
             <div class="card-color-line" style="background:${color}"></div>
 
-            <div class="card-icon">
-                <img src=${icon}>
-            </div>
+            
 
             <div class="card-title">
                 <h2>${title}</h2>
             </div>
-
+            <div class="card-icon">
+                <img src=${icon}>
+            </div>
             <div class="card-info">
                 <p>${info}</p>
             </div>
@@ -306,13 +308,19 @@ let view = {
         
         <div class="projects-sectionBlock">
                 <div class="project-trigger">
-                <img src="assets/project-hictio.png" alt="josedavid-hictio"></div>
+              
+                    <img src="assets/project-hictio.png" alt="josedavid-hictio">
+                   
+                </div>
                 <div class="project-trigger">
-                <img src="assets/project-ginef.png" alt="josedavid-ginef"></div>
+                    <img src="assets/project-ginef.png" alt="josedavid-ginef">
+                </div>
                 <div class="project-trigger">
-                <img src="assets/project-beoplay.png" alt="josedavid-beoplay"></div>
+                    <img src="assets/project-beoplay.png" alt="josedavid-beoplay">
+                </div>
                 <div class="project-trigger">
-                <img src="assets/project-shell.png" alt="josedavid-shell"></div>
+                    <img src="assets/project-shell.png" alt="josedavid-shell">
+                </div>
         </div>
         `;
         let projectTriggers = div.querySelectorAll('.project-trigger');

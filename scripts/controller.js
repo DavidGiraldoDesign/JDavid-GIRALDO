@@ -44,7 +44,7 @@ var t0 = performance.now();
                             case 0:
                                 menuBackground.style.display = 'none';
                                 // bodyColor.style.backgroundImage = 'url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1549234041/fondo-josedavid_dv6hqd.png")';
-                                bodyColor.style.backgroundImage = 'url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1550853017/a_vlzp8o.png")';
+                                bodyColor.style.backgroundImage = 'url("https://res.cloudinary.com/dpnemhlg6/image/upload/v1550882488/david-background_kszbkl.png")';
                                 break;
 
                             case 1:
@@ -74,6 +74,7 @@ var t0 = performance.now();
                             });
                         } else {
                             bodyColor.style.backgroundColor = 'rgb(255,255,255)';
+                           //bodyColor.style.backgroundColor = '#b8cace';
                             bntsMenu.forEach(e => {
                                 e.style.color = 'rgb(55,55,55)';
                             });
