@@ -7,19 +7,19 @@ const projectHolder = [
 
 const competencies = [{
     title: 'Aesthetics',
-    info: 'High attention to details and sensibility to create aesthetic products.',
+    info: 'High attention to details and sensibility to use shapes, colors, textures, sounds and interactions to create aesthetic products.',
     img: '/assets/cards-imgs/c1.png',
     icon: '/assets/cards-imgs/com.png',
     color: '#004cb9'
 }, {
     title: 'Problem-solving',
-    info: 'Strong problem-solving abilities to address different situations and challenges.',
+    info: 'Strong problem-solving abilities to address different situations and challenges through design thinking methodologies (Personas, Job to be done, customer journey map, insights, etc.)',
     img: '/assets/cards-imgs/c2.png',
     icon: '/assets/cards-imgs/prom.png',
     color: '#004cb9'
 }, {
     title: 'Empathy',
-    info: 'Empathy toward human needs to conduct user research and user-testing.',
+    info: 'Ability to understand user’s desires and Empathy toward human’s needs to conduct user research and user-testing.',
     img: '/assets/cards-imgs/c3.png',
     icon: '/assets/cards-imgs/empa.png',
     color: '#004cb9'
