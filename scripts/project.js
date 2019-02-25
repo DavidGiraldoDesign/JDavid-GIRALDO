@@ -13,7 +13,7 @@ const competencies = [{
     color: '#004cb9'
 }, {
     title: 'Problem-solving',
-    info: 'Strong problem-solving abilities to address different situations and challenges through design thinking methodologies (Personas, Job to be done, customer journey map, insights, etc.)',
+    info: 'Strong problem-solving abilities to address different situations and challenges through design thinking methodologies.',
     img: '/assets/cards-imgs/c2.png',
     icon: '/assets/cards-imgs/prom.png',
     color: '#004cb9'
