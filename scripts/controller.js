@@ -76,7 +76,7 @@ var t0 = performance.now();
                             bodyColor.style.backgroundColor = 'rgb(255,255,255)';
                            //bodyColor.style.backgroundColor = '#b8cace';
                             bntsMenu.forEach(e => {
-                                e.style.color = 'rgb(55,55,55)';
+                                e.style.color = 'rgb(100,100,100)';
                             });
                             conerTitles.forEach(e => {
                                 e.style.color = 'rgb(55,55,55)';
