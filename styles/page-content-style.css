@@ -366,6 +366,10 @@ article {
         align-items: center;
     }
 
+    .tools-icons {
+        display: none;
+    }
+
     .card-title {
         display: none;
     }
@@ -404,6 +408,7 @@ article {
         background: white;
         width: 700px;
         height: 100px;
+        /*xxxxxxxxxxxxxxxxxx*/
         display: flex;
         margin-bottom: 20px;
         overflow: hidden;
@@ -415,13 +420,13 @@ article {
 
     .card-title {
         display: block;
-        width: 400px;
-        height: 100px;
-        margin-left: 305px;
+        width: 700px;
+        height: 300px;
+        /* margin-left: 305px; */
         position: absolute;
         opacity: 1;
         /* background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(240, 240, 240, 1)); */
-        background: white;
+        background: transparent;
         -webkit-transition: 0.5s ease-in-out;
         transition: 0.5s ease-in-out;
 
@@ -432,9 +437,30 @@ article {
         opacity: 0;
     }
 
-    .card-title h2 {
-        margin-left: 20px;
+    .card-title-screen {
+        margin-left: 305px;
+        display: flex;
+        width: 400px;
+        height: 300px;
+        background: white;
+        
+    }
+
+    .card-title-screen img {
+        width: 50px;
+        height: 50px;
+        margin-top: 30px;
+        margin-left: 50px;
+        opacity: .5;
+        
+    }
+
+    .card-title-screen h2 {
+        text-align: center;
         font-size: 18px;
+        margin-left: 50px;
+        color: gray;
+    
     }
 
     .about-card:hover {
@@ -452,7 +478,7 @@ article {
 
     .card-icon {
         margin-left: 600px;
-        display: flex;
+        display: none;
         position: absolute;
         justify-content: center;
         align-items: center;
@@ -464,7 +490,7 @@ article {
     .card-icon img {
         /*---------------------------- emty ICONS */
         opacity: .5;
-        width: 60%;
+        width: 50%;
 
     }
 
@@ -472,10 +498,12 @@ article {
         width: 400px;
         display: flex;
         justify-content: center;
+        flex-direction: column;
         align-items: center;
         opacity: 1;
         -webkit-transition: 0.5s ease-in-out;
-        transition: 0.5s ease-in-ou
+        transition: 0.5s ease-in-out;
+
     }
 
     .card-info p {
@@ -484,6 +512,14 @@ article {
         text-align: left;
         line-height: 1.2;
 
+
+    }
+
+    .tools-icons {
+        margin-top: 20px;
+        width: 350px;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .card-info :hover {

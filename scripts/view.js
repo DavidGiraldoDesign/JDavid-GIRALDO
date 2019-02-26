@@ -201,7 +201,7 @@ let view = {
         return div;
     },
     //---------------------------------------------------- card structure
-    getInfoCard: function getInfoCard(img, icon, title, info, color) {
+    getInfoCard: function getInfoCard(img, icon, title, info, color, tools) {
         let div = document.createElement('div');
         div.className = 'about-card';
         div.innerHTML = `
@@ -215,16 +215,32 @@ let view = {
             
 
             <div class="card-title">
+                <div class="card-title-screen">
+                <img src=${icon}>    
                 <h2>${title}</h2>
+                    
+                </div>
+                
             </div>
             <div class="card-icon">
                 <img src=${icon}>
             </div>
             <div class="card-info">
                 <p>${info}</p>
+                <div class="tools-icons"></div>
             </div>
         `;
 
+        if (tools != null && tools != undefined && tools != NaN) {
+            if (tools.length >= 1) {
+                let toolsolder = div.querySelector('.tools-icons');
+                tools.forEach((e) => {
+                    let toolIcon = document.createElement('img');
+                    toolIcon.src = e;
+                    toolsolder.appendChild(toolIcon);
+                });
+            }
+        }
         return div;
     },
 
@@ -288,7 +304,7 @@ let view = {
         });
         let skill = div.querySelector('#skillset-Holder');
         skills.forEach((e, i) => {
-            skill.appendChild(this.getInfoCard(e.img, e.icon, e.title, e.info, e.color));
+            skill.appendChild(this.getInfoCard(e.img, e.icon, e.title, e.info, e.color, e.tools));
         });
         let award = div.querySelector('#awards-Holder');
         awards.forEach((e, i) => {
