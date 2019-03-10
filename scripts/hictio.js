@@ -17,7 +17,7 @@ const projectHictio = {
         imageCover: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549747479/portfolio-hictio/cover-hictio.png'
     },
     briefData: {
-        longTitle: 'Interactive Products for Enhancing Accessibility of the Visually Impaired in Touristic Environments',
+        longTitle: 'Interactive products family to improve accessibility inside museums for blind visitor.',
         team: 'David Giraldo | Camilo Montoya',
         scope: 'Graduate thesis',
         date: '2018',

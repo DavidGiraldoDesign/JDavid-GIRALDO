@@ -17,7 +17,7 @@ const projectGinef = {
         imageCover: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549217651/portfolio-ginef/cover-ginef.png'
     },
     briefData: {
-        longTitle: 'UX Design applied to birth control method recommendation App for young women to enhance reliability of the result',
+        longTitle: 'App for birth control method recommendation for young women.',
         team: 'David Giraldo | Maria Camila Morales',
         scope: 'Academic',
         date: '2017',

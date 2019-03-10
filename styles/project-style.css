@@ -246,7 +246,7 @@
     width: 100%;
     display: flex;
     background-color: transparent;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    /*background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));*/
 }
 
 #project-title {
@@ -395,7 +395,8 @@
 /*-------- project-briefData ---------------------*/
 
 #project-briefData h1 {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
     color: rgb(80, 80, 80);
     font-size: 30px;
 }

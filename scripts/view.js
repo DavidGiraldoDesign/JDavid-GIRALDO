@@ -400,15 +400,15 @@ let view = {
         let div = document.createElement('div');
         div.id = 'project-coverPage';
         div.innerHTML = `
-            <div id="project-title">
-                <div id="project-titlesBox">
-                    <h1>${coverData.title}</h1>
+            <!-- div id="project-title">
+                <!--div id="project-titlesBox">
+                    <!--h1>${coverData.title}</h1-->
                     <!--h2>${coverData.subTitle}</h2-->
                 </div>
                 <div id="project-purpose">
                     <p>${coverData.purpose}</p>
                 </div>
-            </div>
+            </div-->
         `;
         div.insertBefore(this.getYouTubeBackGroundVideo(coverData.youTubeVideoID, coverData.imageCover), div.childNodes[0]);
         return div;

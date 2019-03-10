@@ -17,7 +17,7 @@ const projectShell = {
         imageCover: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549209627/portfolio-shell/cover-shell.png'
     },
     briefData: {
-        longTitle: 'Redesign the Shell´s helix-ultra engine oil bottle through ergonomics and brand communication for packaging design',
+        longTitle: 'Packaging redesign for engine oil bottle.',
         team: 'David Giraldo | Luisa Oviedo | Santiago Alonso',
         scope: 'Academic',
         date: '2014',

@@ -17,7 +17,7 @@ const projectBeo = {
         imageCover: 'https://res.cloudinary.com/dpnemhlg6/image/upload/v1549713515/portfolio-beoplay/cover-beoplay.png'
     },
     briefData: {
-        longTitle: 'Brand innovation for consumer electronics to enhance social gathering experiences around music, food, and illumination.',
+        longTitle: 'Sound system that keeps beverages temperature during social gatherings.',
         team: 'David Giraldo | Natalia Valencia',
         scope: 'Academic',
         date: '2015',
