@@ -3,6 +3,12 @@ const projectGinef = {
         background: 'rgb(255, 252, 250)',
         color: 'rgb(80, 80, 80)'
     },
+    cardData:{
+        thumbnail:'assets/project-ginef.png',
+        title: 'Ginef',
+        subTitle: 'App for birth control method recommendation for young women.',
+        hashtags: '#UX #Web #App'
+    },
     coverData: {
         title: 'Ginef ',
         subTitle: '',

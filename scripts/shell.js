@@ -3,6 +3,12 @@ const projectShell = {
         background: 'rgb(20, 20, 20)',
         color: 'rgb(150, 150, 150)'
     },
+    cardData:{
+        thumbnail:'assets/project-shell.png',
+        title: 'Shell F',
+        subTitle: 'Packaging redesign for engine oil bottle.',
+        hashtags: '#Visual #packaging'
+    },
     coverData: {
         title: 'Helix-Ultra Bottle ',
         subTitle: '',

@@ -206,21 +206,14 @@ let view = {
         div.className = 'about-card';
         div.innerHTML = `
             <div class="card-photo">
-            
                 <img src=${img}>
             </div>
-
             <div class="card-color-line" style="background:${color}"></div>
-
-            
-
             <div class="card-title">
                 <div class="card-title-screen">
                 <img src=${icon}>    
                 <h2>${title}</h2>
-                    
                 </div>
-                
             </div>
             <div class="card-icon">
                 <img src=${icon}>
@@ -313,38 +306,38 @@ let view = {
 
         return div;
     },
-    getThirdPage: function getThirdPage() {
+    getThirdPage: function getThirdPage(projectHolder) {
         let div = document.createElement(`article`);
         div.id = `portfolioArticle`;
         div.className = `page`;
-        div.innerHTML = `
-        <!-- div class="sectionBlock">
-            <h1> Projects </h1>
-        </div -->
-        
-        <div class="projects-sectionBlock">
-                <div class="project-trigger">
-              
-                    <img src="assets/project-hictio.png" alt="josedavid-hictio">
-                   
+        div.innerHTML = `<div class="projects-sectionBlock"></div>`;
+
+        projectHolder.forEach((element,index) => {
+            let projectThumbnail = document.createElement('div');
+            projectThumbnail.className='project-trigger';
+            projectThumbnail.innerHTML=`
+                <div class="project-card-intro">
+                    <div class="project-card-thumbnail">
+                        <img src="${element.cardData.thumbnail}">
+                    </div>
+                    <div class="project-card-titles">
+                        <h1>${element.cardData.title}</h1>
+                        <p>${element.cardData.subTitle}</p>
+                    </div>
                 </div>
-                <div class="project-trigger">
-                    <img src="assets/project-ginef.png" alt="josedavid-ginef">
+                <div class="project-card-tags">
+                    <p class="card-hashtag">${element.cardData.hashtags}</p>
+                    <p>+ More</p>
                 </div>
-                <div class="project-trigger">
-                    <img src="assets/project-beoplay.png" alt="josedavid-beoplay">
-                </div>
-                <div class="project-trigger">
-                    <img src="assets/project-shell.png" alt="josedavid-shell">
-                </div>
-        </div>
-        `;
-        let projectTriggers = div.querySelectorAll('.project-trigger');
-        projectTriggers.forEach((e, i) => {
-            e.addEventListener('click', (event) => {
-                this.onShowProject(i);
+            `;    
+            projectThumbnail.addEventListener('click', (event) => {
+                this.onShowProject(index);
             });
+            div.querySelector('.projects-sectionBlock').appendChild(projectThumbnail);
         });
+
+        
+
         return div;
     },
     getForthPage: function getForthPage() {
@@ -613,7 +606,7 @@ let view = {
         let pagesArray = [
             this.getFirtsPage(),
             this.getSecondPage(),
-            this.getThirdPage(),
+            this.getThirdPage(projectHolder),
             this.getForthPage()
         ]
         return pagesArray;

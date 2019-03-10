@@ -3,6 +3,12 @@ const projectHictio = {
         background: 'rgb(255,246,223)',
         color: 'rgb(76,46,29)'
     },
+    cardData:{
+        thumbnail:'assets/project-hictio.png',
+        title: 'Hictio',
+        subTitle: 'Interactive products family to improve accessibility inside museums for blind visitor.',
+        hashtags: '#UX #Interactive'
+    },
     coverData: {
         title: 'Hictio',
         subTitle: 'Interactive museography',

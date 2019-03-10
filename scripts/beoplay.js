@@ -3,6 +3,12 @@ const projectBeo = {
         background: 'rgb(226,241,248)',
         color: 'rgb(50,56,70)'
     },
+    cardData:{
+        thumbnail:'assets/project-beoplay.png',
+        title: 'BeoPlay',
+        subTitle: 'Sound system that keeps beverages temperature during social gatherings.',
+        hashtags: '#Furniture'
+    },
     coverData: {
         title: 'BeoPlay S1 A2',
         subTitle: '',
