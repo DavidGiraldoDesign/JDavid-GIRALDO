@@ -9,7 +9,7 @@ let view = {
         div.innerHTML = `
         <div id="menuBackground"></div>
         <div id="upperTitles">
-            <h3 class="cornerTitle" id="josedavidTitle">David <span class="bolder">GIRALDO</span></h3>
+            <a href="https://davidgiraldo.netlify.com/"><h3 class="cornerTitle" id="josedavidTitle">David <span class="bolder">GIRALDO</span></h3></a>
             <div id="menu-holder"></div>
             <a class="cornerTitle" id="emailTitle-mobile" href="mailto:josedavidgm1995@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
             <h3>Send me an <span class="bolder">EMAIL</span></h3></a>

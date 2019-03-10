@@ -404,16 +404,17 @@ article {
         border-bottom: 0px solid #c8c8c8;
         /*border-right: 1px solid #c8c8c8;*/
         /* background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(240, 240, 240, 1)); */
-        border-radius: 50px 0px 0px 50px;
+        border-radius: 5px 5px 5px 5px;
+        box-shadow: 1px 1px 4px hsl(0, 0%, 70%);
         background: white;
         width: 700px;
         height: 100px;
         /*xxxxxxxxxxxxxxxxxx*/
         display: flex;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         overflow: hidden;
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
+        -webkit-filter: grayscale(80%);
+        filter: grayscale(80%);
         transition: 0.5s ease-in-out;
         -webkit-transition: 0.5s ease-in-out;
     }
@@ -527,7 +528,7 @@ article {
     }
 
     .card-color-line {
-        width: 5px;
+        width: 0px;
         height: 300px;
     }
 }
