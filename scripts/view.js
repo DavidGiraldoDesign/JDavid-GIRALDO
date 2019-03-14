@@ -171,6 +171,16 @@ let view = {
                 <span class="bolder">INTERNSHIP.</span></h3 -->
                 <h3>I DESIGN DIGITAL AND PHYSICAL PRODUCTS</h3>
                 <span id="h-copy">and the interaction between them.</span>
+                <br>
+                <br>
+                
+                <div class="download-btn">
+                <a  href="https://res.cloudinary.com/dpnemhlg6/image/upload/v1552534183/JoseDavid_portafolio_2019_zy7xao.pdf" download="JoseDavid_portafolio_2019"  target="_blank">
+                Download PDF Portfolio / Español </a> 
+                </div>
+                
+                
+
             </div>
           `;
 
@@ -245,11 +255,12 @@ let view = {
         <div class="sectionBlock">
             <h1> Hola, I'm David </h1>
         </div>
-        <!-- div class="sectionBlock">
-            <div id="about-jose-photo">
-                <img src="assets/about-jose.png">
+        <div class="sectionBlock">
+            <div class="download-btn">
+                <a  href="https://res.cloudinary.com/dpnemhlg6/image/upload/v1552534176/JoseDavid_cv_2019_tszdk9.pdf"  target="_blank">
+                Download PDF CV / Español </a> 
             </div>
-        </div -->
+        </div>
         <div class="sectionBlock">
             <div class="text-inside-sectionBlock">
                 <p>I am currently pursuing a dual degree in Industrial Design and Interactive Media Design at Icesi University in Cali - Colombia since 2012. As a result, I have learned how to design digital and physical products, and the interactions between them to deliver a meaningful experience that suits user’s and business’ needs.
@@ -310,7 +321,17 @@ let view = {
         let div = document.createElement(`article`);
         div.id = `portfolioArticle`;
         div.className = `page`;
-        div.innerHTML = `<div class="projects-sectionBlock"></div>`;
+        div.innerHTML = `<div class="projects-sectionBlock">
+            <div class="project-trigger">
+                <div class="project-card-intro" id="pdf">
+                <h1>Download my complete Portfolio 2019</h1>    
+                <a href="https://res.cloudinary.com/dpnemhlg6/image/upload/v1552534183/JoseDavid_portafolio_2019_zy7xao.pdf" download="JoseDavid_portafolio_2019"  target="_blank">
+                    <h2>PDF Portfolio</h2>
+                    <p>En español</p>
+                    </a>
+                </div>
+            </div>
+        </div>`;
 
         projectHolder.forEach((element,index) => {
             let projectThumbnail = document.createElement('div');
