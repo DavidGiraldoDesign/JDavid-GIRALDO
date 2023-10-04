@@ -169,14 +169,19 @@ let view = {
                 <!-- h1>Hi!</h1>
                 <h3>I’m  a design student from Colombia, currently looking for an 
                 <span class="bolder">INTERNSHIP.</span></h3 -->
+                
                 <h3>I DESIGN DIGITAL AND PHYSICAL PRODUCTS</h3>
                 <span id="h-copy">and the interaction between them.</span>
                 <br>
                 <br>
                 
                 <div class="download-btn">
-                <a  href="https://res.cloudinary.com/dpnemhlg6/image/upload/v1552534183/JoseDavid_portafolio_2019_zy7xao.pdf" download="JoseDavid_portafolio_2019"  target="_blank">
-                Download PDF Portfolio / Español </a> 
+                <!-- a  href="https://res.cloudinary.com/dpnemhlg6/image/upload/v1552534183/JoseDavid_portafolio_2019_zy7xao.pdf" download="JoseDavid_portafolio_2019"  target="_blank">
+                Download PDF Portfolio / Español </a --> 
+                
+                <a  href="https://drive.google.com/file/d/1apm6_n8quQ8a8a8H1XqcyUXRXa5rkJju/view?usp=share_link" download="JoseDavid_portafolio_2019"  target="_blank">
+                Download PDF Portfolio </a> 
+                
                 </div>
                 
                 
@@ -257,13 +262,15 @@ let view = {
         </div>
         <div class="sectionBlock">
             <div class="download-btn">
-                <a  href="https://res.cloudinary.com/dpnemhlg6/image/upload/v1552534176/JoseDavid_cv_2019_tszdk9.pdf"  target="_blank">
-                Download PDF CV / Español </a> 
+                <!--a  href="https://res.cloudinary.com/dpnemhlg6/image/upload/v1552534176/JoseDavid_cv_2019_tszdk9.pdf"  target="_blank"-->
+                <a  href="https://drive.google.com/file/d/1apm6_n8quQ8a8a8H1XqcyUXRXa5rkJju/view?usp=share_link"  target="_blank">
+                Download PDF CV </a> 
             </div>
         </div>
         <div class="sectionBlock">
             <div class="text-inside-sectionBlock">
-                <p>I am currently pursuing a dual degree in Industrial Design and Interactive Media Design at Icesi University in Cali - Colombia since 2012. As a result, I have learned how to design digital and physical products, and the interactions between them to deliver a meaningful experience that suits user’s and business’ needs.
+                <p>
+                Interactive product design consultant with solid knowledge in UX/UI and interaction for IoT contexts. He holds a double major in Interactive Media Design and Industrial Design, allowing him to envision and design holistic user experiences for physical and digital products. Apart from consulting, he has experience working within software development companies and banks. He has worked on fintech, retail, health, consumer goods, and tourism projects for Fortune 500 companies. He is currently pursuing a master's in Interactive Media Technology at KTH, Sweden
                 </p>
             </div>
         </div>
@@ -283,14 +290,14 @@ let view = {
         <div class="cards-holder" id="awards-Holder"></div>
 
         <div class="sectionBlock">
-            <div class="text-inside-sectionBlock">
+            <!--div class="text-inside-sectionBlock">
             <br>    
             <p>For me, design is about working in collaborative environments, and I am a team player who is easy to get along with, and therefore I like to maintain a positive and friendly team environment.
                 </p>
                 
                 <h2>Working as assistant</h2>
                 <p> I have been a teaching and research assistant. That is, give my support to teachers by providing assistance to students in: universal design, usability, accessibility, product sketching and digital rendering, 3d modeling and printing, as well as making prototypes for investigations.</p>
-            </div>
+            </div-->
         </div>
 
         <!-- div id="instaGrid-Holder"></div -->
@@ -325,9 +332,11 @@ let view = {
             <div class="project-trigger">
                 <div class="project-card-intro" id="pdf">
                 <h1>Download my complete Portfolio 2019</h1>    
-                <a href="https://res.cloudinary.com/dpnemhlg6/image/upload/v1552534183/JoseDavid_portafolio_2019_zy7xao.pdf" download="JoseDavid_portafolio_2019"  target="_blank">
+                <!-- a href="https://res.cloudinary.com/dpnemhlg6/image/upload/v1552534183/JoseDavid_portafolio_2019_zy7xao.pdf" download="JoseDavid_portafolio_2019"  target="_blank" -->
+                <a href="https://drive.google.com/file/d/1apm6_n8quQ8a8a8H1XqcyUXRXa5rkJju/view?usp=share_link" target="_blank">
+                
                     <h2>PDF Portfolio</h2>
-                    <p>En español</p>
+                    <!-- p>En español</p -->
                     </a>
                 </div>
             </div>
@@ -388,11 +397,11 @@ let view = {
             <p>Did you enjoy my work? 
             <br>
             Let me know if you think I could be part of 
-            <br> your team during my internship in 2019.
+            <br> your team.
             </p>
             <br>
-            <!--a id="email-contact" href="mailto:josedavidgm1995@gmail.com?Subject=Internship%202019" target="_top">
-            <h2>josedavidgm1995@gmail.com</h2></a-->
+            <!--a id="email-contact" href="mailto:davidgiraldodesign@gmail.com?Subject=Internship%202019" target="_top">
+            <h2>davidgiraldodesign@gmail.com</h2></a-->
             <br><br><br>
       </div>
        `;
@@ -549,7 +558,7 @@ let view = {
             
             <div class="thankYouBlock">
                 <div id="project-thanks-photo">
-                    <a id="email-contact" href="mailto:josedavidgm1995@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
+                    <a id="email-contact" href="mailto:davidgiraldodesign@gmail.com?Subject=We%20Want%20You%20for:%20Internship%202019" target="_top">
                     <img src="assets/thanks-photo.png"></a>
                     <p>( Click me for send an <span class="bolder">EMAIL</span> )</p> 
                 </div>
